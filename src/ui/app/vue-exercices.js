@@ -4,7 +4,7 @@
 // Deux interactions : choix d'une option (quiz, lecture, écoute) et phrase à remettre dans l'ordre (SORT de la V1).
 import { h, melange } from './dom.js';
 import { bouton, note, ligne, lien } from './composants-app.js';
-import { lirePref } from '../../app/etude.js';
+import { lirePref, ETUDE_PERSO_DEFAUT } from '../../app/etude.js';
 import { preparer, creerSession, MESSAGE_INDISPONIBLE, ETIQUETTE_PERSONNEL } from '../../core/exercices.js';
 import { enregistrerReponse } from '../../app/reponses.js';
 import { melangerItem } from '../../core/melange.js';
@@ -110,7 +110,7 @@ export function jouerSerie(ctx, zone, items, { prefixe, arreter = false, resume,
 
 export function sectionExercices(ctx, lecon, pool) {
   const zone = h('div', { class: 'exercices' });
-  const personnel = lirePref(ctx.journal, 'etude.personnel', false) === true;
+  const personnel = lirePref(ctx.journal, 'etude.personnel', ETUDE_PERSO_DEFAUT) === true;
   const prep = preparer(pool, { graine: lecon.numero, personnel });
   if (!prep.disponible) {
     zone.append(note({ type: 'info', texte: MESSAGE_INDISPONIBLE }),

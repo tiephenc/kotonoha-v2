@@ -10,7 +10,7 @@ import { requestPersist } from '../../infra/storage.js';
 import { MANIFESTE } from '../../core/catalogue.js';
 import { analyser, entreeCourante, SANS_CATALOGUE, hashPour } from './routeur.js';
 import { codeSync, parametres, CLE_RECONCILIE } from './synchro.js';
-import { lirePref } from '../../app/etude.js';
+import { lirePref, ETUDE_PERSO_DEFAUT } from '../../app/etude.js';
 import { h, fr } from './dom.js';
 import { note } from './composants-app.js';
 import { chargerValidation } from './validation.js';
@@ -171,12 +171,12 @@ export async function demarrer({ remote = null, account = null, retryAuto = true
   let courante = null, premier = true;
   const nav = document.querySelectorAll('#nav-principale a');
   // Les révisions n'ont besoin du catalogue qu'en étude personnelle (leur banque est alors tirée des leçons des niveaux ouverts).
-  const besoinCatalogue = (vue = analyser(location.hash).vue) => !SANS_CATALOGUE.includes(vue) || vue === 'anki' || (vue === 'revision' && lirePref(journal, 'etude.personnel', false) === true);
+  const besoinCatalogue = (vue = analyser(location.hash).vue) => !SANS_CATALOGUE.includes(vue) || vue === 'anki' || (vue === 'revision' && lirePref(journal, 'etude.personnel', ETUDE_PERSO_DEFAUT) === true);
   async function chargerCatalogueEtModules() {
     cat.statut = 'chargement'; cat.erreur = null; rendre({ focus: false });
     try {
       ctx.cat = await chargerCatalogueServi();
-      ctx.modules = await chargerModules();
+      ctx.modules = [...await chargerModules(), ...ctx.cat.modulesSupplement];
       ctx.validation = await chargerValidation(BASE_DONNEES);
       cat.statut = 'pret';
     } catch (e) { cat.statut = 'erreur'; cat.erreur = e; }

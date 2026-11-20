@@ -11,7 +11,8 @@ const lireTexte = (f) => async (adresse) => {
 };
 
 /**
- * @param {string | { base?: string, manifesteBloques?: string, corrections?: string | null, fetch?: typeof fetch }} [o] adresse du catalogue, ou options
+ * @param {string | { base?: string, baseSupplements?: string | null, manifesteBloques?: string, corrections?: string | null, fetch?: typeof fetch }} [o] adresse du catalogue, ou options
+ *   `baseSupplements` : dossier v2/donnees/ des parcours N5 et N1 (null : V1 seule ; c'est le cas par défaut quand `base` est donné)
  * @param {typeof fetch} [f] (forme courte, compatible avec la première version)
  */
 export async function chargerCatalogueServi(o = {}, f) {
@@ -19,13 +20,14 @@ export async function chargerCatalogueServi(o = {}, f) {
   const base = o.base ?? new URL('../../donnees/catalogue-v1/', import.meta.url).href;
   const manifeste = o.manifesteBloques ?? new URL('../../donnees/identifiants-bloques-1890.tsv', import.meta.url).href;
   const adresseCorrections = o.corrections === undefined ? new URL('../../donnees/corrections/CORRECTIONS.json', import.meta.url).href : o.corrections;
+  const baseSupp = o.baseSupplements !== undefined ? o.baseSupplements : o.base ? null : new URL('../../donnees/', import.meta.url).href;
   const lire = lireTexte(o.fetch ?? globalThis.fetch);
-  const [verifie, texteBloques, texteCorrections] = await Promise.all([chargerCatalogue((nom) => lire(new URL(nom, base).href)), lire(manifeste), adresseCorrections ? lire(adresseCorrections) : null]);
+  const [verifie, texteBloques, texteCorrections] = await Promise.all([chargerCatalogue((nom) => lire(new URL(nom, base).href), { lireSupplement: baseSupp ? (f) => lire(new URL(f, baseSupp).href) : null }), lire(manifeste), adresseCorrections ? lire(adresseCorrections) : null]);
   // Les empreintes ont été vérifiées sur les fichiers d'origine ; les corrections autorisées s'ajoutent ensuite (échec si orpheline ou « avant » différent).
   const catalogue = texteCorrections === null ? verifie : appliquerCorrections(verifie, JSON.parse(texteCorrections));
   const bloques = await chargerBloques(texteBloques);
   reserverBloques(bloques);
   const collisions = verifierCollisions(identifiantsDuCatalogue(catalogue), bloques);
-  if (collisions.length) throw new Error(`catalogue : ${collisions.length} identifiant(s) bloqué(s) porté(s) par le catalogue V1 (${collisions.slice(0, 3).join(', ')})`);
+  if (collisions.length) throw new Error(`catalogue : ${collisions.length} identifiant(s) bloqué(s) porté(s) par le catalogue (${collisions.slice(0, 3).join(', ')})`);
   return catalogue;
 }

@@ -25,6 +25,19 @@ export const MANIFESTE = Object.freeze({
 /** Volumes de référence (tools/data-baseline.json, 2026-11-04 ; rapport V5 §5.1). */
 export const VOLUMES = Object.freeze({ unites: 210, grammaire: 628, exemples: 1884, vocabulaire: 2355, kanji: 785, quiz: 942, lectures: 157, ecoutes: 157, ordonner: 1884 });
 
+/**
+ * Suppléments produits pour KOTONOHA 2.0 (v2/tools/supplements/), dans l'ordre de chargement : même format que la V1,
+ * empreinte et volumes propres, vérifiés à part. Le corpus V1 reste vérifié seul, avec ses propres volumes.
+ */
+const VOLUMES_SUPPLEMENT = { unites: 12, grammaire: 36, exemples: 108, vocabulaire: 96, quiz: 60, lectures: 12, ecoutes: 12, ordonner: 108 };
+export const SUPPLEMENTS = Object.freeze({
+  N5: Object.freeze({ fichier: 'catalogue-n5/n5.json', sha256: 'c9d8b082fcf0c7563e7252b9f071c33934b93ffc4ecd6f619c5ac8a3fb68dd61', volumes: Object.freeze({ ...VOLUMES_SUPPLEMENT, kanji: 95 }) }),
+  N1: Object.freeze({ fichier: 'catalogue-n1/n1.json', sha256: '3a7a3c2b3ce59391fbdc76597847d24b10ed6e9d98378fc8ae2b861fe1032f37', volumes: Object.freeze({ ...VOLUMES_SUPPLEMENT, kanji: 72 }) }),
+});
+export const ORIGINE_SUPPLEMENT = 'produit';
+export const STATUT_NIVEAU_SUPPLEMENT = 'estime-editorial-nouveau';
+export const DROITS_SUPPLEMENT = 'contenu original de KOTONOHA 2.0 ; licence de diffusion à fixer (Q-16) ; usage personnel seulement';
+
 export const ORIGINE = 'repris';
 export const STATUT_NIVEAU = 'estime-v1';
 export const SANS_CONTROLE = 'extrait sans contrôle de contenu';
@@ -38,7 +51,8 @@ const sha256 = async (t) => hex(await globalThis.crypto.subtle.digest('SHA-256',
  * Échoue au moindre écart d'empreinte ou de volume, sans jamais compléter ni corriger.
  * @param {(nom: string) => Promise<string>} lire
  */
-export async function chargerCatalogue(lire) {
+/** @param {{ lireSupplement?: ((fichier: string) => Promise<string>) | null }} [o] lecture d'un fichier de v2/donnees/ (suppléments) ; absent : V1 seule */
+export async function chargerCatalogue(lire, { lireSupplement = null } = {}) {
   const d = {};
   for (const [nom, attendu] of Object.entries(MANIFESTE)) {
     const texte = await lire(nom);
@@ -47,18 +61,30 @@ export async function chargerCatalogue(lire) {
     d[nom.replace(/^v1-|\.json$/g, '')] = JSON.parse(texte);
   }
   for (const [k, n] of Object.entries(VOLUMES)) if (d[k].length !== n) throw new Error(`catalogue V1 : volume ${k} = ${d[k].length}, attendu ${n}`);
-  return construire(d);
+  if (!lireSupplement) return construire(d);
+  const supps = [];
+  for (const [niveau, s] of Object.entries(SUPPLEMENTS)) {
+    const texte = await lireSupplement(s.fichier);
+    const e = await sha256(texte);
+    if (e !== s.sha256) throw new Error(`catalogue ${niveau} altéré : ${s.fichier} (${e})`);
+    const x = JSON.parse(texte);
+    if (x.niveau !== niveau) throw new Error(`catalogue ${niveau} : niveau ${x.niveau}`);
+    for (const [k, n] of Object.entries(s.volumes)) if (x[k].length !== n) throw new Error(`catalogue ${niveau} : volume ${k} = ${x[k].length}, attendu ${n}`);
+    supps.push(x);
+  }
+  return construire(d, supps);
 }
 
 const AUCUNE_CORRECTION = Object.freeze({ de: () => null, taille: 0, ids: () => [] });
 
-function construire(d) {
+/** Leçons d'un jeu de données au format V1, avec leur provenance. */
+function leconsDe(d, { origine, statut, droits }) {
   const parUnite = (liste) => { const m = new Map(); for (const x of liste) { if (!m.has(x.unite)) m.set(x.unite, []); m.get(x.unite).push(x); } return m; };
   const gram = parUnite(d.grammaire), voc = parUnite(d.vocabulaire), kan = parUnite(d.kanji), qz = parUnite(d.quiz), ordo = parUnite(d.ordonner);
   const exParG = new Map(); for (const e of d.exemples) { if (!exParG.has(e.grammaire)) exParG.set(e.grammaire, []); exParG.get(e.grammaire).push(e); }
   const lect = new Map(d.lectures.map((x) => [x.unite, x])), ecou = new Map(d.ecoutes.map((x) => [x.unite, x]));
   const ordoParEx = new Map(); for (const o of d.ordonner) if (o.exemple) ordoParEx.set(o.exemple, o);
-  const prov = (loc) => ({ origine: ORIGINE, fondement: loc, droits: DROITS });
+  const prov = (loc) => ({ origine, fondement: loc, droits });
   const lecons = new Map();
   for (const u of d.unites) {
     const g = (gram.get(u.unite) || []).sort((a, b) => a.rang - b.rang).map((x) => ({
@@ -66,7 +92,7 @@ function construire(d) {
       exemples: (exParG.get(x.id) || []).sort((a, b) => a.rang - b.rang).map((e) => ({ ...prov(e.loc), loc: e.loc, jp: e.valeur[0], fr: e.valeur[1], ordonner: ordoParEx.get(e.loc)?.valeur ?? null })),
     }));
     lecons.set(u.unite, Object.freeze({
-      ...prov(u.loc), loc: u.loc, numero: Number(u.unite), niveau: u.niveau, statutNiveau: STATUT_NIVEAU, module: u.module,
+      ...prov(u.loc), loc: u.loc, numero: Number(u.unite), niveau: u.niveau, statutNiveau: statut, module: u.module,
       titre: u.syl?.t ?? null, sousTitre: u.syl?.g ?? null, champs: u.champs, ordreChamps: u.ordreChamps,
       grammaire: g,
       vocabulaire: (voc.get(u.unite) || []).sort((a, b) => a.rang - b.rang).map((x) => ({ ...prov(x.loc), loc: x.loc, mot: x.valeur[0], lecture: x.valeur[1], sens: x.valeur[2] })),
@@ -77,9 +103,19 @@ function construire(d) {
       ordonner: (ordo.get(u.unite) || []).filter((o) => o.valeur !== null).map((o) => ({ loc: o.loc, exemple: o.exemple, segments: o.valeur })),
     }));
   }
-  const niveaux = Object.freeze(Object.fromEntries(d.tables.LEVELS.map((l) => [l.lv, Object.freeze({ ...l, unites: [...lecons.values()].filter((x) => x.niveau === l.lv).map((x) => x.numero) })])));
+  return lecons;
+}
+
+/** Catalogue : corpus V1, puis les suppléments (leçons à la suite ; niveaux rangés par phase : N5 avant la V1, N1 après). */
+function construire(d, supps = []) {
+  const lecons = leconsDe(d, { origine: ORIGINE, statut: STATUT_NIVEAU, droits: DROITS });
+  for (const x of supps) for (const [k, l] of leconsDe(x, { origine: ORIGINE_SUPPLEMENT, statut: STATUT_NIVEAU_SUPPLEMENT, droits: DROITS_SUPPLEMENT })) lecons.set(k, l);
+  const tablesNiveaux = [...d.tables.LEVELS, ...supps.map((x) => x.table)].sort((a, b) => a.phase - b.phase);
+  const niveaux = Object.freeze(Object.fromEntries(tablesNiveaux.map((l) => [l.lv, Object.freeze({ ...l, unites: [...lecons.values()].filter((x) => x.niveau === l.lv).map((x) => x.numero) })])));
   return Object.freeze({
     niveaux,
+    /** Modules du supplément (lignes [de, à, nom, niveau, …], à la suite de MODULES des tables V1). */
+    modulesSupplement: Object.freeze(supps.flatMap((x) => x.modules)),
     nombre: lecons.size,
     corrections: AUCUNE_CORRECTION,
     /** @param {number|string} n */
@@ -118,7 +154,7 @@ export function appliquerCorrections(c, surcouche) {
   if (orphelines.length) throw new Error(`corrections : localisateur(s) inconnu(s) du catalogue : ${orphelines.join(', ')}`);
   const parNumero = new Map(lecons.map((l) => [String(l.numero), l]));
   return Object.freeze({
-    niveaux: c.niveaux, nombre: parNumero.size,
+    niveaux: c.niveaux, modulesSupplement: c.modulesSupplement, nombre: parNumero.size,
     corrections: Object.freeze({ de: (loc) => marques.get(loc) ?? null, taille: marques.size, ids: () => [...new Set([...marques.values()].flat())].sort() }),
     lecon: (n) => parNumero.get(String(n)) ?? null,
     lecons: () => [...parNumero.values()],

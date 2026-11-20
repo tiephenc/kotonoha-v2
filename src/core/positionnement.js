@@ -8,7 +8,7 @@ import { selectionner } from './selection-evaluation.js';
 export const COMPETENCES = Object.freeze({ grammaire: 'Grammaire', vocabulaire: 'Vocabulaire', kanji: 'Kanji', lecture: 'Lecture', ecoute: 'Écoute' });
 export const PAR_COMPETENCE = 3;
 export const SEC_PAR_QUESTION = 30; // [Hyp] durée annoncée
-export const MESSAGE_N4 = 'Cette version commence au niveau N4 : elle suppose les kana et les bases du N5. Les kana et le N5 arriveront dans une version suivante.';
+export const MESSAGE_N4 = 'Ce test porte sur les niveaux N4 à N2. Si vous débutez, commencez par les kana, puis par le parcours N5.';
 
 /** @param {any[]} banque items `{id, competence, statut, question, options, reponse, ...}` */
 export function preparerPositionnement(banque, { graine = 0, parCompetence = PAR_COMPETENCE } = {}) {

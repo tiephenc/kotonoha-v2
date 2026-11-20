@@ -41,10 +41,11 @@ export const poolComplet = (l) => [...poolDeLecon(l), ...poolOrdonner(l), ...poo
 /** Rattache un item V1 à une facette de compréhension propre (un item, un élément) : ses réponses alimentent la répétition espacée. Marque `perso`. */
 export const rattacherPerso = (it) => ({ ...it, perso: true, element: it.id.replace(/#/g, '~'), facette: 'G-COMP' });
 
-/** @param {{n?: number, graine?: any, personnel?: boolean}} o `personnel` : étude personnelle activée par l'apprenant (mode `personnel`, sans plafond, étiquetée). */
+/** @param {{n?: number, graine?: any, personnel?: boolean}} o `personnel` : étude personnelle activée par l'apprenant (mode `personnel`, sans plafond ; les contenus estimés y sont étiquetés). */
 export function preparer(pool, { n = NB_EXERCICES, graine = 0, personnel = false } = {}) {
   const r = selectionner(pool, { mode: personnel ? 'personnel' : 'entrainement', n, graine });
-  if (personnel) r.items = r.items.map(rattacherPerso);
+  // Seuls les contenus estimés sont rattachés (et étiquetés) en étude personnelle ; un item vérifié garde sa facette et son étiquette.
+  if (personnel) r.items = r.items.map((it) => (it.statut === 'verifie' ? it : rattacherPerso(it)));
   return { items: r.items, rapport: r.rapport, disponible: r.items.length > 0, motif: r.rapport.motif };
 }
 

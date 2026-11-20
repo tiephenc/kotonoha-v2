@@ -12,7 +12,7 @@ import { backupJournal, verifyBackup } from '../../infra/backup.js';
 import { newId } from '../../core/ids.js';
 import { sha256 } from '../../core/canon.js';
 import { analyserImport, identifierCartes, preparerSeanceAnki, statistiques, facesCarte, texteBrut, sujetCarte, jourLocal, NOUVELLES_PAR_JOUR, MATURE_JOURS } from '../../core/anki.js';
-import { hashPour } from './routeur.js';
+import { hashPour, etiquetteLecon } from './routeur.js';
 
 const fmt = (n) => new Intl.NumberFormat('fr-FR').format(n);
 const pl = (n, s, p = `${s}s`) => `${fmt(n)}${NB}${n > 1 ? p : s}`;
@@ -88,7 +88,7 @@ export function vueAnki(ctx) {
         const l = A.liens(it).liens;
         const lecons = [...new Set(l.map((x) => x.unite))].sort((a, b) => a - b);
         zoneReponse.replaceChildren(h('hr', { class: 'anki-separation' }), face(f.verso, true),
-          lecons.length ? h('p', { class: 'aide-courte' }, 'Dans les leçons : ', ...lecons.flatMap((n, k) => [k ? ', ' : '', lien(hashPour('lecon', n), `leçon ${n}`)]), '.') : null,
+          lecons.length ? h('p', { class: 'aide-courte' }, 'Dans les leçons : ', ...lecons.flatMap((n, k) => [k ? ', ' : '', lien(hashPour('lecon', n), `leçon ${etiquetteLecon(n)}`)]), '.') : null,
           h('p', { class: 'aide-courte', id: 'anki-question-note' }, 'Vous en souveniez-vous ?'),
           h('div', { class: 'barre-actions', role: 'group', 'aria-labelledby': 'anki-question-note' },
             bouton('À revoir', 'btn-secondaire', async () => noter(false)), bouton('Je savais', 'btn-principal', async () => noter(true))));
@@ -287,7 +287,7 @@ export function vueAnki(ctx) {
         const etat = e.statut === 'nouvelle' ? 'nouvelle' : e.statut === 'suspendue' ? 'suspendue dans Anki' : e.maitrisee ? 'maîtrisée' : 'en cours';
         const quand = e.due === null || e.statut === 'nouvelle' || e.statut === 'suspendue' ? '' : e.due <= jour ? ', à revoir aujourd’hui' : `, prochaine révision dans ${pl(e.due - jour, 'jour')}`;
         return h('li', { class: 'anki-trouve' }, h('p', {}, brut(texteBrut(f.recto.map((x) => x.valeur).join(' · ')).slice(0, 120)), ' — ', brut(texteBrut(f.verso.map((x) => x.valeur).join(' · ')).slice(0, 160))),
-          h('p', { class: 'aide-courte' }, brut(it.paquet), ` · ${etat}${quand}`, lecons.length ? ' · ' : '', ...lecons.flatMap((n, k) => [k ? ', ' : '', lien(hashPour('lecon', n), `leçon ${n}`)])));
+          h('p', { class: 'aide-courte' }, brut(it.paquet), ` · ${etat}${quand}`, lecons.length ? ' · ' : '', ...lecons.flatMap((n, k) => [k ? ', ' : '', lien(hashPour('lecon', n), `leçon ${etiquetteLecon(n)}`)])));
       })));
   }
 

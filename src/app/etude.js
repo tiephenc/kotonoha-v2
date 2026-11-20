@@ -10,6 +10,9 @@ function refuser(journal) {
   }
 }
 /** Valeur courante d'une préférence (booléen ou jeton), `defaut` si elle n'a jamais été écrite. */
+/** Étude personnelle (exercices V1 au niveau estimé, signalés comme tels) : activée par défaut depuis le 20/11/2026, sur décision de
+ * l'utilisateur (« ne pas bloquer la production sur l'incertitude du classement JLPT »). Un choix explicite de l'apprenant prime. */
+export const ETUDE_PERSO_DEFAUT = true;
 export const lirePref = (journal, sujet, defaut = null) => (journal.view.prefs[sujet] ? journal.view.prefs[sujet].v : defaut);
 
 /** Écrit une préférence. @returns {Promise<{op: any, saved: boolean}>} */

@@ -11,7 +11,7 @@ import { selectionnerExamen } from '../../core/selection-evaluation.js';
 import { COMPETENCES } from '../../core/positionnement.js';
 import { sectionExercices } from './vue-exercices.js';
 import { voixJaponaise, surVoix, lire } from './voix.js';
-import { hashPour, NIVEAUX_OUVERTS } from './routeur.js';
+import { hashPour, NIVEAUX_OUVERTS, etiquetteLecon, etiquetteModule } from './routeur.js';
 import { blocAnkiLecon } from './anki-lecon.js';
 
 const NB = ' ';
@@ -29,7 +29,10 @@ function etiquetteBrute(v) {
  * Il reste « à recontrôler » sauf si une surcouche de contrôle le couvre explicitement après correction
  * (`apresCorrection: ['C-00xx', …]`). La mention « corrigé (C-00xx) » est toujours affichée.
  */
+export const MENTION_REDACTION_V2 = 'rédigé pour KOTONOHA 2.0, contrôles automatiques de forme, sans relecture humaine';
 export function etiquetteValidation(ctx, loc) {
+  // Contenu produit pour la V2 (parcours N5) : ni extrait de la V1, ni couvert par les surcouches de contrôle de la V1.
+  if (String(loc).startsWith('v2:')) return h('span', { class: 'validation', dataset: { validation: 'redaction-v2' } }, MENTION_REDACTION_V2);
   const v = ctx.validation.de(loc);
   const ids = ctx.cat?.corrections?.de(loc);
   if (!ids) return etiquetteBrute(v);
@@ -107,7 +110,7 @@ function sectionsMethode(ctx, l) {
   if (c.bilan) {
     const unites = (c.units ?? []).map((n) => ctx.cat.lecon(n)).filter(Boolean);
     sec('bilan', `Bilan du module`, h('p', {}, 'Relisez la synthèse du module, puis passez le test : les questions manquées sont regroupées par unité pour cibler ce qu’il faut revoir.'),
-      h('ul', { class: 'bilan-unites' }, ...unites.map((u) => h('li', {}, lien(hashPour('lecon', u.numero), `Leçon ${u.numero} · ${u.titre}`),
+      h('ul', { class: 'bilan-unites' }, ...unites.map((u) => h('li', {}, lien(hashPour('lecon', u.numero), `Leçon ${etiquetteLecon(u.numero)} · ${u.titre}`),
         u.grammaire.length ? h('ul', {}, ...u.grammaire.map((g) => h('li', {}, jaFurigana(g.motif)))) : null))));
     exercices(unites.flatMap((u) => poolComplet(u)));
   } else if (c.kind === 'lecture') {
@@ -180,9 +183,9 @@ export function vueLecon(ctx, { numero }) {
   const pool = ctx.itemsExercices ? ctx.itemsExercices(l) : poolComplet(l);
   racine.append(
     h('p', { class: 'fil' }, lien(hashPour('parcours', l.niveau), `← Parcours ${l.niveau}`)),
-    h('h1', { tabindex: '-1' }, `Leçon ${l.numero} · ${l.titre}`),
+    h('h1', { tabindex: '-1' }, `Leçon ${etiquetteLecon(l.numero)} · ${l.titre}`),
     l.sousTitre ? h('p', { class: 'sous-titre' }, melange(l.sousTitre)) : null,
-    h('p', { class: 'meta-lecon' }, h('span', { class: 'etiquette' }, label({ statut: l.statutNiveau, niveau: l.niveau })), ' ', h('span', {}, `Module ${l.module + 1}`)),
+    h('p', { class: 'meta-lecon' }, h('span', { class: 'etiquette' }, label({ statut: l.statutNiveau, niveau: l.niveau })), ' ', h('span', {}, `Module ${etiquetteModule(l.module, ctx.modules)}`)),
     h('details', { class: 'aide-niveau' }, h('summary', {}, 'Que signifie « estimé » ?'),
       h('p', {}, 'Ce niveau vient du contenu d’origine de KOTONOHA. Il n’a pas encore été vérifié par deux références indépendantes : c’est une estimation, pas un classement JLPT. Chaque contenu indique aussi s’il a fait l’objet d’un contrôle.')),
     h('div', { class: 'carte barre-lecon' }, bar.element, etat, h('div', { class: 'barre-actions' }, btnLecon, sw.element)));
@@ -217,9 +220,9 @@ export function vueLecon(ctx, { numero }) {
     for (const f of majs) f();
   }
   maj();
-  return { titre: `Leçon ${l.numero} · ${l.titre}`, element: racine, maj, fin: surVoix(maj) };
+  return { titre: `Leçon ${etiquetteLecon(l.numero)} · ${l.titre}`, element: racine, maj, fin: surVoix(maj) };
 }
 
 export function vueIntrouvableLecon(numero) {
-  return { titre: 'Leçon introuvable', element: h('div', { class: 'vue' }, h('h1', { tabindex: '-1' }, 'Leçon introuvable'), h('p', {}, `La leçon ${numero} n’existe pas dans cette version.`), lien(hashPour('parcours'), 'Retour au parcours')) };
+  return { titre: 'Leçon introuvable', element: h('div', { class: 'vue' }, h('h1', { tabindex: '-1' }, 'Leçon introuvable'), h('p', {}, `La leçon ${etiquetteLecon(numero)} n’existe pas dans cette version.`), lien(hashPour('parcours'), 'Retour au parcours')) };
 }

@@ -2,7 +2,7 @@
 // affichage, voix, mouvement, sauvegarde et restauration avec confirmation explicite.
 import { h } from './dom.js';
 import { interrupteur, bouton, note } from './composants-app.js';
-import { reglerPref, lirePref } from '../../app/etude.js';
+import { reglerPref, lirePref, ETUDE_PERSO_DEFAUT } from '../../app/etude.js';
 import { verifyBackup, planRestore, applyRestore, BACKUP_MAX_BYTES } from '../../infra/backup.js';
 import { sauvegardeComplete, telecharger, nomSauvegarde } from './sauvegarde.js';
 import { ankiDe } from './anki-etat.js';
@@ -23,7 +23,7 @@ export function vueReglages(ctx) {
   };
   const swFur = bascule('reg-furigana', 'Afficher les furigana', 'affichage.furigana', true, ['Furigana affichés.', 'Furigana masqués.']);
   const swVoix = bascule('reg-voix', 'Synthèse vocale', 'voix.active', true, ['Synthèse vocale activée.', 'Synthèse vocale désactivée.']);
-  const swPerso = bascule('reg-etude-perso', 'Étude personnelle', 'etude.personnel', false, ['Étude personnelle activée.', 'Étude personnelle désactivée.']);
+  const swPerso = bascule('reg-etude-perso', 'Étude personnelle', 'etude.personnel', ETUDE_PERSO_DEFAUT, ['Étude personnelle activée.', 'Étude personnelle désactivée.']);
   const swMvt = bascule('reg-mouvement', 'Réduire les animations', 'mouvement.reduit', false, ['Animations réduites.', 'Animations rétablies.']);
   const etatVoix = h('p', { class: 'aide-courte', id: 'reg-voix-etat', role: 'status' });
   const sauvegarde = h('p', { id: 'reg-sauv-etat', role: 'status', class: 'aide-courte' });
@@ -100,7 +100,7 @@ export function vueReglages(ctx) {
       h('p', { class: 'aide-courte' }, 'Les lectures en petits kana s’affichent au-dessus des kanji.'), swFur.element,
       h('p', { class: 'aide-courte' }, 'Réduire les animations s’ajoute au réglage de votre système, qui est toujours respecté.'), swMvt.element),
     h('section', { class: 'carte', 'aria-labelledby': 'reg-etude' }, h('h2', { id: 'reg-etude' }, 'Étude'),
-      h('p', { class: 'aide-courte' }, `Étude personnelle${NB}: proposer aussi les exercices de KOTONOHA V1 dont le niveau est seulement estimé. Ils sont signalés comme tels, ne sont jamais notés ni utilisés en examen blanc, et leur niveau n’est pas certifié.`), swPerso.element),
+      h('p', { class: 'aide-courte' }, `Étude personnelle${NB}: proposer aussi les exercices dont le niveau est seulement estimé (corpus de KOTONOHA V1, parcours N5 et N1 rédigés pour la version 2). Activée par défaut. Ils sont signalés comme tels, ne sont jamais notés ni utilisés en examen blanc, et leur niveau n’est pas certifié.`), swPerso.element),
     h('section', { class: 'carte', 'aria-labelledby': 'reg-son' }, h('h2', { id: 'reg-son' }, 'Voix'), swVoix.element, etatVoix),
     h('section', { class: 'carte', 'aria-labelledby': 'reg-anki' }, h('h2', { id: 'reg-anki' }, 'Fiches Anki'),
       h('p', {}, 'Importer votre collection Anki avec sa progression (cartes maîtrisées, en cours, échéances, historique), puis la réviser ici. Les fiches importées font partie de la sauvegarde.'),
@@ -112,5 +112,5 @@ export function vueReglages(ctx) {
       h('p', {}, 'La sauvegarde est un fichier que vous gardez : progression, réglages et fiches Anki importées. La restauration ajoute les données d’un fichier à celles de cet appareil, sans rien retirer.'),
       h('div', { class: 'barre-actions' }, btnSauver, btnRestaurer, fichier), sauvegarde, apercu));
   const fin = surVoix(majVoix);
-  return { titre: 'Réglages', element: racine, maj: () => { swFur.regler(lirePref(j, 'affichage.furigana', true)); swVoix.regler(lirePref(j, 'voix.active', true)); swMvt.regler(lirePref(j, 'mouvement.reduit', false)); swPerso.regler(lirePref(j, 'etude.personnel', false)); majVoix(); }, fin };
+  return { titre: 'Réglages', element: racine, maj: () => { swFur.regler(lirePref(j, 'affichage.furigana', true)); swVoix.regler(lirePref(j, 'voix.active', true)); swMvt.regler(lirePref(j, 'mouvement.reduit', false)); swPerso.regler(lirePref(j, 'etude.personnel', ETUDE_PERSO_DEFAUT)); majVoix(); }, fin };
 }

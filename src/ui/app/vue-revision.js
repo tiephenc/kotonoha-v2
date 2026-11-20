@@ -7,8 +7,8 @@ import { preparerRevision, dateDuJour, MESSAGE_VIDE } from '../../core/revision.
 import { melangerItem } from '../../core/melange.js';
 import { jouerSerie } from './vue-exercices.js';
 import { graineSession } from './graine.js';
-import { hashPour, NIVEAUX_OUVERTS } from './routeur.js';
-import { lirePref } from '../../app/etude.js';
+import { hashPour, NIVEAUX_OUVERTS, etiquetteLecon } from './routeur.js';
+import { lirePref, ETUDE_PERSO_DEFAUT } from '../../app/etude.js';
 import { poolComplet, rattacherPerso } from '../../core/exercices.js';
 import { chargerDonneesEcriture } from './donnees-ecriture.js';
 import { ankiDe } from './anki-etat.js';
@@ -33,9 +33,10 @@ export function vueRevision(ctx) {
     } catch { /* encart facultatif */ }
   })();
   let serie = 0, actif = true;
-  const afficher = (...n) => zone.replaceChildren(...n);
+  // replaceChildren écrirait « null » pour un bloc absent : on ne garde que les nœuds réels.
+  const afficher = (...n) => zone.replaceChildren(...n.filter((x) => x !== null && x !== undefined && x !== false));
 
-  const perso = () => lirePref(ctx.journal, 'etude.personnel', false) === true;
+  const perso = () => lirePref(ctx.journal, 'etude.personnel', ETUDE_PERSO_DEFAUT) === true;
   // Écriture des kana (facette S-ECR) : les items d'écriture rejoignent la banque dès que le journal contient une réponse d'écriture ; leurs données ne sont chargées qu'alors.
   let ecriture = [];
   const aDesReponsesEcriture = () => Object.keys(ctx.journal.view.learn ?? {}).some((k) => k.startsWith('kf:niv0:') && k.endsWith('#S-ECR'));
@@ -69,7 +70,7 @@ export function vueRevision(ctx) {
     const relire = [...new Set(r.file.filter((f) => f.reprise && f.item.lecon).map((f) => f.item.lecon))].sort((a, b) => a - b);
     afficher(h('h2', {}, `Révisions, environ ${r.minutes} min`),
       h('p', {}, `${r.file.length} élément${r.file.length > 1 ? 's' : ''} à revoir aujourd’hui${r.reprises ? `, dont ${r.reprises} manqué${r.reprises > 1 ? 's' : ''} au premier essai, à reprendre` : ''}${r.reportees ? `, le reste est reporté sur les jours suivants` : ''}.`),
-      relire.length ? h('p', { class: 'aide-courte' }, 'Avant de reprendre les éléments manqués, vous pouvez relire : ', ...relire.flatMap((n, k) => [k ? ', ' : '', lien(hashPour('lecon', n), `leçon ${n}`)]), '.') : null,
+      relire.length ? h('p', { class: 'aide-courte' }, 'Avant de reprendre les éléments manqués, vous pouvez relire : ', ...relire.flatMap((n, k) => [k ? ', ' : '', lien(hashPour('lecon', n), `leçon ${etiquetteLecon(n)}`)]), '.') : null,
       bloque ? note({ type: 'avertissement', texte: 'Des actions précédentes ne sont pas encore enregistrées. Exportez-les ou réessayez depuis le bandeau avant de commencer.' }) : null,
       h('div', { class: 'barre-actions' }, bouton('Commencer la séance', 'btn-principal', async () => {
         if (!ctx.journal.canStartActivity()) { ctx.echec(Object.assign(new Error('actions en attente'), { code: 'blocked' })); return; }
