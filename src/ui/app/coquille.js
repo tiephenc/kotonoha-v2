@@ -6,7 +6,6 @@ import { createSync } from '../../infra/sync.js';
 import { createErasure } from '../../infra/effacement.js';
 import { createAccountDeletion } from '../../infra/suppression-compte.js';
 import { chargerCatalogueServi } from '../../infra/catalogue-fetch.js';
-import { backupJournal } from '../../infra/backup.js';
 import { requestPersist } from '../../infra/storage.js';
 import { MANIFESTE } from '../../core/catalogue.js';
 import { analyser, entreeCourante, SANS_CATALOGUE, hashPour } from './routeur.js';
@@ -25,6 +24,8 @@ import { vueFocus } from './vue-focus.js';
 import { vuePause } from './vue-pause.js';
 import { vueEffacement } from './vue-effacement.js';
 import { vueKana } from './vue-kana.js';
+import { vueAnki } from './vue-anki.js';
+import { sauvegardeComplete, telecharger, nomSauvegarde } from './sauvegarde.js';
 
 const NB = ' ';
 const BASE_DONNEES = new URL('../../../donnees/', import.meta.url).href;
@@ -131,7 +132,7 @@ export async function demarrer({ remote = null, account = null, retryAuto = true
   ctx.effacementChange = () => { majBanniereEffacement(); for (const f of ecouteursEff) f(); };
   majBanniereEffacement();
   const exporterTout = async () => {
-    try { const { text } = await backupJournal(journal, Date.now()); const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type: 'application/json' })); a.download = 'kotonoha2-sauvegarde.json'; document.body.append(a); a.click(); a.remove(); ctx.notifier('Sauvegarde téléchargée.', 'succes'); } catch (e) { ctx.signaler(`La sauvegarde a échoué${NB}: ${e.message}.`); }
+    try { const { text } = await sauvegardeComplete(ctx); telecharger(nomSauvegarde(), text); ctx.notifier('Sauvegarde téléchargée.', 'succes'); } catch (e) { ctx.signaler(`La sauvegarde a échoué${NB}: ${e.message}.`); }
   };
   let minuteur = 0, horsLigneVu = false;
   const cycle = async () => {
@@ -170,7 +171,7 @@ export async function demarrer({ remote = null, account = null, retryAuto = true
   let courante = null, premier = true;
   const nav = document.querySelectorAll('#nav-principale a');
   // Les révisions n'ont besoin du catalogue qu'en étude personnelle (leur banque est alors tirée des leçons des niveaux ouverts).
-  const besoinCatalogue = (vue = analyser(location.hash).vue) => !SANS_CATALOGUE.includes(vue) || (vue === 'revision' && lirePref(journal, 'etude.personnel', false) === true);
+  const besoinCatalogue = (vue = analyser(location.hash).vue) => !SANS_CATALOGUE.includes(vue) || vue === 'anki' || (vue === 'revision' && lirePref(journal, 'etude.personnel', false) === true);
   async function chargerCatalogueEtModules() {
     cat.statut = 'chargement'; cat.erreur = null; rendre({ focus: false });
     try {
@@ -202,7 +203,7 @@ export async function demarrer({ remote = null, account = null, retryAuto = true
   function rendre({ focus }) {
     const r = analyser(location.hash);
     // Le Focus ne se remonte pas quand seul le catalogue change d'état : le minuteur affiché (et les champs en cours de saisie) restent intacts.
-    if (!focus && (r.vue === 'focus' || r.vue === 'pause') && courante?.cle === r.vue) return;
+    if (!focus && (r.vue === 'focus' || r.vue === 'pause' || r.vue === 'anki') && courante?.cle === r.vue) return;
     // Dernière vue d'étude : « Reprendre l'étude » de l'écran de pause y ramène exactement (vue ou leçon).
     if (r.vue !== 'focus' && r.vue !== 'pause' && r.vue !== 'introuvable') retenirRetour(location.hash || '#/');
     courante?.fin?.();
@@ -216,6 +217,7 @@ export async function demarrer({ remote = null, account = null, retryAuto = true
     else if (r.vue === 'pause') v = vuePause(ctx);
     else if (r.vue === 'effacement') v = vueEffacement(ctx);
     else if (r.vue === 'kana') v = vueKana(ctx, r);
+    else if (r.vue === 'anki') v = vueAnki(ctx);
     else if (cat.statut === 'chargement' || cat.statut === 'inactif') v = ecranChargement();
     else if (cat.statut === 'erreur') v = ecranErreur(cat.erreur);
     else if (r.vue === 'revision') v = vueRevision(ctx);

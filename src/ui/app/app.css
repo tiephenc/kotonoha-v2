@@ -210,3 +210,22 @@ dialog.dlg h2 { margin: 0; }
   .zt-anime .zt-trait { animation: none; stroke-dasharray: none; stroke-dashoffset: 0; }
   .zt-anime .zt-num { animation: none; opacity: 1; }
 }
+
+/* ——— Fiches Anki (vue-anki.js, anki-lecon.js) ——— */
+.vue-anki .carte + .carte { margin-top: var(--space-5, 20px); }
+.anki-face { display: grid; gap: var(--space-3); margin: var(--space-4) 0; overflow-wrap: anywhere; }
+.anki-face .anki-champ:first-child { font: var(--type-title); }
+.anki-face .anki-champ[lang="ja"] { font: var(--type-body-ja-ruby); font-size: 1.25em; }
+.anki-face .anki-champ:first-child[lang="ja"] { font: var(--type-title); font-size: clamp(24px, 5vw, 34px); line-height: 1.6; }
+.anki-face rt { font-size: var(--ruby-size); }
+.anki-separation { border: 0; border-top: 1px solid var(--color-border-strong); margin: var(--space-4) 0; }
+.anki-etiquette, .anki-progres { font: var(--type-meta); color: var(--color-text-2); margin: 0; }
+.anki-paquets, .anki-versions, .anki-trouves, .anki-journal, .anki-resume { list-style: none; padding: 0; margin: var(--space-3) 0; display: grid; gap: var(--space-3); }
+.anki-resume { list-style: disc; padding-left: 1.2em; gap: var(--space-2); }
+.anki-paquet h3 { margin: 0; font: var(--type-subtitle); overflow-wrap: anywhere; }
+.anki-paquet p, .anki-version p, .anki-trouve p { margin: var(--space-1) 0; overflow-wrap: anywhere; }
+.anki-version, .anki-trouve { border-top: 1px solid var(--color-border); padding-top: var(--space-3); }
+.anki-lignee { border: 1px solid var(--color-border-strong); border-radius: 4px; padding: var(--space-3) var(--space-4); margin: var(--space-4) 0; display: grid; gap: var(--space-2); }
+.anki-lignee legend { font: var(--type-label-info); padding: 0 var(--space-2); }
+.vue-anki .fld { margin: var(--space-3) 0; }
+.anki-lecon, .revision-anki { margin-top: var(--space-5, 20px); }

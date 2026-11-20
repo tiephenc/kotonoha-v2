@@ -3,17 +3,15 @@
 import { h } from './dom.js';
 import { interrupteur, bouton, note } from './composants-app.js';
 import { reglerPref, lirePref } from '../../app/etude.js';
-import { backupJournal, verifyBackup, planRestore, applyRestore, BACKUP_MAX_BYTES } from '../../infra/backup.js';
+import { verifyBackup, planRestore, applyRestore, BACKUP_MAX_BYTES } from '../../infra/backup.js';
+import { sauvegardeComplete, telecharger, nomSauvegarde } from './sauvegarde.js';
+import { ankiDe } from './anki-etat.js';
+import { newId } from '../../core/ids.js';
 import { voixJaponaise, surVoix } from './voix.js';
 
 const NB = ' ';
 const fmt = (n) => new Intl.NumberFormat('fr-FR').format(n);
 
-function telecharger(nom, texte) {
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([texte], { type: 'application/json' })); a.download = nom;
-  document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-}
 
 export function vueReglages(ctx) {
   const j = ctx.journal, racine = h('div', { class: 'vue vue-reglages' });
@@ -37,9 +35,9 @@ export function vueReglages(ctx) {
   const btnSauver = bouton('Créer une sauvegarde', 'btn-principal', async () => {
     sauvegarde.textContent = '';
     try {
-      const { text, backup } = await backupJournal(j, Date.now());
-      telecharger(`kotonoha2-sauvegarde-${new Date().toISOString().slice(0, 10)}.json`, text);
-      sauvegarde.textContent = `Sauvegarde vérifiée et téléchargée${NB}: ${fmt(backup.parts.ops.count)} opérations, ${fmt(backup.parts.objs.count)} textes.`;
+      const { text, backup } = await sauvegardeComplete(ctx);
+      telecharger(nomSauvegarde(), text);
+      sauvegarde.textContent = `Sauvegarde vérifiée et téléchargée${NB}: ${fmt(backup.parts.ops.count)} opérations, ${fmt(backup.parts.objs.count)} textes${backup.parts.corpus ? `, ${fmt(backup.parts.corpus.cartes)} cartes Anki` : ''}.`;
       ctx.notifier('Sauvegarde téléchargée.', 'succes');
     } catch (e) { ctx.signaler(`La sauvegarde a échoué${NB}: ${e.message}. Rien n’a été modifié.`); }
   });
@@ -53,17 +51,31 @@ export function vueReglages(ctx) {
       if (!v.ok) { ctx.signaler(`Sauvegarde refusée${NB}: ${v.errors.join(' ; ')}. Rien n’a été modifié.`); return; }
       plan = await planRestore(j, v.backup);
       if (!plan.ok) { ctx.signaler(plan.message); plan = null; return; }
+      // Fiches Anki de la sauvegarde : versions absentes de cet appareil, ajoutées sans rien retirer.
+      const corpus = v.backup.corpus || null;
+      const locales = corpus ? new Set((await (await ankiDe(ctx).store()).versions()).map((x) => x.id)) : new Set();
+      const versionsNeuves = corpus ? corpus.versions.filter((x) => !locales.has(x.id)) : [];
+      plan.corpus = corpus; plan.cartesAnki = versionsNeuves.reduce((n, x) => n + (x.compte?.cartes || 0), 0); plan.versionsAnki = versionsNeuves.length;
       const titre = h('h3', { id: 'reg-apercu-titre', tabindex: '-1' }, 'Confirmer la restauration');
       apercu.replaceChildren(titre,
         h('p', {}, `${fmt(plan.add.length)} opérations à ajouter, ${fmt(plan.identical)} déjà présentes, ${fmt(plan.objs.length)} textes à ajouter, ${fmt(plan.objsRefused.length)} textes effacés non réintroduits.`),
+        plan.corpus ? h('p', { id: 'reg-apercu-anki' }, plan.versionsAnki ? `Fiches Anki : ${fmt(plan.versionsAnki)} import${plan.versionsAnki > 1 ? 's' : ''} à ajouter (${fmt(plan.cartesAnki)} cartes).` : 'Fiches Anki : déjà toutes présentes sur cet appareil.') : null,
         h('p', {}, 'Rien ne sera retiré. Une copie vérifiée de l’état actuel est faite avant : si elle échoue, la restauration n’a pas lieu.'),
         h('div', { class: 'barre-actions' },
           bouton('Ajouter ces données', 'btn-principal', async () => {
             if (!plan) return;
             try {
-              const r = await applyRestore(j, plan, Date.now());
+              const p = plan;
+              const r = await applyRestore(j, p, Date.now());
+              let anki = null;
+              if (r.ok && p.corpus) {
+                const st = await ankiDe(ctx).store();
+                anki = await st.restaurer(p.corpus);
+                await st.ajouterJournal({ id: newId('ku', 'imp', Date.now()), t: Date.now(), action: 'restauration', versions: anki.versions, cartes: anki.cartes, revisions: anki.revisions });
+                ankiDe(ctx).invalider();
+              }
               ferme(btnRestaurer);
-              if (r.ok) { sauvegarde.textContent = `Restauration faite${NB}: ${fmt(r.added.length)} opérations ajoutées.`; ctx.notifier('Restauration terminée.', 'succes'); } else ctx.signaler(r.message);
+              if (r.ok) { sauvegarde.textContent = `Restauration faite${NB}: ${fmt(r.added.length)} opérations ajoutées${anki ? `, ${fmt(anki.cartes)} cartes Anki ajoutées` : ''}.`; ctx.notifier('Restauration terminée.', 'succes'); } else ctx.signaler(r.message);
             } catch (e) { ctx.signaler(`La restauration a échoué${NB}: ${e.message}. Rien n’a été ajouté.`); }
           }),
           bouton('Annuler', 'btn-secondaire', async () => { ferme(btnRestaurer); sauvegarde.textContent = 'Restauration annulée. Rien n’a été modifié.'; })));
@@ -90,11 +102,14 @@ export function vueReglages(ctx) {
     h('section', { class: 'carte', 'aria-labelledby': 'reg-etude' }, h('h2', { id: 'reg-etude' }, 'Étude'),
       h('p', { class: 'aide-courte' }, `Étude personnelle${NB}: proposer aussi les exercices de KOTONOHA V1 dont le niveau est seulement estimé. Ils sont signalés comme tels, ne sont jamais notés ni utilisés en examen blanc, et leur niveau n’est pas certifié.`), swPerso.element),
     h('section', { class: 'carte', 'aria-labelledby': 'reg-son' }, h('h2', { id: 'reg-son' }, 'Voix'), swVoix.element, etatVoix),
+    h('section', { class: 'carte', 'aria-labelledby': 'reg-anki' }, h('h2', { id: 'reg-anki' }, 'Fiches Anki'),
+      h('p', {}, 'Importer votre collection Anki avec sa progression (cartes maîtrisées, en cours, échéances, historique), puis la réviser ici. Les fiches importées font partie de la sauvegarde.'),
+      h('p', {}, h('a', { class: 'lnk', href: '#/anki', id: 'reg-lien-anki' }, 'Importer et réviser mes fiches Anki'))),
     h('section', { class: 'carte', 'aria-labelledby': 'reg-eff' }, h('h2', { id: 'reg-eff' }, 'Effacement définitif'),
       h('p', {}, 'Effacer des textes pour de bon : ils sont masqués tout de suite et détruits après un délai de 72 heures, pendant lequel vous pouvez annuler.'),
       h('p', {}, h('a', { class: 'lnk', href: '#/effacement' }, 'Gérer les effacements'))),
     h('section', { class: 'carte', 'aria-labelledby': 'reg-don' }, h('h2', { id: 'reg-don' }, 'Sauvegarde et restauration'),
-      h('p', {}, 'La sauvegarde est un fichier que vous gardez. La restauration ajoute les données d’un fichier à celles de cet appareil, sans rien retirer.'),
+      h('p', {}, 'La sauvegarde est un fichier que vous gardez : progression, réglages et fiches Anki importées. La restauration ajoute les données d’un fichier à celles de cet appareil, sans rien retirer.'),
       h('div', { class: 'barre-actions' }, btnSauver, btnRestaurer, fichier), sauvegarde, apercu));
   const fin = surVoix(majVoix);
   return { titre: 'Réglages', element: racine, maj: () => { swFur.regler(lirePref(j, 'affichage.furigana', true)); swVoix.regler(lirePref(j, 'voix.active', true)); swMvt.regler(lirePref(j, 'mouvement.reduit', false)); swPerso.regler(lirePref(j, 'etude.personnel', false)); majVoix(); }, fin };

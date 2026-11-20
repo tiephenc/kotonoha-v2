@@ -1,7 +1,7 @@
 // KOTONOHA 2.0 · infra/import/import — import d'un paquet Anki, côté page. Un Worker NEUF par import, toujours
 // terminé à la fin (réussite, échec, annulation, plantage) : la mémoire du Worker est rendue en entier et rien
-// n'est conservé (parade contre la rétention mémoire observée sous Firefox). Aucune écriture : l'import ne touche
-// à aucune donnée existante ; il ne renvoie qu'un résumé.
+// n'est conservé (parade contre la rétention mémoire observée sous Firefox). Aucune écriture : la lecture ne touche
+// à aucune donnée existante ; elle renvoie un résumé (mode « resume ») ou le contenu lu de la base (mode « complet »).
 //
 // Plafonds PROVISOIRES (décision du 2026-11-15), en Mo DÉCIMAUX (1 Mo = 1 000 000 octets ; jamais des Mio) :
 // P1 = 256 Mo sur la taille du fichier, contrôlée ici et dans le Worker AVANT toute lecture ;
@@ -18,11 +18,11 @@ const WORKER = new URL('./import-worker.js', import.meta.url);
 
 /**
  * @param {Blob} file
- * @param {{p1?: number, p2?: number, signal?: AbortSignal, onProgress?: (o: {octets: number}) => void,
+ * @param {{p1?: number, p2?: number, mode?: 'resume'|'complet', signal?: AbortSignal, onProgress?: (o: {octets: number}) => void,
  *   creerWorker?: (url: URL) => Worker}} [o]
  * @returns {Promise<object>} résumé : entrée choisie, tailles, notes, cartes, GUID distincts, empreinte des GUID
  */
-export function importerPaquet(file, { p1 = P1, p2 = P2, signal, onProgress, creerWorker = (u) => new Worker(u) } = {}) {
+export function importerPaquet(file, { p1 = P1, p2 = P2, mode = 'resume', signal, onProgress, creerWorker = (u) => new Worker(u) } = {}) {
   return new Promise((resolve, reject) => {
     if (!file || typeof file.size !== 'number' || typeof file.slice !== 'function') { reject(new ImportAnkiError('fichier', 'aucun fichier')); return; }
     if (!(p1 > 0 && p2 > 0)) { reject(new ImportAnkiError('plafonds', 'plafonds invalides')); return; }
@@ -44,6 +44,6 @@ export function importerPaquet(file, { p1 = P1, p2 = P2, signal, onProgress, cre
     };
     w.onerror = (e) => { if (e && e.preventDefault) e.preventDefault(); fin(() => reject(new ImportAnkiError('worker', (e && e.message) || 'erreur du Worker (mémoire épuisée ?)'))); };
     w.onmessageerror = () => fin(() => reject(new ImportAnkiError('worker', 'message illisible du Worker')));
-    try { w.postMessage({ file, p1, p2 }); } catch (x) { fin(() => reject(new ImportAnkiError('worker', `envoi impossible : ${(x && x.message) || x}`))); }
+    try { w.postMessage({ file, p1, p2, mode }); } catch (x) { fin(() => reject(new ImportAnkiError('worker', `envoi impossible : ${(x && x.message) || x}`))); }
   });
 }

@@ -7,29 +7,37 @@ import { newId } from '../core/ids.js';
 import { objectValid } from '../core/objects.js';
 
 export const BACKUP_FORMAT = 'kotonoha2-sauvegarde';
-export const BACKUP_VERSION = 1;
+/** Version 2 : partie « corpus » (fiches Anki importées) présente. Une sauvegarde sans corpus reste écrite en version 1, à l'identique. */
+export const BACKUP_VERSION = 2;
 /** Taille maximale d'un fichier de sauvegarde accepté en lecture, en octets décimaux [Hyp] : contrôlée AVANT toute lecture du fichier. */
 export const BACKUP_MAX_BYTES = 100_000_000;
 
 const sortObjs = (objs) => [...objs].sort((a, b) => (a.id < b.id ? -1 : 1));
 
+/** Résumé chiffré du corpus Anki (DC-7) d'une sauvegarde. @param {any} c */
+const corpusParts = async (c) => ({ versions: c.versions.length, lignees: c.lignees.length, notes: c.notes.length, cartes: c.cartes.length, revisions: c.revisions.length, journal: c.journal.length, meta: c.meta.length, sha256: await hashOf(c) });
+const CORPUS_CLES = ['versions', 'lignees', 'notes', 'cartes', 'revisions', 'journal', 'meta'];
+
 /**
- * Construit une sauvegarde complète. Le corpus Anki (DC-7) et l'archive V1 (DC-11) n'existent pas
- * encore en V2 : leurs parties sont `null`, ce que l'en-tête déclare.
- * @param {{account: string|null, dev: string, ops: any[], objs: any[], aliases?: any[], t: number, kind?: string}} a
+ * Construit une sauvegarde complète. Le corpus Anki (DC-7), s'il est fourni, forme la partie « corpus » (version 2 du format) ;
+ * sinon cette partie est `null` (version 1, inchangée). L'archive V1 (DC-11) n'existe pas en V2 : sa partie est `null`.
+ * @param {{account: string|null, dev: string, ops: any[], objs: any[], aliases?: any[], t: number, kind?: string, corpus?: any}} a
  */
-export async function buildBackup({ account, dev, ops, objs, aliases = [], t, kind = 'complete' }) {
+export async function buildBackup({ account, dev, ops, objs, aliases = [], t, kind = 'complete', corpus = null }) {
   const sorted = prepare(ops).sorted, o2 = sortObjs(objs), al = [...aliases].sort((a, b) => (a.k < b.k ? -1 : 1));
   const d = derive(sorted);
-  const header = { format: BACKUP_FORMAT, version: BACKUP_VERSION, createdAt: t, account, dev, schema: SCHEMA, rules: RULES, catalog: null, kind };
+  const c = corpus && CORPUS_CLES.some((k) => corpus[k]?.length) ? Object.fromEntries(CORPUS_CLES.map((k) => [k, corpus[k] || []])) : null;
+  const header = { format: BACKUP_FORMAT, version: c ? 2 : 1, createdAt: t, account, dev, schema: SCHEMA, rules: RULES, catalog: null, kind };
   const parts = {
     ops: { count: sorted.length, sha256: await hashOf(sorted) },
     objs: { count: o2.length, sha256: await hashOf(o2) },
     aliases: { count: al.length, sha256: await hashOf(al) },
     derived: { n: d.view.n, stateHash: await viewHash(d.view) },
-    corpus: null, v1: null,
+    corpus: c ? await corpusParts(c) : null, v1: null,
   };
-  return { header, parts, sha256: await hashOf({ header, parts }), ops: sorted, objs: o2, aliases: al };
+  const b = { header, parts, sha256: await hashOf({ header, parts }), ops: sorted, objs: o2, aliases: al };
+  if (c) b.corpus = c;
+  return b;
 }
 
 /** Sérialisation du fichier (JSON lisible sans KOTONOHA). @param {any} b */
@@ -67,6 +75,11 @@ async function verifyParsed(b) {
   if (b.parts.ops?.count !== b.ops.length || (await hashOf(b.ops)) !== b.parts.ops?.sha256) errors.push('partie « opérations » altérée');
   if (b.parts.objs?.count !== b.objs.length || (await hashOf(b.objs)) !== b.parts.objs?.sha256) errors.push('partie « objets » altérée');
   if (b.parts.aliases?.count !== b.aliases.length || (await hashOf(b.aliases)) !== b.parts.aliases?.sha256) errors.push('partie « alias » altérée');
+  if (b.parts.corpus != null) {
+    const c = b.corpus;
+    if (!c || typeof c !== 'object' || !CORPUS_CLES.every((k) => Array.isArray(c[k]))) errors.push('partie « fiches Anki » absente ou incomplète');
+    else { const p = await corpusParts(c); if (canonical(p) !== canonical(b.parts.corpus)) errors.push('partie « fiches Anki » altérée'); }
+  } else if (b.corpus !== undefined) errors.push('fiches Anki non déclarées dans l’en-tête');
   for (const o of b.ops) { const e = validate(o); if (e.length) { errors.push(`opération ${o?.op} : ${e[0]}`); break; } }
   for (const o of b.objs) if (!(await objectValid(o))) { errors.push(`objet ${o?.id} : empreinte incorrecte`); break; }
   if (!errors.length && h.rules === RULES) {
@@ -83,11 +96,11 @@ async function verifyParsed(b) {
  * complète ne doit rien omettre en silence.
  * @param {any} journal @param {number} t @param {string} [kind]
  */
-export async function backupJournal(journal, t, kind = 'complete', { excludeObjs = [] } = {}) {
+export async function backupJournal(journal, t, kind = 'complete', { excludeObjs = [], corpus = null } = {}) {
   const st = journal.status;
   if (st.invalid?.length || st.updateRequired) { const e = new Error(`sauvegarde refusée : ${st.invalid?.length || 0} opération(s) illisible(s) par cette version ; mettez KOTONOHA à jour`); e.code = 'backup-incomplete'; throw e; }
   const skip = new Set(excludeObjs);
-  const b = await buildBackup({ account: journal.account, dev: journal.dev, ops: journal.ops, objs: (await journal.objects()).filter((o) => !skip.has(o.id)), aliases: await journal.aliases(), t, kind });
+  const b = await buildBackup({ account: journal.account, dev: journal.dev, ops: journal.ops, objs: (await journal.objects()).filter((o) => !skip.has(o.id)), aliases: await journal.aliases(), t, kind, corpus });
   const text = serialize(b);
   const v = await verifyBackup(text);
   const agrees = v.ok && b.parts.derived.stateHash === journal.hash && b.ops.length === journal.ops.length;

@@ -11,6 +11,8 @@ import { hashPour, NIVEAUX_OUVERTS } from './routeur.js';
 import { lirePref } from '../../app/etude.js';
 import { poolComplet, rattacherPerso } from '../../core/exercices.js';
 import { chargerDonneesEcriture } from './donnees-ecriture.js';
+import { ankiDe } from './anki-etat.js';
+import { preparerSeanceAnki } from '../../core/anki.js';
 
 const phraseEcheance = (p) => (p === null
   ? 'Aucune révision n’est prévue pour l’instant : elles apparaissent quand vous avez répondu à des exercices dont le contenu est vérifié.'
@@ -19,7 +21,17 @@ const phraseEcheance = (p) => (p === null
 export function vueRevision(ctx) {
   const racine = h('div', { class: 'vue vue-revision' });
   const zone = h('div', { class: 'revision', 'aria-live': 'polite' });
-  racine.append(h('h1', { tabindex: '-1' }, 'Révisions'), zone);
+  // Fiches Anki importées : leur révision a son écran ; l'encart n'apparaît que si des fiches existent.
+  const encartAnki = h('aside', { class: 'carte revision-anki', id: 'revision-anki', hidden: true, 'aria-label': 'Fiches Anki' });
+  racine.append(h('h1', { tabindex: '-1' }, 'Révisions'), encartAnki, zone);
+  (async () => {
+    try {
+      const A = ankiDe(ctx); if (await A.vide()) return;
+      const s = preparerSeanceAnki((await A.corpus()).items, ctx.maintenant());
+      encartAnki.replaceChildren(h('p', {}, s.total ? `Fiches Anki : ${s.dues.length} à revoir aujourd’hui${s.nouvelles.length ? `, ${s.nouvelles.length} nouvelle${s.nouvelles.length > 1 ? 's' : ''}` : ''}.` : 'Fiches Anki : rien à revoir aujourd’hui.'), h('p', {}, lien(hashPour('anki'), 'Réviser mes fiches Anki', s.total ? 'btn btn-secondaire' : 'lnk')));
+      encartAnki.hidden = false;
+    } catch { /* encart facultatif */ }
+  })();
   let serie = 0, actif = true;
   const afficher = (...n) => zone.replaceChildren(...n);
 

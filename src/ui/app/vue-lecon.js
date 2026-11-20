@@ -12,6 +12,7 @@ import { COMPETENCES } from '../../core/positionnement.js';
 import { sectionExercices } from './vue-exercices.js';
 import { voixJaponaise, surVoix, lire } from './voix.js';
 import { hashPour, NIVEAUX_OUVERTS } from './routeur.js';
+import { blocAnkiLecon } from './anki-lecon.js';
 
 const NB = ' ';
 /** Un outil ne conclut pas à la conformité d'un contenu : il signale ce qu'il détecte. */
@@ -206,6 +207,7 @@ export function vueLecon(ctx, { numero }) {
     racine.append(h('section', { class: 'section', id: `s-${cle}`, 'aria-labelledby': `t-${cle}` }, h('h2', { id: `t-${cle}` }, info.libelle), ...noeuds, h('div', { class: 'coche-section' }, coche.element)));
   }
   if (l.champs.kind || l.champs.bilan) { const m = sectionsMethode(ctx, l); racine.append(...m.sections); majs.push(...m.majs); }
+  racine.append(blocAnkiLecon(ctx, l));
   function maj() {
     const e = etatLecon(l, prefs());
     bar.maj(e.faites, Math.max(e.total, 1));
