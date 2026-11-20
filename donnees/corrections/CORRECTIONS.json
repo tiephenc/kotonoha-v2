@@ -1,0 +1,1630 @@
+{
+ "registre": "docs/developpement/REGISTRE-CORRECTIONS-CONTENUS.md",
+ "regle": "Ajout seul. Une correction n'entre ici qu'avec l'autorisation explicite de l'utilisateur, citée et datée. C-0001 à C-0057 et C-0064 à C-0105 autorisées le 19/11/2026 ; C-0058 à C-0063 (corrections de corrections) le 20/11/2026.",
+ "corrections": [
+  {
+   "id": "C-0001",
+   "loc": "v1:exemple:g3-3#2",
+   "chemin": [
+    "fr"
+   ],
+   "avant": "Ce café n'est pas très calme.",
+   "apres": "Ce magasin n'est pas très calme.",
+   "justification": "店 désigne un magasin ou un établissement ; « café » ajoute une précision absente du japonais. Cohérent avec g4-2#0 (店 = magasin).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N4-L1-20261115.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0002",
+   "loc": "v1:exemple:g2-1#2",
+   "chemin": [
+    "fr"
+   ],
+   "avant": "Appelez-moi par mon nom, s'il vous plaît.",
+   "apres": "Appelez mon nom, s'il vous plaît.",
+   "justification": "名前を呼ぶ = prononcer le nom de quelqu'un pour l'appeler ; « appeler quelqu'un par son nom » se dit plutôt 名前で呼ぶ. Le japonais est inchangé.",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N4-L1-20261115.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0003",
+   "loc": "v1:lecture:1",
+   "chemin": [
+    "qs",
+    1,
+    "w"
+   ],
+   "avant": "« 十時まで帰りませんでした » : il est rentré vers 22 h.",
+   "apres": "« 十時まで帰りませんでした » : il n'est pas rentré avant 22 h ; la réponse la plus proche est « 十時ごろ ».",
+   "justification": "〜まで帰らなかった fixe une borne, pas l'heure exacte du retour ; la clé reste la meilleure option, seule l'explication affirmait trop.",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N4-L1-20261115.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0004",
+   "loc": "v1:lecture:5",
+   "chemin": [
+    "qs",
+    1,
+    "o",
+    3
+   ],
+   "avant": "六時{ろくじ}に行{い}くこと",
+   "apres": "駅{えき}の北口{きたぐち}を出{で}ること",
+   "justification": "La fête dure de 18 h à 21 h : arriver à 18 h n'est pas obligatoire, donc l'option 六時に行くこと était une seconde bonne réponse. 駅の北口を出る est exigé par le texte (駅の北口を出て). Clé inchangée (0). Option nouvelle : à contrôler (AC-2) avant usage.",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N4-L1-20261115.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0005",
+   "loc": "v1:quiz:5#2",
+   "chemin": [
+    "question"
+   ],
+   "avant": "毎朝{まいあさ}、公園{こうえん}（　）散歩{さんぽ}します。",
+   "apres": "毎日{まいにち}、この川{かわ}（　）渡{わた}って学校{がっこう}へ行{い}きます。",
+   "justification": "Avec 散歩する, 「公園で」 est aussi correct mais absent des choix : l'item ne se résout que par élimination. Avec 渡る (espace franchi, 橋を渡る en g5-2), を est la seule particule possible parmi les choix.",
+   "source": "rédigée par kotonoha-linguiste (variante A', classée 1re) ; AC-2 en contexte neuf : conforme ; AC-3 : très bon alignement ; connaissance du modèle, non sourcée, sans relecture native",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0006",
+   "loc": "v1:quiz:5#2",
+   "chemin": [
+    "options",
+    2
+   ],
+   "avant": "へ",
+   "apres": "で",
+   "justification": "へ remplacé par で : distracteur qui teste la distinction de g5-3 (で = lieu d'une action). 「この川で渡って」 est exclu.",
+   "source": "rédigée par kotonoha-linguiste (variante A', classée 1re) ; AC-2 en contexte neuf : conforme ; AC-3 : très bon alignement ; connaissance du modèle, non sourcée, sans relecture native",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0007",
+   "loc": "v1:quiz:5#2",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Lieu qu'on parcourt → 「を」 (「公園で」 serait aussi possible, mais ne figure pas parmi les choix).",
+   "apres": "Espace franchi ou parcouru → 「を」 (「橋を渡る」). 「で」 marquerait le lieu d'une action (「川で泳ぐ」), 「に」 la destination.",
+   "justification": "Explication alignée sur la nouvelle question ; elle ne cite plus de réponse correcte absente des choix.",
+   "source": "rédigée par kotonoha-linguiste (variante A', classée 1re) ; AC-2 en contexte neuf : conforme ; AC-3 : très bon alignement ; connaissance du modèle, non sourcée, sans relecture native",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0008",
+   "loc": "v1:grammaire:g56-4",
+   "chemin": [
+    "forme"
+   ],
+   "avant": "N ＋ 中{ちゅう} (en cours) · N ＋ 中{じゅう} (tout au long, d'ici la fin)",
+   "apres": "N ＋ 中{ちゅう} (en cours ; d'ici la fin : 今週中{こんしゅうちゅう}) · N ＋ 中{じゅう} (tout au long : 一日中{いちにちじゅう} ; aussi 今日中{きょうじゅう}) ; la lecture dépend du mot",
+   "justification": "La lecture de 中 dépend du mot : ちゅう (en cours, d'ici la fin) ou じゅう (tout au long). JMdict consulté par AC-2 le 19/11/2026 : 今週中 こんしゅうちゅう, 今日中 きょうじゅう.",
+   "source": "JMdict (consulté par AC-2 le 19/11/2026) ; connaissance du modèle, non sourcée ; contrôle N3-L1 (CONTROLE-N3-L1-20261119.md) ; décision du 19/11/2026",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0009",
+   "loc": "v1:unite:56#nuance",
+   "chemin": [
+    "texte"
+   ],
+   "avant": "「間{あいだ}に」 désigne une période aux limites nettes (夏休{なつやす}みの間{あいだ}に). 「うちに」 ajoute l'idée « avant que ça change » : on dit 「若{わか}いうちに」 et non « 若い間に ». 「最中{さいちゅう}に」 suppose une interruption soudaine ; on ne l'emploie pas pour une action simplement faite pendant une autre.",
+   "apres": "「間{あいだ}に」 désigne une période aux limites nettes (夏休{なつやす}みの間{あいだ}に). 「うちに」 ajoute l'idée « avant que ça change » : on préfère 「若{わか}いうちに」 ; 「若{わか}い間{あいだ}に」 reste possible, mais neutre, sans l'idée d'urgence. 「最中{さいちゅう}に」 introduit en général un événement soudain ou gênant ; on ne l'emploie pas pour une action simplement faite pendant une autre.",
+   "justification": "« 若い間に » est possible en japonais ; seule l'idée d'urgence distingue 「うちに」. 「最中に」 n'impose pas une interruption.",
+   "source": "connaissance du modèle, non sourcée ; contrôle N3-L1 (CONTROLE-N3-L1-20261119.md) ; décision du 19/11/2026",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0010",
+   "loc": "v1:ecoute:58",
+   "chemin": [
+    "lines",
+    3,
+    1
+   ],
+   "avant": "うん。今日{きょう}は母{はは}の誕生日{たんじょうび}だから、帰{かえ}る際{さい}に渡{わた}そうと思{おも}って。毎年{まいとし}、誕生日{たんじょうび}のたびに花{はな}をあげてるんだ。",
+   "apres": "うん。今日{きょう}は母{はは}の誕生日{たんじょうび}だから、帰{かえ}ったら渡{わた}そうと思{おも}って。毎年{まいとし}、誕生日{たんじょうび}のたびに花{はな}をあげてるんだ。",
+   "justification": "Réplique alignée sur la leçon 58 : 「帰ったら」 est naturel dans ce contexte.",
+   "source": "connaissance du modèle, non sourcée ; contrôle N3-L1 (CONTROLE-N3-L1-20261119.md) ; décision du 19/11/2026",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0011",
+   "loc": "v1:unite:56#prod0",
+   "chemin": [
+    "consigne"
+   ],
+   "avant": "Mangez le gâteau tant qu'il est frais. (〜うちに)",
+   "apres": "Mangez le gâteau tant qu'il est bon. (〜うちに)",
+   "justification": "Le modèle 「おいしいうちに」 (C-0012) est plus naturel pour un gâteau que 「新鮮なうちに」.",
+   "source": "connaissance du modèle, non sourcée ; contrôle N3-L1 (CONTROLE-N3-L1-20261119.md) ; décision du 19/11/2026",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0012",
+   "loc": "v1:unite:56#prod0",
+   "chemin": [
+    "modele"
+   ],
+   "avant": "新鮮{しんせん}なうちに、ケーキを食{た}べてください。",
+   "apres": "おいしいうちに、ケーキを食{た}べてください。",
+   "justification": "Voir C-0011 : 「新鮮」 qualifie plutôt des produits frais, pas un gâteau.",
+   "source": "connaissance du modèle, non sourcée ; contrôle N3-L1 (CONTROLE-N3-L1-20261119.md) ; décision du 19/11/2026",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0013",
+   "loc": "v1:grammaire:g57-2",
+   "chemin": [
+    "forme"
+   ],
+   "avant": "Vる / N ＋ と同時{どうじ}に",
+   "apres": "Vる / adj. い / N ＋ と同時{どうじ}に",
+   "justification": "と同時に se construit aussi avec un adjectif en い.",
+   "source": "connaissance du modèle, non sourcée ; contrôle N3-L1 (CONTROLE-N3-L1-20261119.md) ; décision du 19/11/2026",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0014",
+   "loc": "v1:quiz:58#4",
+   "chemin": [
+    "options",
+    2
+   ],
+   "avant": "際{さい}",
+   "apres": "とたん",
+   "justification": "Distracteur clairement exclu : とたん exige la forme en た.",
+   "source": "connaissance du modèle, non sourcée ; contrôle N3-L1 (CONTROLE-N3-L1-20261119.md) ; décision du 19/11/2026",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0015",
+   "loc": "v1:grammaire:g59-4",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "À partir d'un moment donné, passé ou futur. Plus neutre et plus formel que 「以来」, et utilisable pour l'avenir (来月{らいげつ}以降{いこう}).",
+   "apres": "À partir d'un moment donné, passé ou futur. Plus neutre et plus formel que 「以来」, et utilisable pour l'avenir (来月{らいげつ}以降{いこう}). Le point de repère est inclus : 「六時{ろくじ}以降{いこう}」 = à partir de 6 h. Après un verbe : 「卒業{そつぎょう}して以降{いこう}」.",
+   "justification": "Précision : 以降 inclut le repère ; l'explication ne le disait pas.",
+   "source": "connaissance du modèle, non sourcée ; contrôle N3-L1 (CONTROLE-N3-L1-20261119.md) ; décision du 19/11/2026",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0016",
+   "loc": "v1:exemple:g59-4#0",
+   "chemin": [
+    "fr"
+   ],
+   "avant": "Après 18 h, les lignes téléphoniques sont souvent saturées.",
+   "apres": "À partir de 18 h, il devient difficile d'obtenir la ligne.",
+   "justification": "Traduction fidèle : 電話がつながりにくくなります = il devient difficile d'obtenir la ligne ; « souvent saturées » ajoutait un sens absent du japonais.",
+   "source": "connaissance du modèle, non sourcée ; contrôle N3-L1 (CONTROLE-N3-L1-20261119.md) ; décision du 19/11/2026",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0017",
+   "loc": "v1:quiz:56#4",
+   "chemin": [
+    "options",
+    1
+   ],
+   "avant": "間{あいだ}",
+   "apres": "たびに",
+   "justification": "Distracteur : 間 restait une réponse défendable ; たびに est clairement exclu.",
+   "source": "connaissance du modèle, non sourcée ; contrôle N3-L1 (CONTROLE-N3-L1-20261119.md) ; décision du 19/11/2026",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0018",
+   "loc": "v1:grammaire:g60-3",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Un changement est imminent (nature, objets). Au passé, 「〜ようとしたとき」 : « au moment où j'allais… ». Pour une personne, la forme peut aussi signifier « essayer de » (unité 107).",
+   "apres": "Un changement est imminent (nature, objets). Au passé, 「〜ようとしたとき」 : « au moment où j'allais… ». Avec un sujet humain et un verbe volontaire, 「〜ようとする」 signifie plutôt « essayer de » : ce sens est étudié à l'unité 107.",
+   "justification": "Précision de l'emploi avec un sujet humain.",
+   "source": "connaissance du modèle, non sourcée ; contrôle N3-L1 (CONTROLE-N3-L1-20261119.md) ; décision du 19/11/2026",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0019",
+   "loc": "v1:quiz:60#1",
+   "chemin": [
+    "question"
+   ],
+   "avant": "物価{ぶっか}は上{あ}がる（　）で、生活{せいかつ}が苦{くる}しい。",
+   "apres": "物価{ぶっか}は上{あ}がる（　）だ。生活{せいかつ}が苦{くる}しい。",
+   "justification": "Avec 一方で, la phrase n'avait pas de lecture unique ; 「〜一方だ」 (tendance à sens unique) est la forme attendue.",
+   "source": "connaissance du modèle, non sourcée ; contrôle N3-L1 (CONTROLE-N3-L1-20261119.md) ; décision du 19/11/2026",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0020",
+   "loc": "v1:quiz:60#1",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Tendance continue → 「上がる一方で」.",
+   "apres": "Tendance continue, à sens unique → 「上がる一方だ」.",
+   "justification": "Explication alignée sur la question corrigée (C-0019).",
+   "source": "connaissance du modèle, non sourcée ; contrôle N3-L1 (CONTROLE-N3-L1-20261119.md) ; décision du 19/11/2026",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Ne me sollicite plus pour : C-0001 à C-0005. Les 13 corrections de N3-L1. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0021",
+   "loc": "v1:grammaire:g61-4",
+   "chemin": [
+    "sens"
+   ],
+   "avant": "depuis… plus jamais ; seulement une fois",
+   "apres": "depuis…, et plus rien depuis (avec 一度{いちど} : une seule fois, puis plus rien)",
+   "justification": "〜たきり : la suite attendue ne se produit plus ; « une fois » ne vient que d'un 一度 explicite (AC-1, AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0022",
+   "loc": "v1:exemple:g61-4#0",
+   "chemin": [
+    "fr"
+   ],
+   "avant": "Je ne l'ai vu qu'une fois, il y a trois ans.",
+   "apres": "Je ne l'ai pas revu depuis notre dernière rencontre, il y a trois ans.",
+   "justification": "会ったきりだ : pas revu depuis ; le japonais ne dit pas « une fois » (AC-1, AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0023",
+   "loc": "v1:unite:61#nuance",
+   "chemin": [
+    "texte"
+   ],
+   "avant": "「ところに」 : quelque chose arrive pendant l'action (souvent une personne). 「ところを」 : l'action elle-même est vue, interrompue ou aidée — elle devient l'objet du verbe suivant. 「かけ」 : action commencée mais pas finie. 「きり」 : action faite une fois, sans suite.",
+   "apres": "「ところに」 : quelque chose arrive pendant l'action (souvent une personne). 「ところを」 : l'action elle-même est vue, interrompue ou aidée — elle devient l'objet du verbe suivant. 「かけ」 : action commencée mais pas finie. 「きり」 : une action a eu lieu, puis la suite attendue ne se produit plus (avec 一度{いちど} : une seule fois). Paire : 「勉強{べんきょう}しているところに友{とも}だちが来{き}た」 (une arrivée pendant l'action) / 「勉強しているところを友だちに見{み}られた」 (l'action elle-même est vue).",
+   "justification": "Glose de きり trompeuse ; paire minimale ところに / ところを ajoutée (AC-1, AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0024",
+   "loc": "v1:vocab:61#5",
+   "chemin": [
+    "sens"
+   ],
+   "avant": "témoigner (avoir vu)",
+   "apres": "fait de voir de ses propres yeux ; 〜する : être témoin (oculaire) de",
+   "justification": "目撃 n'est pas « témoigner » (証言) ; c'est voir de ses yeux (AC-1, AC-2, AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0025",
+   "loc": "v1:exemple:g61-1#2",
+   "chemin": [
+    "fr"
+   ],
+   "avant": "Alors que j'étais en difficulté, mon aîné est venu m'aider.",
+   "apres": "Alors que j'étais en difficulté, mon senpai (un camarade plus ancien) est venu m'aider.",
+   "justification": "先輩 : camarade ou collègue plus ancien, pas un aîné d'âge (AC-1).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0026",
+   "loc": "v1:grammaire:g61-2",
+   "chemin": [
+    "forme"
+   ],
+   "avant": "Vている / Vた / N の ＋ ところを ＋ 見{み}る・見{み}つかる・助{たす}ける・邪魔{じゃま}する",
+   "apres": "Vている / Vた / adj. い / N の ＋ ところを ＋ 見{み}る・見{み}つかる・助{たす}ける・邪魔{じゃま}する",
+   "justification": "L'explication emploie 「お忙しいところを」 : la forme omettait l'adjectif en い (AC-1).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0027",
+   "loc": "v1:exemple:g61-3#1",
+   "chemin": [
+    "fr"
+   ],
+   "avant": "Ne jette pas le pain que tu as commencé.",
+   "apres": "Ne jette pas le pain entamé.",
+   "justification": "Calque ; « entamé » est le mot français (AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0028",
+   "loc": "v1:unite:63#nuance",
+   "chemin": [
+    "texte"
+   ],
+   "avant": "「おかげで」 : cause d'un résultat heureux (ou ironie). 「せいで」 : cause d'un résultat fâcheux, avec reproche. 「ため(に)」 et 「によって」 : causes neutres et formelles, typiques de l'écrit et des annonces ; elles n'expriment ni gratitude ni reproche.",
+   "apres": "「おかげで」 : cause d'un résultat heureux (ou ironie). 「せいで」 : cause d'un résultat fâcheux, avec reproche. 「ため(に)」 et 「によって」 : causes neutres et formelles, typiques de l'écrit et des annonces ; elles n'expriment ni gratitude ni reproche. 「によって」 signifie aussi « selon » (「人{ひと}によって違{ちが}う」) et introduit l'agent du passif. Paire : 「友{とも}だちのおかげで間{ま}に合{あ}った」 / 「友だちのせいで遅{おく}れた」.",
+   "justification": "Le sens « selon », testé en 63#4, n'était pas dit ; paire minimale ajoutée (AC-1, AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0029",
+   "loc": "v1:quiz:63#1",
+   "chemin": [
+    "options",
+    1
+   ],
+   "avant": "おかげで",
+   "apres": "によって",
+   "justification": "おかげで reste admissible par ironie, enseignée en g63-1 ; によって est exclu après un verbe (AC-2, AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0030",
+   "loc": "v1:quiz:63#5",
+   "chemin": [
+    "options",
+    1
+   ],
+   "avant": "のおかげで",
+   "apres": "ので",
+   "justification": "のおかげで est admissible par ironie ; 「故障ので」 est agrammatical (il faut なので) (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0031",
+   "loc": "v1:grammaire:g64-1",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "On justifie personnellement une situation, souvent pour s'excuser. À l'oral familier : 「〜もん」. La seconde partie ne peut pas être un ordre ou une invitation.",
+   "apres": "On justifie personnellement une situation, souvent pour s'excuser. À l'oral très familier (enfants, proches) : 「〜もん」, comme dans 「だって、眠{ねむ}かったんだもん」. La seconde partie ne peut pas être un ordre ou une invitation.",
+   "justification": "L'exemple 3 illustre もん sans que son registre soit dit (AC-1).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0032",
+   "loc": "v1:exemple:g64-1#0",
+   "chemin": [
+    "fr"
+   ],
+   "avant": "C'est que le train avait du retard, je suis arrivé en retard.",
+   "apres": "Je suis arrivé en retard : c'est que le train avait du retard.",
+   "justification": "Phrase française bancale ; la nuance d'excuse est gardée (AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0033",
+   "loc": "v1:unite:64#nuance",
+   "chemin": [
+    "texte"
+   ],
+   "avant": "「ものだから」 : excuse personnelle (jamais suivie d'un ordre). 「せいか」 : cause supposée. 「からには」 : un engagement entraîne un devoir ou une volonté. 「だけあって」 : un éloge, le résultat confirme la réputation. Comparer 「だけあって」 (positif, constat) et 「くせに」 (unité 68, reproche).",
+   "apres": "「ものだから」 : excuse personnelle (jamais suivie d'un ordre). 「せいか」 : cause supposée. 「からには」 : un engagement entraîne un devoir ou une volonté. 「だけあって」 : un éloge, le résultat confirme la réputation. Comparer 「だけあって」 (positif, constat) et 「くせに」 (unité 68, reproche). Paire : 「疲{つか}れているせいか、眠{ねむ}い」 (cause supposée) / 「寝不足{ねぶそく}のせいで、失敗{しっぱい}した」 (cause certaine, reproche).",
+   "justification": "Contraste せいか / せいで sans paire minimale (AC-1). Le renvoi à くせに (unité 68) est exact : g68-1 (AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0034",
+   "loc": "v1:grammaire:g65-2",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Indique l'usage d'un objet ou ce qu'une action demande (temps, argent). Toujours suivi d'un prédicat d'utilité ou de coût.",
+   "apres": "Indique l'usage d'un objet ou ce qu'une action demande (temps, argent). Le plus souvent suivi d'un prédicat d'utilité, de nécessité ou de coût (使{つか}う, 便利{べんり}だ, 必要{ひつよう}だ, かかる, いい, 役{やく}に立{た}つ…).",
+   "justification": "Liste présentée comme fermée à tort (AC-2, AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0035",
+   "loc": "v1:unite:65#nuance",
+   "chemin": [
+    "texte"
+   ],
+   "avant": "「のに」 (usage) est suivi de 使う, 便利だ, 必要だ, かかる, いい. 「には」 introduit une condition ou un moyen pour un objectif. 「ために」 exige un verbe volontaire : on dit 「合格するために勉強する」 mais 「合格できるように勉強する」.",
+   "apres": "「のに」 (usage) est le plus souvent suivi de 使う, 便利だ, 必要だ, かかる, いい ; avec 便利だ, かかる ou 必要だ, 「には」 est souvent possible aussi. 「には」 introduit une condition ou un moyen pour un objectif. 「ために」 exige un verbe volontaire : on dit 「合格するために勉強する」 mais 「合格できるように勉強する」. Avec un nom : 「家族{かぞく}のために」 (but, bénéficiaire) ≠ 「事故{じこ}のため」 (cause, unité 63).",
+   "justification": "Frontière のに / には contradictoire avec g65-3 ; spirale ため (cause, 63) / ために (but) non explicitée (AC-2, AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0036",
+   "loc": "v1:quiz:65#1",
+   "chemin": [
+    "options",
+    2
+   ],
+   "avant": "のに",
+   "apres": "ところに",
+   "justification": "のに reste possible au sens concessif ; ところに (unité 61) est exclu (AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0037",
+   "loc": "v1:grammaire:g65-4",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Avec un nom de personne ou de chose, 「のために」 indique le bénéficiaire ou l'objectif : 「家族{かぞく}のために」, 「将来{しょうらい}のために」.",
+   "apres": "Avec un nom de personne ou de chose, 「のために」 indique le bénéficiaire ou l'objectif : 「家族{かぞく}のために」, 「将来{しょうらい}のために」. À distinguer de 「N のため」 de cause (unité 63 : 「事故{じこ}のため」).",
+   "justification": "Spirale non explicitée (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0038",
+   "loc": "v1:quiz:65#4",
+   "chemin": [
+    "options",
+    2
+   ],
+   "avant": "ために",
+   "apres": "ところを",
+   "justification": "「覚えるために便利だ」 jugé possible par une passe à l'aveugle ; 「覚えるところを便利だ」 est exclu.",
+   "source": "connaissance du modèle, non sourcée ; passe AC-4 B (docs/developpement/controles/CONTROLE-N3-L2-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Continue immédiatement avec N3-L2, leçons 61 à 65. Produis et intègre les contenus réels. »"
+   }
+  },
+  {
+   "id": "C-0039",
+   "loc": "v1:grammaire:g130-2",
+   "chemin": [
+    "sens"
+   ],
+   "avant": "ne cesser de, aller toujours en",
+   "apres": "ne cesser de, aller toujours dans le même sens",
+   "justification": "Sens tronqué (« aller toujours en ») (AC-1).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0040",
+   "loc": "v1:grammaire:g130-3",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Proche de 「一方{いっぽう}だ」, mais presque toujours négatif et un peu plus émotionnel : la situation se dégrade sans amélioration en vue.",
+   "apres": "Proche de 「一方{いっぽう}だ」, mais presque toujours négatif (「一方{いっぽう}だ」 peut rester neutre : 「増{ふ}える一方だ」) : la situation se dégrade sans amélioration en vue.",
+   "justification": "« un peu plus émotionnel » : glose non fondée ; contraste explicité (AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0041",
+   "loc": "v1:exemple:g130-4#1",
+   "chemin": [
+    "fr"
+   ],
+   "avant": "À force d'entraînement, je suis devenu moins nerveux.",
+   "apres": "Au fil de l'entraînement, je suis devenu moins nerveux.",
+   "justification": "につれて exprime une covariation progressive, non une cause cumulative (AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0042",
+   "loc": "v1:unite:130#nuance",
+   "chemin": [
+    "texte"
+   ],
+   "avant": "「つつある」 se fixe sur le processus en cours (souvent neutre ou positif : 回復{かいふく}しつつある). 「一方{いっぽう}だ」 et 「ばかりだ」 insistent sur la direction unique, 「ばかりだ」 étant plus nettement négatif. 「につれて」 relie deux évolutions et ne peut pas être suivi d'une volonté (「〜につれて、〜しよう」 ✗).",
+   "apres": "「つつある」 se fixe sur le processus en cours (neutre : le changement peut être favorable ou défavorable : 回復{かいふく}しつつある / 悪化{あっか}しつつある). 「一方{いっぽう}だ」 et 「ばかりだ」 insistent sur la direction unique, 「ばかりだ」 étant plus nettement négatif. 「につれて」 relie deux évolutions et ne peut pas être suivi d'une volonté (「〜につれて、〜しよう」 ✗). Paire : 「人口{じんこう}は減{へ}る一方{いっぽう}だ」 (tendance constatée) / 「病状{びょうじょう}は悪{わる}くなるばかりだ」 (dégradation déplorée).",
+   "justification": "つつある est fréquent avec un changement défavorable ; paire minimale ajoutée (AC-1, AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0043",
+   "loc": "v1:unite:131#nuance",
+   "chemin": [
+    "texte"
+   ],
+   "avant": "「際{さい}」 = moment précis (comme とき). 「に先立{さきだ}って」 = étape qui précède. 「をきっかけに」 et 「を契機{けいき}に」 = point de départ d'un changement ; le second est plus solennel et s'applique surtout à des collectivités.",
+   "apres": "「際{さい}」 = moment précis (comme とき), en registre formel (annonces, consignes). 「に先立{さきだ}って」 = étape qui précède. 「をきっかけに」 et 「を契機{けいき}に」 = point de départ d'un changement ; le second est plus formel et écrit, fréquent pour un tournant important (entreprise, ville, société), mais il s'emploie aussi pour une personne (「結婚{けっこん}を契機に」).",
+   "justification": "Registre de 際 omis ; restriction de 契機 aux collectivités non fondée (AC-1, AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0044",
+   "loc": "v1:quiz:131#1",
+   "chemin": [
+    "options",
+    3
+   ],
+   "avant": "加{くわ}えて",
+   "apres": "とって",
+   "justification": "加えて donne une phrase grammaticale (« en plus du match ») ; 「試合にとって」 est exclu (AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0045",
+   "loc": "v1:ecoute:131",
+   "chemin": [
+    "lines",
+    2,
+    1
+   ],
+   "avant": "六時半{ろくじはん}からです。なお、ご利用{りよう}に先立{さきだ}って、こちらの券{けん}をお受{う}け取{と}りください。",
+   "apres": "六時半{ろくじはん}からです。なお、朝食{ちょうしょく}のご利用{りよう}に先立{さきだ}って、こちらの券{けん}をお受{う}け取{と}りください。",
+   "justification": "La question 2 porte sur le petit-déjeuner, que le dialogue ne nommait pas (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0046",
+   "loc": "v1:unite:132#nuance",
+   "chemin": [
+    "texte"
+   ],
+   "avant": "Passé, surprise, non volontaire → 「とたん」, 「かと思{おも}うと」 (observateur), 「か〜ないかのうちに」 (quasi simultané). Futur, volontaire → 「次第{しだい}」. 「とたん」 et 「かと思{おも}うと」 exigent la forme en た.",
+   "apres": "Faits observés, non volontaires → 「とたん」 (B au passé), 「かと思{おも}うと」 (observateur ; A en た, B au passé ou au présent), 「か〜ないかのうちに」 (quasi simultané ; Vる ou Vた). Futur, volontaire → 「次第{しだい}」. 「とたん」 et 「かと思{おも}うと」 exigent la forme en た pour A.",
+   "justification": "« Passé » inexact pour かと思うと et か〜ないかのうちに (AC-1, AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0047",
+   "loc": "v1:quiz:132#4",
+   "chemin": [
+    "options",
+    3
+   ],
+   "avant": "かのうちに",
+   "apres": "うちに",
+   "justification": "Distracteur fragmentaire « かのうちに » (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0048",
+   "loc": "v1:quiz:132#5",
+   "chemin": [
+    "options",
+    2
+   ],
+   "avant": "かないか",
+   "apres": "ながら",
+   "justification": "Distracteur fragmentaire « かないか » (AC-2, AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0049",
+   "loc": "v1:unite:133#nuance",
+   "chemin": [
+    "texte"
+   ],
+   "avant": "「末{すえ}に」 (bilan d'un long effort, positif ou neutre) ↔ 「あげく」 (résultat fâcheux après une épreuve). 「た上{うえ}で」 décrit une étape préalable choisie ; 「てからでないと」 insiste sur l'impossibilité sans elle.",
+   "apres": "「末{すえ}に」 (aboutissement d'un long effort ou d'une longue réflexion ; résultat le plus souvent positif ou neutre, parfois négatif) ↔ 「あげく」 (résultat toujours fâcheux, ton de plainte). 「た上{うえ}で」 décrit une étape préalable choisie ; 「てからでないと」 insiste sur l'impossibilité sans elle.",
+   "justification": "L'opposition laissait croire que 末に exclut un résultat négatif (AC-1, AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0050",
+   "loc": "v1:quiz:133#0",
+   "chemin": [
+    "options",
+    1
+   ],
+   "avant": "とたんに",
+   "apres": "あげく",
+   "justification": "L'opposition 末に / あげく n'était jamais testée ; 「ようやく結論が出た」 exclut あげく (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0051",
+   "loc": "v1:quiz:133#0",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Aboutissement d'un long processus → 「末に」.",
+   "apres": "Aboutissement d'un long processus → 「末に」. 「あげく」 annoncerait un résultat fâcheux.",
+   "justification": "Explication du nouveau distracteur (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0052",
+   "loc": "v1:quiz:133#2",
+   "chemin": [
+    "options",
+    2
+   ],
+   "avant": "末{すえ}に",
+   "apres": "最中{さいちゅう}に",
+   "justification": "「確認した末に」 jugé possible par une passe à l’aveugle (AC-4) ; 「確認した最中に」 est exclu.",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0053",
+   "loc": "v1:kanji:133#4",
+   "chemin": [
+    "exemples"
+   ],
+   "avant": "挙{あ}げる・選挙{せんきょ}",
+   "apres": "挙{あ}げる・挙{あ}げ句{く}・選挙{せんきょ}",
+   "justification": "Lien avec 「あげく」 (挙げ句), pattern de la leçon (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0054",
+   "loc": "v1:grammaire:g134-1",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Un état dure depuis un événement passé jusqu'à maintenant. Ne s'emploie pas pour un futur ni pour un passé très récent (「昨日{きのう}以来{いらい}」 ✗).",
+   "apres": "Un état dure depuis un événement passé jusqu'à maintenant. Ne s'emploie pas pour un futur. La suite décrit un état qui dure ou une action répétée ; avec un point de départ très proche, on préfère 「から」 (「昨日{きのう}から」 plutôt que 「昨日以来{いらい}」).",
+   "justification": "「昨日以来」 est attesté : le ✗ enseignait une fausse règle (AC-1, AC-2, AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0055",
+   "loc": "v1:grammaire:g134-2",
+   "chemin": [
+    "sens"
+   ],
+   "avant": "à compter de, en date de ; par, avec",
+   "apres": "à la date de, au terme de (surtout une fin) ; par, avec",
+   "justification": "« à compter de » évoque un début, alors que l'emploi (1) marque une fin (AC-1).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0056",
+   "loc": "v1:exemple:g134-2#0",
+   "chemin": [
+    "fr"
+   ],
+   "avant": "Nous fermons définitivement ce jour. Merci pour toutes ces années.",
+   "apres": "Nous fermons définitivement aujourd'hui. Merci pour toutes ces années.",
+   "justification": "Calque (« ce jour ») (AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0057",
+   "loc": "v1:unite:134#nuance",
+   "chemin": [
+    "texte"
+   ],
+   "avant": "「て以来{いらい}」 regarde du passé vers maintenant. 「をもって」 et 「を限{かぎ}りに」 marquent une fin ; 「をもって」 est l'expression officielle (entreprises, cérémonies), 「を限{かぎ}りに」 insiste sur la rupture (dernière fois). 「に至{いた}るまで」 cite l'extrême d'une liste.",
+   "apres": "「て以来{いらい}」 regarde du passé vers maintenant. 「をもって」 et 「を限{かぎ}りに」 marquent une fin ; 「をもって」 est l'expression officielle (entreprises, cérémonies), 「を限{かぎ}りに」 insiste sur la rupture (dernière fois). 「に至{いた}るまで」 cite l'extrême d'une liste. Paire : 「本日{ほんじつ}をもって閉店{へいてん}いたします」 (annonce officielle d'une fin) / 「今日{きょう}を限{かぎ}りにタバコをやめる」 (rupture décidée). 「をもって」 sert aussi à dire le moyen, en style formel : 「誠意{せいい}をもって」.",
+   "justification": "Paire minimale absente ; emploi « moyen » de をもって omis (AC-1).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N2-L1-20261119.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Lance en parallèle les lots N2. »"
+   }
+  },
+  {
+   "id": "C-0058",
+   "loc": "v1:exemple:g2-1#2",
+   "chemin": [
+    "fr"
+   ],
+   "avant": "Appelez mon nom, s'il vous plaît.",
+   "apres": "Appelez-moi par mon nom, s'il vous plaît.",
+   "justification": "Annule C-0002 : 名前を呼ぶ se dit couramment pour « appeler quelqu'un par son nom » ; « Appelez mon nom » est un calque. Le texte d'origine est rétabli.",
+   "source": "contre-contrôle AC-2 du 20/11/2026 (kotonoha-linguiste, contexte neuf), connaissance du modèle, non sourcée",
+   "autorisation": {
+    "date": "2026-11-20",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0059",
+   "loc": "v1:grammaire:g56-4",
+   "chemin": [
+    "forme"
+   ],
+   "avant": "N ＋ 中{ちゅう} (en cours ; d'ici la fin : 今週中{こんしゅうちゅう}) · N ＋ 中{じゅう} (tout au long : 一日中{いちにちじゅう} ; aussi 今日中{きょうじゅう}) ; la lecture dépend du mot",
+   "apres": "N ＋ 中{ちゅう} (en cours ; d'ici la fin : 今週中{こんしゅうちゅう}) · N ＋ 中{じゅう} (tout au long : 一日中{いちにちじゅう} ; mais aussi « d'ici la fin de la journée » : 今日中{きょうじゅう}) ; la lecture dépend du mot",
+   "justification": "Complète C-0008 : 今日中 (きょうじゅう) signifie « d'ici la fin de la journée » ; ne pas laisser croire que じゅう marque toujours la durée.",
+   "source": "contre-contrôle AC-2 du 20/11/2026 (kotonoha-linguiste, contexte neuf), connaissance du modèle, non sourcée ; 今週中 こんしゅうちゅう vérifié sur l'API Jisho (données JMdict) le 20/11/2026",
+   "autorisation": {
+    "date": "2026-11-20",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0060",
+   "loc": "v1:grammaire:g60-3",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Un changement est imminent (nature, objets). Au passé, 「〜ようとしたとき」 : « au moment où j'allais… ». Avec un sujet humain et un verbe volontaire, 「〜ようとする」 signifie plutôt « essayer de » : ce sens est étudié à l'unité 107.",
+   "apres": "Un changement est imminent (nature, objets). Au passé, 「〜ようとしたとき」 : « au moment où j'allais… », y compris pour une personne. Avec un verbe volontaire, 「〜ようとする」 peut aussi signifier « essayer de » : ce sens est étudié à l'unité 107.",
+   "justification": "Corrige C-0018, jugée erronée : 「家を出ようとしたとき」 (quiz 60#5) a un sujet humain et signifie « au moment où j'allais partir » ; g107-2 donne les deux sens.",
+   "source": "contre-contrôle AC-2 du 20/11/2026 (kotonoha-linguiste, contexte neuf), connaissance du modèle, non sourcée",
+   "autorisation": {
+    "date": "2026-11-20",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0061",
+   "loc": "v1:quiz:58#4",
+   "chemin": [
+    "options",
+    3
+   ],
+   "avant": "間{あいだ}",
+   "apres": "ながら",
+   "justification": "「会う間に」 a été jugé grammatical (« pendant la rencontre ») par la passe à l'aveugle ; 「会うながらに」 est exclu (ながら suit le radical en ます).",
+   "source": "passe à l'aveugle AC-4 du 20/11/2026 sur les quiz corrigés (Haiku) ; connaissance du modèle, non sourcée",
+   "autorisation": {
+    "date": "2026-11-20",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0062",
+   "loc": "v1:quiz:133#0",
+   "chemin": [
+    "options",
+    1
+   ],
+   "avant": "あげく",
+   "apres": "とたんに",
+   "justification": "Annule C-0050 : 「何度も話し合ったあげく、ようやく結論が出た」 est naturel ; あげく était une seconde bonne réponse. Le distracteur d'origine est rétabli.",
+   "source": "passe à l'aveugle AC-4 du 20/11/2026 sur les quiz corrigés (Haiku) ; connaissance du modèle, non sourcée",
+   "autorisation": {
+    "date": "2026-11-20",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0063",
+   "loc": "v1:quiz:133#0",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Aboutissement d'un long processus → 「末に」. 「あげく」 annoncerait un résultat fâcheux.",
+   "apres": "Aboutissement d'un long processus → 「末に」.",
+   "justification": "Annule C-0051 avec C-0062 : l'explication d'origine est rétablie.",
+   "source": "passe à l'aveugle AC-4 du 20/11/2026 sur les quiz corrigés (Haiku) ; connaissance du modèle, non sourcée",
+   "autorisation": {
+    "date": "2026-11-20",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Pour chaque décision : 1. Utilise les preuves et ressources disponibles. 2. Prends la meilleure décision raisonnable selon ton expertise. […] 4. Applique-la. »"
+   }
+  },
+  {
+   "id": "C-0064",
+   "loc": "v1:grammaire:g66-1",
+   "chemin": [
+    "sens"
+   ],
+   "avant": "c'est donc pour ça que, forcément",
+   "apres": "c'est donc pour ça que ; pas étonnant que",
+   "justification": "« forcément » fait de わけだ une déduction (≈ はずだ) ; わけだ explique un constat (AC-1, AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0065",
+   "loc": "v1:grammaire:g66-1",
+   "chemin": [
+    "forme"
+   ],
+   "avant": "forme neutre (N の / adj. な な) ＋ わけだ",
+   "apres": "forme neutre (N な / adj. な な) ＋ わけだ",
+   "justification": "Devant わけ, le nom se lie par な (「学生なわけだ」) (AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0066",
+   "loc": "v1:exemple:g66-1#2",
+   "chemin": [
+    "fr"
+   ],
+   "avant": "Il a vécu dix ans aux États-Unis, il parle donc forcément bien anglais.",
+   "apres": "Il a vécu dix ans aux États-Unis : pas étonnant qu'il parle bien anglais.",
+   "justification": "Même glissement vers « forcément » (AC-1, AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0067",
+   "loc": "v1:unite:66#nuance",
+   "chemin": [
+    "texte"
+   ],
+   "avant": "「わけではない」 nie partiellement (« pas forcément »), 「わけがない」 nie totalement (« impossible »). 「わけにはいかない」 n'a rien de logique : c'est une impossibilité morale. Comparez 「飲めない」 (je ne peux pas, physiquement) et 「飲むわけにはいかない」 (je ne peux pas me le permettre, je conduis).",
+   "apres": "「わけではない」 nie partiellement (« pas forcément »), 「わけがない」 nie totalement (« impossible »). 「わけにはいかない」 ne relève pas de la logique mais du devoir : il suppose la volonté ou l'obligation du locuteur (pas de forme potentielle avant : ✕ 「飲{の}めるわけにはいかない」). Comparez 「飲めない」 (je ne peux pas, physiquement) et 「飲むわけにはいかない」 (je ne peux pas me le permettre, je conduis). Exemple : 「運転{うんてん}するので、飲{の}むわけにはいかない。」",
+   "justification": "Formulation maladroite ; restriction d’emploi, emploi fautif et exemple japonais manquants (AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0068",
+   "loc": "v1:unite:66#prod0",
+   "chemin": [
+    "consigne"
+   ],
+   "avant": "Ce n'est pas que je n'aime pas, mais je n'en mange pas souvent. (〜わけではない)",
+   "apres": "Ce n'est pas que je sois fatigué, mais je n'ai pas envie de sortir. (〜わけではない)",
+   "justification": "La consigne et le modèle copiaient l'exemple g66-2#0 (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0069",
+   "loc": "v1:unite:66#prod0",
+   "chemin": [
+    "modele"
+   ],
+   "avant": "嫌{きら}いなわけではないが、あまり食{た}べない。",
+   "apres": "疲{つか}れているわけではないが、出{で}かけたくない。",
+   "justification": "Modèle nouveau, distinct de l'exemple (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0070",
+   "loc": "v1:unite:66#prod1",
+   "chemin": [
+    "consigne"
+   ],
+   "avant": "C'est une réunion importante, je ne peux pas m'absenter. (〜わけにはいかない)",
+   "apres": "J'ai un rendez-vous important aujourd'hui, je ne peux pas me permettre d'être en retard. (〜わけにはいかない)",
+   "justification": "La consigne et le modèle copiaient l'exemple g66-4#1 (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0071",
+   "loc": "v1:unite:66#prod1",
+   "chemin": [
+    "modele"
+   ],
+   "avant": "大切{たいせつ}な会議{かいぎ}なので、休{やす}むわけにはいかない。",
+   "apres": "今日{きょう}は大事{だいじ}な約束{やくそく}があるので、遅{おく}れるわけにはいかない。",
+   "justification": "Modèle nouveau, distinct de l'exemple (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0072",
+   "loc": "v1:vocab:66#0",
+   "chemin": [
+    "sens"
+   ],
+   "avant": "être convaincu, comprendre",
+   "apres": "être convaincu, admettre (après avoir compris)",
+   "justification": "納得 n’est pas 理解 (AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0073",
+   "loc": "v1:quiz:66#0",
+   "chemin": [
+    "question"
+   ],
+   "avant": "彼{かれ}は毎日{まいにち}三時間{さんじかん}練習{れんしゅう}している。上手{じょうず}になる（　）。",
+   "apres": "彼{かれ}は毎日{まいにち}三時間{さんじかん}練習{れんしゅう}している。なるほど、上手{じょうず}な（　）ね。",
+   "justification": "Sans marqueur de constat, わけではない restait lisible ; なるほど et 上手な fixent わけだ (AC-1, AC-2, AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0074",
+   "loc": "v1:ecoute:66",
+   "chemin": [
+    "lines",
+    2,
+    1
+   ],
+   "avant": "そうですか。じゃあ、早{はや}めに帰{かえ}れば？",
+   "apres": "そうですか。じゃあ、早{はや}めに帰{かえ}ったらどうですか。",
+   "justification": "Registre : M parle poliment, 「帰れば？」 détonnait (AC-1, AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0075",
+   "loc": "v1:grammaire:g67-1",
+   "chemin": [
+    "motif"
+   ],
+   "avant": "そのため(に)",
+   "apres": "そのため",
+   "justification": "「そのために」 exprime aussi le but ; le point enseigné est la cause (AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0076",
+   "loc": "v1:grammaire:g67-1",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Cause objective suivie de sa conséquence. Ton neutre, fréquent à l'écrit et dans les explications. La seconde phrase constate un fait.",
+   "apres": "Cause objective suivie de sa conséquence. Ton neutre, fréquent à l'écrit et dans les explications. La seconde phrase constate un fait. Ne pas confondre avec 「そのために」 (but, « pour cela »).",
+   "justification": "Mise en garde cause / but (AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0077",
+   "loc": "v1:grammaire:g67-3",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Face à une situation, quelqu'un réagit volontairement. B est toujours une action décidée, jamais un simple résultat subi.",
+   "apres": "Face à une situation, quelqu'un réagit volontairement. Comme connecteur de conséquence, B est une action décidée, jamais un simple résultat subi.",
+   "justification": "そこで sert aussi de relance du discours ; « toujours » trop absolu (AC-1).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0078",
+   "loc": "v1:unite:67#nuance",
+   "chemin": [
+    "texte"
+   ],
+   "avant": "Test rapide : B est-il une action voulue ? → 「そこで」. Un aboutissement après des efforts ? → 「その結果」. Un effet neutre ? → 「そのため」. Une déduction écrite ? → 「したがって」. Un ordre ou une demande ? → seul 「だから」 convient. Et si B contredit A, il faut un connecteur d'opposition : 「ところが」, 「しかし」.",
+   "apres": "Test rapide : B est-il une action voulue ? → 「そこで」. Un aboutissement après des efforts ? → 「その結果」. Un effet neutre ? → 「そのため」. Une déduction écrite ? → 「したがって」. Un ordre ou une demande ? → 「だから」 (ou 「ですから」) ; 「そのため」, 「それで」 et 「その結果」 ne sont pas suivis d'un ordre. Et si B contredit A, il faut un connecteur d'opposition : 「ところが」, 「しかし」.",
+   "justification": "« seul だから » trop absolu (ですから) (AC-1, AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0079",
+   "loc": "v1:quiz:67#5",
+   "chemin": [
+    "options",
+    1
+   ],
+   "avant": "そのため",
+   "apres": "したがって",
+   "justification": "そのため devenait recevable (la clientèle va au concurrent) ; したがって est exclu (AC-1, AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0080",
+   "loc": "v1:lecture:67",
+   "chemin": [
+    "paras",
+    2
+   ],
+   "avant": "その結果{けっか}、一年{いちねん}で袋{ふくろ}を買{か}う客{きゃく}は三割{さんわり}から一割{いちわり}に減{へ}った。ごみの量{りょう}も大{おお}きく減{へ}り、町{まち}はこの取{と}り組{く}みをほかの店{みせ}にも広{ひろ}げる予定{よてい}だ。",
+   "apres": "その結果{けっか}、一年{いちねん}で袋{ふくろ}を買{か}う客{きゃく}は三割{さんわり}から一割{いちわり}に減{へ}った。ごみの量{りょう}も大{おお}きく減{へ}り、このスーパーはこの取{と}り組{く}みをほかの店{みせ}にも広{ひろ}げる予定{よてい}だ。",
+   "justification": "Le sujet de l'initiative est le supermarché, non la municipalité (AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0081",
+   "loc": "v1:ecoute:67",
+   "chemin": [
+    "lines",
+    2,
+    1
+   ],
+   "avant": "その結果{けっか}、みんな水曜日{すいようび}までに仕事{しごと}を終{お}わらせようとするので、仕事{しごと}のスピードが上{あ}がりました。",
+   "apres": "その結果{けっか}、みんな水曜日{すいようび}は六時{ろくじ}までに仕事{しごと}を終{お}わらせようとするので、仕事{しごと}のスピードが上{あ}がりました。",
+   "justification": "« d’ici mercredi » ne correspond pas à la règle « départ à 18 h le mercredi » (AC-1).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0082",
+   "loc": "v1:grammaire:g68-1",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Critique d'une personne dont le comportement contredit sa situation. Ton accusateur, à éviter envers un supérieur ; ne s'emploie pas pour soi-même.",
+   "apres": "Critique d'une personne dont le comportement contredit sa situation. Ton accusateur, à éviter envers un supérieur ; vise surtout autrui (l'auto-reproche est possible, mais rare).",
+   "justification": "Trop absolu (AC-1, AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0083",
+   "loc": "v1:unite:68#nuance",
+   "chemin": [
+    "texte"
+   ],
+   "avant": "「のに」 peut parler de soi (« j'ai travaillé, et pourtant… ») ; 「くせに」 vise toujours quelqu'un d'autre avec reproche. 「にしては」 part d'un cas concret (初めて, 十月, 小学生) ; 「わりに」 compare un degré (値段, 年) et s'emploie aussi pour des généralités.",
+   "apres": "「のに」 peut parler de soi (« j'ai travaillé, et pourtant… ») ; 「くせに」 vise le plus souvent quelqu'un d'autre, avec reproche (ton familier et péjoratif). 「にしては」 part d'un cas concret (初めて, 十月, 小学生) ; 「わりに」 compare un degré (値段, 年) et s'emploie aussi pour des généralités. Forme : 「にしては」 suit un nom ou un verbe, pas un adjectif (✕ 「簡単{かんたん}なにしては」) ; 「わりに」 accepte aussi les adjectifs : 「簡単なわりに」.",
+   "justification": "Surgénéralisation ; registre et emploi fautif manquants (AC-1, AC-2). Construction de にしては vérifiée le 20/11/2026 (bunpro.jp, japanistry.com ; sources divergentes, avis le plus restrictif retenu).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0084",
+   "loc": "v1:unite:68#prod0",
+   "chemin": [
+    "consigne"
+   ],
+   "avant": "Il le sait, mais il ne me dit rien. (〜くせに)",
+   "apres": "Il est lui-même arrivé en retard, mais il fait des reproches aux autres. (〜くせに)",
+   "justification": "Le modèle copiait l'exemple g68-1#0 (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0085",
+   "loc": "v1:unite:68#prod0",
+   "chemin": [
+    "modele"
+   ],
+   "avant": "知{し}っているくせに、教{おし}えてくれない。",
+   "apres": "自分{じぶん}が遅{おく}れたくせに、人{ひと}に文句{もんく}を言{い}う。",
+   "justification": "Modèle nouveau (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0086",
+   "loc": "v1:quiz:68#0",
+   "chemin": [
+    "options",
+    1
+   ],
+   "avant": "にしては",
+   "apres": "ついでに",
+   "justification": "「料理をしないものだから」 laissait une lecture causale ; 「料理をしないついでに」 est exclu (AC-2, recontrôle).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0087",
+   "loc": "v1:quiz:68#0",
+   "chemin": [
+    "options",
+    2
+   ],
+   "avant": "わりに",
+   "apres": "からには",
+   "justification": "「料理をしないわりに」 est naturel : seconde bonne réponse (AC-1, AC-2, AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0088",
+   "loc": "v1:quiz:68#3",
+   "chemin": [
+    "options",
+    2
+   ],
+   "avant": "にしては",
+   "apres": "ものだから",
+   "justification": "「説明したにしては」 est grammatical : seconde bonne réponse (AC-1, AC-2, AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0089",
+   "loc": "v1:quiz:68#3",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Déception sur sa propre action → 「のに」 ; 「くせに」 ne s'emploie pas pour soi.",
+   "apres": "Regret sur sa propre action → 「のに」 (「くせに」 serait un reproche adressé à autrui).",
+   "justification": "Explication alignée sur g68-1 corrigé (AC-1, AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0090",
+   "loc": "v1:quiz:68#4",
+   "chemin": [
+    "options",
+    2
+   ],
+   "avant": "わりで",
+   "apres": "からには",
+   "justification": "Fragment sans sens « わりで » (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0091",
+   "loc": "v1:ecoute:68",
+   "chemin": [
+    "lines",
+    1,
+    1
+   ],
+   "avant": "うん。値段{ねだん}が安{やす}いのに、量{りょう}が多{おお}いからね。",
+   "apres": "うん。値段{ねだん}が安{やす}いし、量{りょう}も多{おお}いからね。",
+   "justification": "のに (concession) ne convient pas à deux avantages cités comme cause (AC-1).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0092",
+   "loc": "v1:ecoute:68",
+   "chemin": [
+    "qs",
+    0,
+    "w"
+   ],
+   "avant": "« 値段が安いのに、量が多いからね ».",
+   "apres": "« 値段が安いし、量も多いからね ».",
+   "justification": "Citation alignée sur la réplique corrigée (AC-1).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0093",
+   "loc": "v1:grammaire:g70-2",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Conviction forte du locuteur, souvent fondée sur un indice. Style plutôt écrit ; à l'oral on préfère 「きっと〜と思{おも}う」.",
+   "apres": "Conviction forte du locuteur, souvent fondée sur un indice. Style plutôt affirmé, courant aussi à l'oral ; 「きっと〜と思{おも}う」 est plus atténué.",
+   "justification": "Contredisait l'écoute 70 et l'usage oral courant (AC-1).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0094",
+   "loc": "v1:unite:70#nuance",
+   "chemin": [
+    "texte"
+   ],
+   "avant": "Échelle de certitude : 「だろう」 < 「はずだ」 (raisonnement objectif) ≈ 「に違いない」 (conviction) < 「に決まっている」 (évidence affective, orale). Seul 「はず」 s'emploie avec 「なのに」 pour une attente déçue : 「来{く}るはずなのに来{こ}ない」.",
+   "apres": "Degrés de certitude approximatifs : 「だろう」 (supposition) ; 「はずだ」 (déduction fondée sur une raison) ; 「に違{ちが}いない」 (conviction) ; 「に決{き}まっている」 (évidence affective, orale). 「はず」 est la forme la plus courante pour une attente déçue : 「来{く}るはずなのに来{こ}ない」 ; 「だろう」 s'y combine mal.",
+   "justification": "« Seul はず … なのに » faux (に決まっているのに existe) ; échelle simplifiée à tort (AC-1, AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0095",
+   "loc": "v1:quiz:70#1",
+   "chemin": [
+    "options",
+    1
+   ],
+   "avant": "に違{ちが}いだ",
+   "apres": "わけにはいかない",
+   "justification": "Distracteurs inexistants : le quiz testait la morphologie (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0096",
+   "loc": "v1:quiz:70#1",
+   "chemin": [
+    "options",
+    2
+   ],
+   "avant": "のはずがある",
+   "apres": "ものだから",
+   "justification": "Idem (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0097",
+   "loc": "v1:quiz:70#1",
+   "chemin": [
+    "options",
+    3
+   ],
+   "avant": "に決{き}まりだ",
+   "apres": "からには",
+   "justification": "Idem (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0098",
+   "loc": "v1:quiz:70#1",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Forme correcte : 「〜に違いない」.",
+   "apres": "Conviction fondée sur un indice (la vitre brisée) → 「〜に違いない」.",
+   "justification": "Explication alignée sur les nouveaux distracteurs (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0099",
+   "loc": "v1:quiz:70#2",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Seul 「はず」 peut être suivi de 「なのに」.",
+   "apres": "Devant 「なのに」, il faut le nom 「はず」 : 「入れたはずなのに」.",
+   "justification": "« Seul はず » trop absolu (AC-2).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0100",
+   "loc": "v1:lecture:70",
+   "chemin": [
+    "paras",
+    3
+   ],
+   "avant": "そのとき、夫{おっと}がシャツにクリームをつけたまま起{お}きてきた。「夜中{よなか}に仕事{しごと}をしていたら、急{きゅう}に甘{あま}い物{もの}が食{た}べたくなって……」。人{ひと}を疑{うたが}う前{まえ}に、よく確{たし}かめるべきだと思{おも}った。",
+   "apres": "そのとき、夫{おっと}がシャツにクリームをつけたまま起{お}きてきた。「夜中{よなか}に仕事{しごと}をしていたら、急{きゅう}に甘{あま}い物{もの}が食{た}べたくなって……」。人{ひと}を疑{うたが}う前{まえ}に、よく確{たし}かめたほうがいいと思{おも}った。",
+   "justification": "べきだ n’est enseigné qu’en leçon 103 ; ほうがいい (N4) (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0101",
+   "loc": "v1:lecture:70",
+   "chemin": [
+    "qs",
+    2,
+    "o",
+    0
+   ],
+   "avant": "人{ひと}を疑{うたが}う前{まえ}によく確{たし}かめるべきだ",
+   "apres": "人{ひと}を疑{うたが}う前{まえ}によく確{たし}かめたほうがいい",
+   "justification": "Idem (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0102",
+   "loc": "v1:lecture:70",
+   "chemin": [
+    "qs",
+    2,
+    "o",
+    2
+   ],
+   "avant": "夫{おっと}は夜中{よなか}に仕事{しごと}をするべきではない",
+   "apres": "夫{おっと}は夜中{よなか}に仕事{しごと}をしないほうがいい",
+   "justification": "Idem (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0103",
+   "loc": "v1:lecture:70",
+   "chemin": [
+    "qs",
+    2,
+    "w"
+   ],
+   "avant": "Dernière phrase : « 人を疑う前に、よく確かめるべきだ ».",
+   "apres": "Dernière phrase : « 人を疑う前に、よく確かめたほうがいい ».",
+   "justification": "Idem (AC-3).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0104",
+   "loc": "v1:quiz:67#5",
+   "chemin": [
+    "question"
+   ],
+   "avant": "新{あたら}しい店{みせ}がオープンした。（　）、客{きゃく}はあまり来{こ}なかった。",
+   "apres": "新{あたら}しい店{みせ}がオープンした。（　）、その店{みせ}には客{きゃく}があまり来{こ}なかった。",
+   "justification": "La passe à l'aveugle juge 「その結果」 grammatical : sans possesseur, 客 peut désigner la clientèle d'un autre commerce. 「その店には」 rend le résultat contraire à l'attente (AC-1, AC-4).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  },
+  {
+   "id": "C-0105",
+   "loc": "v1:quiz:67#4",
+   "chemin": [
+    "explication"
+   ],
+   "avant": "Suivi d'un ordre → seul 「だから」 convient.",
+   "apres": "Suivi d'un ordre → 「だから」 (à l'oral poli : 「ですから」). 「それで」 et 「その結果」 énoncent une conséquence de fait et ne précèdent pas un ordre ; 「したがって」, écrit et soutenu, ne convient pas au ton familier de 「時間{じかん}がないよ」.",
+   "justification": "« seul だから » trop absolu, comme la nuance 67 corrigée (recontrôle AC-2). Formulation reprise du second contre-contrôle (したがって exclu par le registre, non par la grammaire).",
+   "source": "connaissance du modèle, non sourcée ; passes AC-1 à AC-4 (docs/developpement/controles/CONTROLE-N3-L3-20261120.md)",
+   "autorisation": {
+    "date": "2026-11-19",
+    "citation": "« Tu disposes désormais d'une autonomie complète pour les décisions techniques, pédagogiques, linguistiques, de design et d'organisation. […] Enchaîne sur les lots suivants sans attendre mon intervention. »"
+   }
+  }
+ ]
+}

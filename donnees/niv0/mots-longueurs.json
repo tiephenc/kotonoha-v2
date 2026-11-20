@@ -1,0 +1,771 @@
+{
+ "version": 1,
+ "module": "NIV-0",
+ "titre": "Paires minimales : っ, ー et voyelles longues (mots d’exemple)",
+ "statutContenu": "prepare",
+ "origine": "nouveau",
+ "niveau": null,
+ "statutNiveau": {
+  "valeur": "hors-niveau",
+  "registre": true,
+  "note": "Contenu nouveau, sans niveau JLPT : jamais présenté comme certifié ni comme d’un niveau (décision D2, 18/11/2026)."
+ },
+ "relecture": "à relire (AC-2) : chaque paire, chaque sens français et chaque romanisation sont une proposition non relue par la linguiste",
+ "romanisation": "Hepburn modifiée (révisée), macron pour les voyelles longues (décision D1, 18/11/2026)",
+ "regles": "Distracteurs : la paire minimale et des voisins plausibles. Toute forme correcte possible (`equivalentes` : autre graphie romanisée du même kana ; `kanaEquivalents` : autre graphie kana de la même lecture) est soit la clé, soit absente des options.",
+ "paires": [
+  {
+   "id": "niv0:paire:kite-kitte",
+   "theme": "sokuon",
+   "etape": "hira-sokuon",
+   "ecriture": "hiragana",
+   "difference": "っ : tenue de la consonne",
+   "mots": [
+    {
+     "id": "niv0:mot:kite",
+     "kana": "きて",
+     "romanisation": "kite",
+     "sens": "viens ; en venant (来て)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "kitte",
+      "kiite",
+      "kitē"
+     ],
+     "distracteursKana": [
+      "きって",
+      "きいて",
+      "きてい"
+     ],
+     "kanaEquivalents": []
+    },
+    {
+     "id": "niv0:mot:kitte",
+     "kana": "きって",
+     "romanisation": "kitte",
+     "sens": "timbre (切手)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "kite",
+      "kitē",
+      "kiite"
+     ],
+     "distracteursKana": [
+      "きて",
+      "きいて",
+      "きっと"
+     ],
+     "kanaEquivalents": []
+    }
+   ],
+   "origine": "nouveau",
+   "niveau": null,
+   "statutNiveau": "hors-niveau",
+   "relecture": "à relire (AC-2)"
+  },
+  {
+   "id": "niv0:paire:oto-otto",
+   "theme": "sokuon",
+   "etape": "hira-sokuon",
+   "ecriture": "hiragana",
+   "difference": "っ : tenue de la consonne",
+   "mots": [
+    {
+     "id": "niv0:mot:oto",
+     "kana": "おと",
+     "romanisation": "oto",
+     "sens": "bruit, son (音)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "otto",
+      "ōto",
+      "otō"
+     ],
+     "distracteursKana": [
+      "おっと",
+      "おおと",
+      "おとお"
+     ],
+     "kanaEquivalents": []
+    },
+    {
+     "id": "niv0:mot:otto",
+     "kana": "おっと",
+     "romanisation": "otto",
+     "sens": "mari (夫)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "oto",
+      "ōto",
+      "ottō"
+     ],
+     "distracteursKana": [
+      "おと",
+      "おおと",
+      "おっこ"
+     ],
+     "kanaEquivalents": []
+    }
+   ],
+   "origine": "nouveau",
+   "niveau": null,
+   "statutNiveau": "hors-niveau",
+   "relecture": "à relire (AC-2)"
+  },
+  {
+   "id": "niv0:paire:saka-sakka",
+   "theme": "sokuon",
+   "etape": "hira-sokuon",
+   "ecriture": "hiragana",
+   "difference": "っ : tenue de la consonne",
+   "mots": [
+    {
+     "id": "niv0:mot:saka",
+     "kana": "さか",
+     "romanisation": "saka",
+     "sens": "pente (坂)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "sakka",
+      "sāka",
+      "sakā"
+     ],
+     "distracteursKana": [
+      "さっか",
+      "さあか",
+      "さかあ"
+     ],
+     "kanaEquivalents": []
+    },
+    {
+     "id": "niv0:mot:sakka",
+     "kana": "さっか",
+     "romanisation": "sakka",
+     "sens": "écrivain, auteur (作家)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "saka",
+      "sāka",
+      "sakā"
+     ],
+     "distracteursKana": [
+      "さか",
+      "さあか",
+      "さかあ"
+     ],
+     "kanaEquivalents": []
+    }
+   ],
+   "origine": "nouveau",
+   "niveau": null,
+   "statutNiveau": "hors-niveau",
+   "relecture": "à relire (AC-2)"
+  },
+  {
+   "id": "niv0:paire:kita-kitta",
+   "theme": "sokuon",
+   "etape": "hira-sokuon",
+   "ecriture": "hiragana",
+   "difference": "っ : tenue de la consonne",
+   "mots": [
+    {
+     "id": "niv0:mot:kita",
+     "kana": "きた",
+     "romanisation": "kita",
+     "sens": "nord (北) ; est venu (来た)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "kitta",
+      "kiita",
+      "kitā"
+     ],
+     "distracteursKana": [
+      "きった",
+      "きいた",
+      "きたあ"
+     ],
+     "kanaEquivalents": []
+    },
+    {
+     "id": "niv0:mot:kitta",
+     "kana": "きった",
+     "romanisation": "kitta",
+     "sens": "a coupé (切った)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "kita",
+      "kiita",
+      "kitā"
+     ],
+     "distracteursKana": [
+      "きた",
+      "きいた",
+      "きったあ"
+     ],
+     "kanaEquivalents": []
+    }
+   ],
+   "origine": "nouveau",
+   "niveau": null,
+   "statutNiveau": "hors-niveau",
+   "relecture": "à relire (AC-2)"
+  },
+  {
+   "id": "niv0:paire:kata-katta",
+   "theme": "sokuon",
+   "etape": "hira-sokuon",
+   "ecriture": "hiragana",
+   "difference": "っ : tenue de la consonne",
+   "mots": [
+    {
+     "id": "niv0:mot:kata",
+     "kana": "かた",
+     "romanisation": "kata",
+     "sens": "épaule (肩) ; modèle, moule (型)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "katta",
+      "kāta",
+      "katā"
+     ],
+     "distracteursKana": [
+      "かった",
+      "かあた",
+      "かたあ"
+     ],
+     "kanaEquivalents": []
+    },
+    {
+     "id": "niv0:mot:katta",
+     "kana": "かった",
+     "romanisation": "katta",
+     "sens": "a gagné (勝った), a acheté (買った)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "kata",
+      "kāta",
+      "katā"
+     ],
+     "distracteursKana": [
+      "かた",
+      "かあた",
+      "かったあ"
+     ],
+     "kanaEquivalents": []
+    }
+   ],
+   "origine": "nouveau",
+   "niveau": null,
+   "statutNiveau": "hors-niveau",
+   "relecture": "à relire (AC-2)"
+  },
+  {
+   "id": "niv0:paire:obasan-obaasan",
+   "theme": "voyelle-longue",
+   "etape": "hira-voyelles-longues",
+   "ecriture": "hiragana",
+   "difference": "あ allongé : ā",
+   "mots": [
+    {
+     "id": "niv0:mot:obasan",
+     "kana": "おばさん",
+     "romanisation": "obasan",
+     "sens": "tante ; dame d’âge mûr (おばさん)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "obāsan",
+      "obasān",
+      "ōbasan"
+     ],
+     "distracteursKana": [
+      "おばあさん",
+      "おおばさん",
+      "おばさあん"
+     ],
+     "kanaEquivalents": []
+    },
+    {
+     "id": "niv0:mot:obaasan",
+     "kana": "おばあさん",
+     "romanisation": "obāsan",
+     "sens": "grand-mère ; vieille dame",
+     "equivalentes": [
+      "obaasan"
+     ],
+     "distracteursLecture": [
+      "obasan",
+      "ōbasan",
+      "obasān"
+     ],
+     "distracteursKana": [
+      "おばさん",
+      "おおばさん",
+      "おばさあん"
+     ],
+     "kanaEquivalents": []
+    }
+   ],
+   "origine": "nouveau",
+   "niveau": null,
+   "statutNiveau": "hors-niveau",
+   "relecture": "à relire (AC-2)"
+  },
+  {
+   "id": "niv0:paire:ojisan-ojiisan",
+   "theme": "voyelle-longue",
+   "etape": "hira-voyelles-longues",
+   "ecriture": "hiragana",
+   "difference": "い + い : ii",
+   "mots": [
+    {
+     "id": "niv0:mot:ojisan",
+     "kana": "おじさん",
+     "romanisation": "ojisan",
+     "sens": "oncle ; monsieur d’âge mûr",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "ojiisan",
+      "ojisān",
+      "ōjisan"
+     ],
+     "distracteursKana": [
+      "おじいさん",
+      "おおじさん",
+      "おじさあん"
+     ],
+     "kanaEquivalents": []
+    },
+    {
+     "id": "niv0:mot:ojiisan",
+     "kana": "おじいさん",
+     "romanisation": "ojiisan",
+     "sens": "grand-père ; vieux monsieur",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "ojisan",
+      "ōjisan",
+      "ojisān"
+     ],
+     "distracteursKana": [
+      "おじさん",
+      "おおじさん",
+      "おじさあん"
+     ],
+     "kanaEquivalents": []
+    }
+   ],
+   "origine": "nouveau",
+   "niveau": null,
+   "statutNiveau": "hors-niveau",
+   "relecture": "à relire (AC-2)"
+  },
+  {
+   "id": "niv0:paire:tori-toori",
+   "theme": "voyelle-longue",
+   "etape": "hira-voyelles-longues",
+   "ecriture": "hiragana",
+   "difference": "お allongé : ō (おお)",
+   "mots": [
+    {
+     "id": "niv0:mot:tori",
+     "kana": "とり",
+     "romanisation": "tori",
+     "sens": "oiseau (鳥)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "tōri",
+      "torii",
+      "ōtori"
+     ],
+     "distracteursKana": [
+      "とおり",
+      "おとり",
+      "とりい"
+     ],
+     "kanaEquivalents": []
+    },
+    {
+     "id": "niv0:mot:toori",
+     "kana": "とおり",
+     "romanisation": "tōri",
+     "sens": "rue, voie (通り)",
+     "equivalentes": [
+      "toori"
+     ],
+     "distracteursLecture": [
+      "tori",
+      "torii",
+      "ōtori"
+     ],
+     "distracteursKana": [
+      "とり",
+      "おとり",
+      "とりい"
+     ],
+     "kanaEquivalents": [
+      "とうり"
+     ]
+    }
+   ],
+   "origine": "nouveau",
+   "niveau": null,
+   "statutNiveau": "hors-niveau",
+   "relecture": "à relire (AC-2)"
+  },
+  {
+   "id": "niv0:paire:toru-tooru",
+   "theme": "voyelle-longue",
+   "etape": "hira-voyelles-longues",
+   "ecriture": "hiragana",
+   "difference": "お allongé : ō (おお)",
+   "mots": [
+    {
+     "id": "niv0:mot:toru",
+     "kana": "とる",
+     "romanisation": "toru",
+     "sens": "prendre (取る)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "tōru",
+      "torū",
+      "ōtoru"
+     ],
+     "distracteursKana": [
+      "とおる",
+      "おとる",
+      "とるう"
+     ],
+     "kanaEquivalents": []
+    },
+    {
+     "id": "niv0:mot:tooru",
+     "kana": "とおる",
+     "romanisation": "tōru",
+     "sens": "passer, traverser (通る)",
+     "equivalentes": [
+      "tooru"
+     ],
+     "distracteursLecture": [
+      "toru",
+      "torū",
+      "ōtoru"
+     ],
+     "distracteursKana": [
+      "とる",
+      "おとる",
+      "とるう"
+     ],
+     "kanaEquivalents": [
+      "とうる"
+     ]
+    }
+   ],
+   "origine": "nouveau",
+   "niveau": null,
+   "statutNiveau": "hors-niveau",
+   "relecture": "à relire (AC-2)"
+  },
+  {
+   "id": "niv0:paire:yuki-yuuki",
+   "theme": "voyelle-longue",
+   "etape": "hira-voyelles-longues",
+   "ecriture": "hiragana",
+   "difference": "う allongé : ū",
+   "mots": [
+    {
+     "id": "niv0:mot:yuki",
+     "kana": "ゆき",
+     "romanisation": "yuki",
+     "sens": "neige (雪)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "yūki",
+      "yukii",
+      "yūkii"
+     ],
+     "distracteursKana": [
+      "ゆうき",
+      "ゆきい",
+      "ゆうきい"
+     ],
+     "kanaEquivalents": []
+    },
+    {
+     "id": "niv0:mot:yuuki",
+     "kana": "ゆうき",
+     "romanisation": "yūki",
+     "sens": "courage (勇気)",
+     "equivalentes": [
+      "yuuki"
+     ],
+     "distracteursLecture": [
+      "yuki",
+      "yukii",
+      "yūkii"
+     ],
+     "distracteursKana": [
+      "ゆき",
+      "ゆきい",
+      "ゆうきい"
+     ],
+     "kanaEquivalents": []
+    }
+   ],
+   "origine": "nouveau",
+   "niveau": null,
+   "statutNiveau": "hors-niveau",
+   "relecture": "à relire (AC-2)"
+  },
+  {
+   "id": "niv0:paire:suji-suuji",
+   "theme": "voyelle-longue",
+   "etape": "hira-voyelles-longues",
+   "ecriture": "hiragana",
+   "difference": "う allongé : ū",
+   "mots": [
+    {
+     "id": "niv0:mot:suji",
+     "kana": "すじ",
+     "romanisation": "suji",
+     "sens": "ligne, muscle, tendon (筋)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "sūji",
+      "sujii",
+      "sūjii"
+     ],
+     "distracteursKana": [
+      "すうじ",
+      "すじい",
+      "すうじい"
+     ],
+     "kanaEquivalents": []
+    },
+    {
+     "id": "niv0:mot:suuji",
+     "kana": "すうじ",
+     "romanisation": "sūji",
+     "sens": "chiffre, nombre (数字)",
+     "equivalentes": [
+      "suuji"
+     ],
+     "distracteursLecture": [
+      "suji",
+      "sujii",
+      "sūjii"
+     ],
+     "distracteursKana": [
+      "すじ",
+      "すじい",
+      "すうじい"
+     ],
+     "kanaEquivalents": []
+    }
+   ],
+   "origine": "nouveau",
+   "niveau": null,
+   "statutNiveau": "hors-niveau",
+   "relecture": "à relire (AC-2)"
+  },
+  {
+   "id": "niv0:paire:ne-nee",
+   "theme": "voyelle-longue",
+   "etape": "hira-voyelles-longues",
+   "ecriture": "hiragana",
+   "difference": "え allongé : ē (ええ)",
+   "mots": [
+    {
+     "id": "niv0:mot:ne",
+     "kana": "ね",
+     "romanisation": "ne",
+     "sens": "particule : n’est-ce pas ?",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "nē",
+      "nu",
+      "re"
+     ],
+     "distracteursKana": [
+      "ねえ",
+      "ぬ",
+      "れ"
+     ],
+     "kanaEquivalents": []
+    },
+    {
+     "id": "niv0:mot:nee",
+     "kana": "ねえ",
+     "romanisation": "nē",
+     "sens": "interjection : dis, dis donc",
+     "equivalentes": [
+      "nee"
+     ],
+     "distracteursLecture": [
+      "ne",
+      "nii",
+      "nū"
+     ],
+     "distracteursKana": [
+      "ね",
+      "にい",
+      "ぬう"
+     ],
+     "kanaEquivalents": []
+    }
+   ],
+   "origine": "nouveau",
+   "niveau": null,
+   "statutNiveau": "hors-niveau",
+   "relecture": "à relire (AC-2)"
+  },
+  {
+   "id": "niv0:paire:biru-biiru",
+   "theme": "voyelle-longue",
+   "etape": "kata-choon",
+   "ecriture": "katakana",
+   "difference": "ー : allonge la voyelle précédente",
+   "mots": [
+    {
+     "id": "niv0:mot:biru",
+     "kana": "ビル",
+     "romanisation": "biru",
+     "sens": "immeuble (ビル)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "bīru",
+      "birū",
+      "bīrū"
+     ],
+     "distracteursKana": [
+      "ビール",
+      "ビルー",
+      "ビイル"
+     ],
+     "kanaEquivalents": []
+    },
+    {
+     "id": "niv0:mot:biiru",
+     "kana": "ビール",
+     "romanisation": "bīru",
+     "sens": "bière (ビール)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "biru",
+      "birū",
+      "bīrū"
+     ],
+     "distracteursKana": [
+      "ビル",
+      "ビルー",
+      "ビールー"
+     ],
+     "kanaEquivalents": []
+    }
+   ],
+   "origine": "nouveau",
+   "niveau": null,
+   "statutNiveau": "hors-niveau",
+   "relecture": "à relire (AC-2)"
+  },
+  {
+   "id": "niv0:paire:beru-beeru",
+   "theme": "voyelle-longue",
+   "etape": "kata-choon",
+   "ecriture": "katakana",
+   "difference": "ー : allonge la voyelle précédente",
+   "mots": [
+    {
+     "id": "niv0:mot:beru",
+     "kana": "ベル",
+     "romanisation": "beru",
+     "sens": "sonnette, cloche (ベル)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "bēru",
+      "berū",
+      "bērū"
+     ],
+     "distracteursKana": [
+      "ベール",
+      "ベルー",
+      "ビル"
+     ],
+     "kanaEquivalents": []
+    },
+    {
+     "id": "niv0:mot:beeru",
+     "kana": "ベール",
+     "romanisation": "bēru",
+     "sens": "voile (ベール)",
+     "equivalentes": [
+      "beeru"
+     ],
+     "distracteursLecture": [
+      "beru",
+      "berū",
+      "bērū"
+     ],
+     "distracteursKana": [
+      "ベル",
+      "ベルー",
+      "ビール"
+     ],
+     "kanaEquivalents": []
+    }
+   ],
+   "origine": "nouveau",
+   "niveau": null,
+   "statutNiveau": "hors-niveau",
+   "relecture": "à relire (AC-2)"
+  },
+  {
+   "id": "niv0:paire:bagu-baggu",
+   "theme": "sokuon",
+   "etape": "kata-sokuon",
+   "ecriture": "katakana",
+   "difference": "ッ : tenue de la consonne",
+   "mots": [
+    {
+     "id": "niv0:mot:bagu",
+     "kana": "バグ",
+     "romanisation": "bagu",
+     "sens": "bogue informatique (バグ)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "baggu",
+      "bāgu",
+      "bagū"
+     ],
+     "distracteursKana": [
+      "バッグ",
+      "バーグ",
+      "バグー"
+     ],
+     "kanaEquivalents": []
+    },
+    {
+     "id": "niv0:mot:baggu",
+     "kana": "バッグ",
+     "romanisation": "baggu",
+     "sens": "sac (バッグ)",
+     "equivalentes": [],
+     "distracteursLecture": [
+      "bagu",
+      "bāgu",
+      "bagū"
+     ],
+     "distracteursKana": [
+      "バグ",
+      "バーグ",
+      "バッグー"
+     ],
+     "kanaEquivalents": []
+    }
+   ],
+   "origine": "nouveau",
+   "niveau": null,
+   "statutNiveau": "hors-niveau",
+   "relecture": "à relire (AC-2)"
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Diagnostic de la persistance · KOTONOHA 2</title>
+<link rel="stylesheet" href="src/ui/diagnostic.css">
+<script type="module" src="src/ui/diagnostic.js"></script>
+</head>
+<body>
+<header class="bandeau">
+  <p class="marque"><span lang="ja">言の葉</span> KOTONOHA 2</p>
+  <h1 tabindex="-1">Diagnostic de la persistance</h1>
+  <p class="avert">Écran de développement (PH-1). Les données créées ici sont des données d’essai, enregistrées sur cet appareil seulement ; elles sont séparées de celles de KOTONOHA V1.</p>
+</header>
+<main>
+  <div id="alerte" class="alerte" role="alert" hidden>
+    <p id="alerte-texte"></p>
+    <p class="actions"><button type="button" id="b-tampon">Exporter les actions non enregistrées</button> <button type="button" id="b-reessayer" class="sec">Réessayer</button> <button type="button" id="b-recharger" class="sec" hidden>Recharger la page</button></p>
+  </div>
+  <section aria-labelledby="t-base">
+    <h2 id="t-base">Base locale</h2>
+    <dl id="etat" class="etat"></dl>
+  </section>
+  <section aria-labelledby="t-essais">
+    <h2 id="t-essais">Opérations d’essai</h2>
+    <p class="actions">
+      <button type="button" id="b-reponse">Ajouter une réponse d’essai</button>
+      <button type="button" id="b-pref" class="sec">Changer une préférence d’essai</button>
+      <button type="button" id="b-texte" class="sec">Ajouter un texte d’essai</button>
+      <button type="button" id="b-instantane" class="sec">Créer un instantané</button>
+    </p>
+  </section>
+  <section aria-labelledby="t-sauv">
+    <h2 id="t-sauv">Sauvegarde et restauration</h2>
+    <p class="actions">
+      <button type="button" id="b-sauver">Créer une sauvegarde vérifiée</button>
+      <label class="bouton sec" for="f-restaurer">Restaurer depuis un fichier</label>
+      <input type="file" id="f-restaurer" accept="application/json,.json" hidden>
+      <button type="button" id="b-persist" class="sec">Demander le stockage persistant</button>
+    </p>
+    <div id="apercu" class="apercu" hidden>
+      <p id="apercu-texte"></p>
+      <p class="actions"><button type="button" id="b-confirmer">Ajouter ces données</button> <button type="button" id="b-annuler" class="sec">Annuler</button></p>
+    </div>
+    <p id="message" role="status" aria-live="polite"></p>
+  </section>
+</main>
+</body>
+</html>

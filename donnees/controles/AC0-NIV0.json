@@ -1,0 +1,208 @@
+{
+ "module": "NIV-0",
+ "nature": "contrôle automatique AC-0 ; ni relecture (AC-2, AC-3) ni certification",
+ "fichier": "v2/donnees/niv0/kana.json",
+ "sha256": "2b29c45ad89a8abc5a72ecb5d605247fb8e033c1b735e39e78de245ecc346b24",
+ "empreintes": {
+  "v2/donnees/niv0/kana.json": "2b29c45ad89a8abc5a72ecb5d605247fb8e033c1b735e39e78de245ecc346b24",
+  "v2/donnees/niv0/mots-longueurs.json": "2d4c7c1976b1a97182937ef1369442b02d83c5afc323d2962df45bbcc0d1c3b6"
+ },
+ "ok": true,
+ "controles": {
+  "blocs-unicode": {
+   "ok": true,
+   "detail": "hiragana U+3040-309F, katakana U+30A0-30FF, NFC, sans diacritique combinant",
+   "ecarts": []
+  },
+  "correspondance-hira-kata": {
+   "ok": true,
+   "detail": "117 hiragana ↔ 117 katakana par décalage 0x60 ; ー seul sans paire",
+   "ecarts": []
+  },
+  "exhaustivite": {
+   "ok": true,
+   "detail": "46 gojūon + 20 dakuten + 5 handakuten + 36 yōon + 10 petits, en hiragana et en katakana, plus ー",
+   "ecarts": []
+  },
+  "identifiants-uniques": {
+   "ok": true,
+   "detail": "préfixe niv0:, forme niv0:(hira|kata):<clé>, aucun doublon",
+   "ecarts": []
+  },
+  "collision-bloques": {
+   "ok": true,
+   "detail": "1890 identifiants bloqués vérifiés (verifierCollisions)",
+   "ecarts": []
+  },
+  "champs-et-niveau": {
+   "ok": true,
+   "detail": "aucun niveau N5-N1 ; statut hors-niveau inscrit dans STATUSES ; romanisation, lecture française, rangée, droits présents",
+   "ecarts": []
+  },
+  "points-discutables": {
+   "ok": true,
+   "detail": "chaque point de romanisation discutable est documenté ; les homophones sont déclarés `secondaire`",
+   "ecarts": []
+  },
+  "types-schema": {
+   "ok": true,
+   "detail": "chaque type utilisé est déclaré dans `types`, dont `allongement`",
+   "ecarts": []
+  },
+  "incertains-ac2": {
+   "ok": true,
+   "detail": "ー : type déclaré et lecture « allonge la voyelle précédente (durée double) » ; っ/ッ : « tient la consonne suivante pendant une mora entière : きって = kit-té », sans « pause »",
+   "ecarts": []
+  },
+  "variantes-systemes": {
+   "ok": true,
+   "detail": "chaque variante est rattachée à Kunrei-shiki, Nihon-shiki ou saisie au clavier ; di, du, dya… jamais Kunrei-shiki",
+   "ecarts": []
+  },
+  "parcours-ordre-groupes": {
+   "ok": true,
+   "detail": "[Hyp] `ordre` 1..N, groupes de 5 signes au plus, confondables séparés, dakuten après leur base, katakana après leur paire, hors parcours déclarés",
+   "ecarts": []
+  }
+ },
+ "effectifs": {
+  "total": 235,
+  "hiragana": 117,
+  "katakana": 118,
+  "parType": {
+   "gojuon": 46,
+   "dakuten": 20,
+   "handakuten": 5,
+   "yoon": 36,
+   "petit": 10
+  },
+  "points": 15
+ },
+ "banque": {
+  "lecture": {
+   "effectif": 208,
+   "ok": true,
+   "positions": {
+    "comptes": [
+     52,
+     52,
+     52,
+     52
+    ],
+    "parts": [
+     25,
+     25,
+     25,
+     25
+    ],
+    "cible": 25,
+    "tolerance": 5,
+    "ecartMax": 0,
+    "equilibre": true
+   },
+   "echecs": []
+  },
+  "kana": {
+   "effectif": 202,
+   "ok": true,
+   "positions": {
+    "comptes": [
+     51,
+     51,
+     50,
+     50
+    ],
+    "parts": [
+     25.247524752475247,
+     25.247524752475247,
+     24.752475247524753,
+     24.752475247524753
+    ],
+    "cible": 25,
+    "tolerance": 5,
+    "ecartMax": 0.24752475247524686,
+    "equilibre": true
+   },
+   "echecs": []
+  }
+ },
+ "mots": {
+  "fichier": "v2/donnees/niv0/mots-longueurs.json",
+  "sha256DonneesMots": "2d4c7c1976b1a97182937ef1369442b02d83c5afc323d2962df45bbcc0d1c3b6",
+  "ok": true,
+  "controles": {
+   "paires-structure": {
+    "ok": true,
+    "detail": "10 à 20 paires ; origine « nouveau », niveau nul, hors-niveau, « à relire (AC-2) » ; identifiants uniques et non bloqués",
+    "ecarts": []
+   },
+   "paires-minimales": {
+    "ok": true,
+    "detail": "chaque paire ne diffère que par la longueur d’une voyelle ou la tenue d’une consonne, un seul mot portant la marque",
+    "ecarts": []
+   },
+   "romanisation-hepburn": {
+    "ok": true,
+    "detail": "romanisation Hepburn à macron recalculée indépendamment depuis le kana ; autres graphies romanisées du même kana (aa, uu, ee, oo ; ou seulement pour おう) déclarées ; ī seulement pour ー ; ii accepté",
+    "ecarts": []
+   },
+   "mots-introduits": {
+    "ok": true,
+    "detail": "chaque kana d’un mot d’exemple est déjà introduit à l’étape de sa paire",
+    "ecarts": []
+   }
+  },
+  "effectifs": {
+   "paires": 15,
+   "mots": 30
+  },
+  "banque": {
+   "lecture": {
+    "effectif": 30,
+    "ok": true,
+    "positions": {
+     "comptes": [
+      8,
+      8,
+      7,
+      7
+     ],
+     "parts": [
+      26.666666666666668,
+      26.666666666666668,
+      23.333333333333332,
+      23.333333333333332
+     ],
+     "cible": 25,
+     "tolerance": 5,
+     "ecartMax": 1.6666666666666679,
+     "equilibre": true
+    },
+    "echecs": []
+   },
+   "kana": {
+    "effectif": 30,
+    "ok": true,
+    "positions": {
+     "comptes": [
+      8,
+      8,
+      7,
+      7
+     ],
+     "parts": [
+      26.666666666666668,
+      26.666666666666668,
+      23.333333333333332,
+      23.333333333333332
+     ],
+     "cible": 25,
+     "tolerance": 5,
+     "ecartMax": 1.6666666666666679,
+     "equilibre": true
+    },
+    "echecs": []
+   }
+  }
+ }
+}

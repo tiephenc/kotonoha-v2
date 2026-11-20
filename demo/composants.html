@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design system · C-BTN et C-FLD</title>
+<link rel="stylesheet" href="../src/ui/jetons.css">
+<link rel="stylesheet" href="../src/ui/composants.css">
+<link rel="stylesheet" href="demo.css">
+<script src="../src/ui/composants.js" defer></script>
+<script src="demo.js" defer></script>
+</head>
+<body>
+<main>
+  <h1>C-BTN et C-FLD</h1>
+  <section aria-labelledby="t-btn">
+    <h2 id="t-btn">Boutons</h2>
+    <div class="rangee barre-actions">
+      <button id="b-principal" class="btn btn-principal" type="button">Commencer la séance</button>
+      <button id="b-secondaire" class="btn btn-secondaire" type="button">Réviser plus tard</button>
+      <button id="b-discret" class="btn btn-discret" type="button">Voir l’explication</button>
+      <button id="b-outil" class="btn btn-outil" type="button" aria-label="Écouter la phrase">♪</button>
+    </div>
+    <div class="rangee">
+      <button id="b-desactive" class="btn btn-principal" type="button" aria-disabled="true" aria-describedby="b-desactive-raison">Envoyer</button>
+      <span id="b-desactive-raison">Répondez d’abord à la question.</span>
+    </div>
+    <p>Actions déclenchées : <output id="compteur">0</output></p>
+    <div class="surface-teinte rangee">
+      <span>Séance du jour</span>
+      <button id="b-teinte" class="btn btn-teinte" type="button">Ouvrir</button>
+    </div>
+  </section>
+  <section aria-labelledby="t-fld">
+    <h2 id="t-fld">Champs</h2>
+    <form id="f-reponse" class="fld" novalidate>
+      <label class="fld-label" for="reponse">Lecture en kana</label>
+      <p id="reponse-aide" class="fld-aide">Écrivez la lecture de 準備.</p>
+      <input id="reponse" class="fld-input" type="text" aria-describedby="reponse-aide">
+    </form>
+    <p>Réponse soumise : <output id="soumis">—</output></p>
+    <div class="fld">
+      <label class="fld-label" for="lecture-seule">Lecture seule</label>
+      <input id="lecture-seule" class="fld-input" type="text" value="じゅんび" readonly>
+    </div>
+  </section>
+</main>
+</body>
+</html>

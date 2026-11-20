@@ -1,0 +1,66 @@
+/* KOTONOHA 2.0 · design system — lot 1, composants de base : C-BTN (06 §4.1) et C-FLD (06 §4.3) ;
+   outil rond révisé au lot 2 (zone de 44 px distincte du cercle de 38 px).
+   N'emploie que des jetons sémantiques (jetons.css) ; focus unique adapté à la surface (06 §5.2, D-84). */
+
+:root {
+  --focus-color: var(--color-focus); --shadow-action: 0 10px 18px -12px var(--color-action);
+  /* Outil rond (décision du 15/11/2026) : zone interactive de 44 × 44 px partout, cercle visible de 38 px. */
+  --btn-outil-zone: 44px; --btn-outil-visuel: 38px;
+}
+/* Conteneurs teints : l'anneau prend la couleur de réserve (06 §5.2). */
+.surface-teinte { background: var(--color-dye-noren); color: var(--color-on-dye); --focus-color: var(--color-focus-on-dye); }
+.surface-action { background: var(--color-action); color: var(--color-on-action); --focus-color: var(--color-focus-on-action); }
+
+:where(.btn, .fld-input):focus-visible { outline: var(--border-focus) solid var(--focus-color); outline-offset: 2px; }
+
+/* ---- C-BTN ---- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+  min-height: 40px; min-width: 40px; padding: 0 var(--space-5);
+  font: var(--type-meta); border-radius: var(--radius-pli); border: var(--border-field) solid transparent;
+  cursor: pointer; text-decoration: none;
+  transition: transform var(--dur-fast) var(--ease), filter var(--dur-fast) var(--ease);
+}
+@media (pointer: coarse), (max-width: 640px) { .btn { min-height: 44px; min-width: 44px; } }
+.btn-principal { background: var(--color-action); color: var(--color-on-action); box-shadow: var(--shadow-action); }
+.btn-secondaire { background: transparent; color: var(--color-text); border-color: var(--color-text); }
+.btn-discret { background: transparent; color: var(--color-link); padding: 0 var(--space-3); }
+.btn-discret:hover { text-decoration: underline; }
+/* Outil rond : le bouton (transparent, sans bordure) est la zone interactive ; le cercle visible est un pseudo-élément
+   centré, sans effet sur la cible ni sur le nom accessible. L'anneau de focus suit la zone (44 px), décalé de 2 px. */
+.btn-outil { position: relative; width: var(--btn-outil-zone); min-width: var(--btn-outil-zone); height: var(--btn-outil-zone); min-height: var(--btn-outil-zone); padding: 0; border: 0; border-radius: var(--radius-round); background: transparent; color: var(--color-text); }
+.btn-outil::after { content: ""; position: absolute; top: 50%; left: 50%; box-sizing: border-box; width: var(--btn-outil-visuel); height: var(--btn-outil-visuel); margin: calc(var(--btn-outil-visuel) / -2) 0 0 calc(var(--btn-outil-visuel) / -2); border: var(--border-field) solid var(--color-border-strong); border-radius: var(--radius-round); pointer-events: none; }
+.btn-outil > svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.btn-teinte { background: transparent; color: var(--color-on-dye); border-color: var(--color-on-dye); }
+.btn:hover:not([aria-disabled="true"]) { filter: brightness(1.08); transform: translateY(-1px); }
+.btn:active:not([aria-disabled="true"]) { transform: translateY(1px) scale(.985); }
+/* Désactivé : jamais seulement grisé (opacité + curseur + aria-disabled ; raison en texte à côté si besoin). */
+.btn[aria-disabled="true"] { opacity: var(--opacity-disabled); cursor: not-allowed; box-shadow: none; }
+/* Chargement : libellé conservé, indicateur à gauche (trait qui avance), aria-busy. */
+.btn[aria-busy="true"]::before { content: ""; width: 1em; height: 2px; background: currentColor; animation: btn-avance var(--dur-slow) var(--ease) infinite alternate; }
+@keyframes btn-avance { from { transform: scaleX(.2); transform-origin: left; } to { transform: scaleX(1); transform-origin: left; } }
+@media (prefers-reduced-motion: reduce) { .btn[aria-busy="true"]::before { animation: none; } }
+/* Au toucher : 44 px (06 §4.1, adaptation) ; pleine largeur dans la barre d'actions, sauf l'outil (déjà 44 px partout). */
+@media (pointer: coarse), (max-width: 640px) {
+  .barre-actions .btn:not(.btn-outil) { width: 100%; }
+}
+
+/* ---- C-FLD ---- */
+.fld { display: grid; gap: var(--space-2); max-width: var(--measure-fr); }
+.fld-label { font: var(--type-label-info); color: var(--color-text); }
+.fld-aide { font: var(--type-meta); font-weight: 400; color: var(--color-text-2); }
+.fld-input {
+  font: var(--type-body); color: var(--color-text); background: var(--color-surface);
+  border: var(--border-field) solid var(--color-field-border); border-radius: var(--radius-sm);
+  min-height: 44px; padding: 0 var(--space-3); width: 100%; box-sizing: border-box;
+}
+textarea.fld-input { min-height: 7em; padding: var(--space-3); }
+.fld-input[lang="ja"] { font: var(--type-body-ja); }
+.fld-input:hover:not(:disabled):not([readonly]) { border-color: var(--color-text); }
+.fld-input:disabled { opacity: var(--opacity-disabled); cursor: not-allowed; }
+.fld-input[readonly] { background: var(--color-surface-2); }
+/* Invalide : bordure + icône + message (trois signaux), message lié par aria-describedby. */
+.fld-input[aria-invalid="true"] { border-color: var(--color-error); }
+.fld-erreur { font: var(--type-meta); color: var(--color-error); display: flex; gap: var(--space-2); }
+.fld-erreur[hidden] { display: none; }
+.fld-erreur-icone { font-weight: 700; } /* icône masquée aux technologies d'assistance : le texte porte l'erreur */

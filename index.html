@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<!-- Politique de sécurité du contenu : tout vient de l'origine ; aucun script ni style inline ; réseau limité aux services Firebase prévus
+     (infra/remote-firestore.js : Firestore ; infra/auth.js : identitytoolkit et securetoken). `frame-ancestors` n'existe pas en balise meta : seul un en-tête HTTP
+     du serveur d'hébergement peut le poser (GitHub Pages n'en offre pas), voir LISEZMOI §11. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="KOTONOHA 2 : préparation gratuite au JLPT en français (niveau N4).">
+<title>KOTONOHA · préparation au JLPT</title>
+<link rel="stylesheet" href="src/ui/jetons.css">
+<link rel="stylesheet" href="src/ui/composants.css">
+<link rel="stylesheet" href="src/ui/composants-2.css">
+<link rel="stylesheet" href="src/ui/focus.css">
+<link rel="stylesheet" href="src/ui/pause.css">
+<link rel="stylesheet" href="src/ui/app/app.css">
+<script src="src/ui/composants.js" defer></script>
+<script src="src/ui/composants-2.js" defer></script>
+<script type="module" src="src/ui/app/amorce.js"></script>
+</head>
+<body>
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+<header class="entete surface-teinte">
+  <div class="entete-rangee">
+    <p class="marque"><span lang="ja">言の葉</span> KOTONOHA</p>
+    <nav aria-label="Navigation principale">
+      <ul id="nav-principale" class="nav">
+        <li><a href="#/" data-vue="accueil">Accueil</a></li>
+        <li><a href="#/parcours" data-vue="parcours">Parcours</a></li>
+        <li><a href="#/kana" data-vue="kana">Kana</a></li>
+        <li><a href="#/revision" data-vue="revision">Révisions</a></li>
+        <li><a href="#/focus" data-vue="focus">Focus</a></li>
+        <li><a href="#/reglages" data-vue="reglages">Réglages</a></li>
+      </ul>
+    </nav>
+    <div class="sync-zone">
+      <button id="sync" class="sync" type="button">Synchronisation</button>
+      <div id="sync-panneau" class="sync-panneau" hidden></div>
+    </div>
+  </div>
+  <div id="bannieres" class="note-bannieres"></div>
+</header>
+<main id="contenu" tabindex="-1">
+  <div id="vue" aria-busy="true"><p role="status" class="chargement">Chargement de KOTONOHA…</p><noscript><p>KOTONOHA a besoin de JavaScript pour fonctionner.</p></noscript></div>
+</main>
+<footer class="pied">
+  <p>Contenu repris de KOTONOHA V1 : niveau estimé, usage personnel. Chaque contenu indique s’il a fait l’objet d’un contrôle.</p>
+</footer>
+<div id="kds-toasts" class="note-pile" role="status" aria-atomic="false"></div>
+<div id="sync-annonce" class="kds-masque" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* Mise en page de la démonstration du lot 2 (hors design system). */
+.entete { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: var(--space-2) var(--space-4); }
+.entete-titre { margin: 0; font: var(--type-subtitle); letter-spacing: .08em; }
+.pile { display: grid; gap: var(--space-4); }
+.pile .fld-aide { margin: var(--space-1) 0 0; }
+.liste-sources, .liste-confiance { padding-left: 1.2em; }
+.liste-confiance li { margin-bottom: var(--space-2); }
+.frise-bloc { margin: var(--space-5) 0; }
+.frise-bloc figcaption { margin-bottom: var(--space-3); font: var(--type-meta); }
+section { margin-bottom: var(--space-7); }
+/* Échelle de 06 §2.2 : titre de page en headline, sections en title, sous-titres en subtitle. Les paliers subtitle (17 px,
+   700, Mincho) et body (16,5 px, 400, Gothic) sont proches par construction : la graisse et la famille les distinguent. */
+h1 { font: var(--type-headline); margin: var(--space-5) 0 var(--space-6); }
+h2 { font: var(--type-title); }
+h3 { font: var(--type-subtitle); }

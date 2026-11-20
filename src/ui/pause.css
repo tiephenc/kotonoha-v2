@@ -1,0 +1,49 @@
+/* KOTONOHA 2.0 · écran de pause. Jetons sémantiques seulement. Pas de défilement horizontal à 360 px.
+   Calme : pas d'animation en boucle ; le seul mouvement est le cercle du souffle, par transition, supprimée sans mouvement. */
+
+/* Plein écran : la barre de navigation et le pied s'effacent ; les bannières d'alerte (synchronisation, journal) restent. */
+html[data-pause] .entete-rangee, html[data-pause] .pied { display: none; }
+html[data-pause] main { max-width: none; padding: 0; }
+html[data-pause] .lien-evitement { display: none; }
+
+.vue-pause { box-sizing: border-box; min-height: 100vh; min-height: 100dvh; padding: var(--space-6) var(--space-4) var(--space-8); background: var(--color-bg); display: flex; flex-direction: column; align-items: center; }
+.vue-pause > h1 { margin: 0 0 var(--space-4); font: var(--type-meta); color: var(--color-text-2); letter-spacing: .08em; text-transform: uppercase; }
+.vue-pause-zone { width: 100%; max-width: 40rem; }
+
+.pz { box-sizing: border-box; --cible-min: 44px; display: grid; gap: var(--space-7); justify-items: center; text-align: center; color: var(--color-text); }
+.pz .btn { min-height: 44px; min-width: 44px; }
+.pz [hidden] { display: none !important; }
+.pz-titre { margin: 0; font: var(--type-subtitle); color: var(--color-text-2); }
+.pz-centre { display: grid; gap: var(--space-4); justify-items: center; width: 100%; }
+.pz-statut { margin: 0; max-width: var(--measure-fr); font: var(--type-body); color: var(--color-text-2); }
+.pz-temps { margin: 0; font: 800 clamp(56px, 18vw, 112px) / 1 var(--font-title); font-variant-numeric: tabular-nums; letter-spacing: .02em; color: var(--color-text); overflow-wrap: anywhere; }
+.pz[data-situation="terminee"] .pz-temps { color: var(--color-success); }
+.pz-commandes { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-3); }
+.pz-annonce { margin: 0; min-height: 1.7em; font: var(--type-meta); color: var(--color-text-2); }
+
+.pz-activites { display: grid; gap: var(--space-3); justify-items: center; width: 100%; padding: var(--space-5); box-sizing: border-box; border: var(--border-hair) solid var(--color-border); border-radius: var(--radius-r); background: var(--color-surface); }
+.pz-sous-titre { margin: 0; font: var(--type-subtitle); }
+.pz-consigne { margin: 0; max-width: var(--measure-fr); color: var(--color-text-2); }
+.pz-act-liste, .pz-amb-liste { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-3); }
+.pz-act[aria-pressed="true"], .pz-amb[aria-pressed="true"] { background: var(--color-action); border-color: var(--color-action); color: var(--color-on-action); }
+.pz-act[aria-pressed="true"]::before, .pz-amb[aria-pressed="true"]::before { content: "✓"; margin-right: var(--space-2); }
+.pz-panneau { display: grid; gap: var(--space-4); justify-items: center; width: 100%; padding-top: var(--space-3); }
+.pz-liste { margin: 0; padding-left: 1.2em; text-align: left; max-width: var(--measure-fr); }
+.pz-liste li { margin-bottom: var(--space-2); }
+.pz-lien { margin: 0; }
+
+.pz-souffle { display: grid; gap: var(--space-3); justify-items: center; }
+.pz-rond { width: 9rem; height: 9rem; max-width: 60vw; max-height: 60vw; border-radius: 50%; background: var(--color-surface-2); border: var(--border-hair) solid var(--color-border); transform: scale(.55); transition: transform var(--pz-duree, 0ms) ease-in-out; }
+.pz-rond[data-etape="inspire"] { transform: scale(1); }
+.pz-rond[data-etape="expire"] { transform: scale(.55); }
+.pz-souffle-texte { margin: 0; min-height: 1.7em; font: var(--type-subtitle); }
+
+@media (prefers-reduced-motion: reduce) {
+  .pz, .pz *, .pz *::before, .pz *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  .pz .btn:hover, .pz .btn:active { transform: none !important; }
+}
+
+/* Micro-activités à scène (sable, lucioles, gouttes d'encre, ensō) : Canvas 4 : 3, jamais plus large que l'écran. */
+.pz-toile { display: block; box-sizing: border-box; width: 100%; max-width: 30rem; aspect-ratio: 4 / 3; height: auto; touch-action: none; border: var(--border-hair) solid var(--color-border); border-radius: var(--radius-r); background: var(--color-surface-2); cursor: crosshair; user-select: none; -webkit-user-select: none; }
+.pz-toile:focus-visible { outline: 3px solid var(--color-action); outline-offset: 3px; }
+.pz-jeu-commandes { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-3); }

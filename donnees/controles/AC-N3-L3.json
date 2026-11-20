@@ -1,0 +1,2047 @@
+{
+ "lot": "N3-L3",
+ "date": "2026-11-19",
+ "denominateur": 188,
+ "valeur": "autocontrole-ia",
+ "protocole": {
+  "AC-0": "outil ac0.mjs (rapport AC0-N3)",
+  "AC-1": "agent en contexte neuf, grille de nuances N3, 188 éléments",
+  "AC-2": "kotonoha-linguiste, contexte neuf, 188 éléments",
+  "AC-3": "kotonoha-pedagogue, par leçon",
+  "AC-4": "deux passes à l’aveugle (Haiku) par deux agents distincts, mélanges à graines distinctes, 44 items : 43 et 44 accords ; 66#3 manqué par la passe A, clé 「休むわけにはいかない」 vérifiée ; hésitations 67#4, 68#2, 70#4, 70#5 écartées par la forme"
+ },
+ "bilan": {
+  "conforme": 179,
+  "erreur": 0,
+  "incertain": 9,
+  "tauxIncertain": 4.79,
+  "statut": "BLOQUÉ : 0 erreur(s), 4.79 % d'incertains (plafond 2 %, M2-03)"
+ },
+ "avertissement": "Contrôle par IA, aucune relecture humaine. La leçon 69 (bilan) n’a aucun élément propre. Verdicts avant correction ; corrections C-0064 à C-0103, à recontrôler.",
+ "elements": {
+  "v1:grammaire:g66-1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1, AC-2 : sens « forcément » (déduction) faux pour わけだ ; forme « N の » douteuse (AC-2). Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0064",
+    "C-0065"
+   ]
+  },
+  "v1:exemple:g66-1#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g66-1#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g66-1#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1, AC-2 : traduction « il parle donc forcément bien anglais ». Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0066"
+   ]
+  },
+  "v1:grammaire:g66-2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g66-2#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g66-2#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g66-2#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g66-3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g66-3#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g66-3#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g66-3#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g66-4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g66-4#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g66-4#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g66-4#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:66#nuance": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2 : formulation maladroite ; restriction d’emploi, emploi fautif et exemple japonais absents. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0067"
+   ]
+  },
+  "v1:unite:66#prod0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-3 : consigne et modèle copiés de g66-2#0. Recontrôle du 20/11/2026 : consigne reprise après le premier contre-contrôle (négation partielle), puis jugée conforme.",
+   "apresCorrection": [
+    "C-0068",
+    "C-0069"
+   ]
+  },
+  "v1:unite:66#prod1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-3 : consigne et modèle copiés de g66-4#1. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0070",
+    "C-0071"
+   ]
+  },
+  "v1:vocab:66#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2 : 納得 rendu par « comprendre » (confusion avec 理解). Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0072"
+   ]
+  },
+  "v1:vocab:66#1": {
+   "resultat": "incertain",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1 : 矛盾, niveau très probablement supérieur au N3 (dépend de D-55)."
+  },
+  "v1:vocab:66#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:66#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:66#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:66#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:66#6": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:66#7": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:66#8": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:66#9": {
+   "resultat": "incertain",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1 : 義理, niveau très probablement supérieur au N3 (dépend de D-55)."
+  },
+  "v1:vocab:66#10": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:66#11": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:66#12": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:66#13": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:66#14": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:66#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:66#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:66#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:66#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:66#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:66#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1, AC-2, AC-3 : sans marqueur de constat, わけではない reste lisible. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par AC-2 ; passe à l’aveugle sur le quiz modifié : clé retrouvée.",
+   "apresCorrection": [
+    "C-0073"
+   ]
+  },
+  "v1:quiz:66#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:66#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:66#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:66#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:66#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:lecture:66": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:ecoute:66": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1, AC-2 : 「帰れば？」 détonne dans un échange poli. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0074"
+   ]
+  },
+  "v1:grammaire:g67-1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2 : motif « そのため(に) » mêle cause et but. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0075",
+    "C-0076"
+   ]
+  },
+  "v1:exemple:g67-1#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g67-1#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g67-1#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g67-2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g67-2#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g67-2#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g67-2#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g67-3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1 : « B est toujours une action décidée » trop absolu. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0077"
+   ]
+  },
+  "v1:exemple:g67-3#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g67-3#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g67-3#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g67-4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g67-4#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g67-4#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g67-4#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:67#nuance": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1, AC-2 : « seul だから » trop absolu (ですから). Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0078"
+   ]
+  },
+  "v1:unite:67#prod0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:67#prod1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:67#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:67#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:67#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:67#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:67#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:67#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:67#6": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:67#7": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:67#8": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:67#9": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:67#10": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:67#11": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:67#12": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:67#13": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:67#14": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:67#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:67#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:67#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:67#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:67#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:67#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:67#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:67#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:67#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:67#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "Recontrôle du 20/11/2026 : explication « seul だから » nuancée (C-0105) ; したがって est exclu par le registre, non par la grammaire ; clé unique selon le second contre-contrôle.",
+   "apresCorrection": [
+    "C-0105"
+   ]
+  },
+  "v1:quiz:67#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1, AC-3 : そのため recevable (clientèle prise par la nouvelle boutique). Recontrôle du 20/11/2026 : distracteur そのため remplacé ; la passe à l’aveugle jugeait encore その結果 grammatical : question précisée (C-0104, 「その店には」) ; état final jugé à clé unique (exclusion par le sens).",
+   "apresCorrection": [
+    "C-0079",
+    "C-0104"
+   ]
+  },
+  "v1:lecture:67": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2 : « 町は…広げる » alors que l’initiative est celle du supermarché. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0080"
+   ]
+  },
+  "v1:ecoute:67": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1 : 「水曜日までに」 ne correspond pas à la règle du mercredi à 18 h. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0081"
+   ]
+  },
+  "v1:grammaire:g68-1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1, AC-2 : « ne s’emploie pas pour soi-même » trop absolu. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0082"
+   ]
+  },
+  "v1:exemple:g68-1#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g68-1#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g68-1#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g68-2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g68-2#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g68-2#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g68-2#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g68-3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g68-3#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g68-3#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g68-3#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g68-4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g68-4#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g68-4#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g68-4#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:68#nuance": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1, AC-2 : « vise toujours quelqu’un d’autre » ; registre et emploi fautif absents. Recontrôle du 20/11/2026 : C-0083 jugée erronée au premier contre-contrôle (「簡単にしては」), reformulée (にしては suit un nom ou un verbe), puis jugée conforme ; construction vérifiée le 20/11/2026 sur bunpro.jp et japanistry.com (sources divergentes, avis le plus restrictif retenu).",
+   "apresCorrection": [
+    "C-0083"
+   ]
+  },
+  "v1:unite:68#prod0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-3 : modèle identique à g68-1#0. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0084",
+    "C-0085"
+   ]
+  },
+  "v1:unite:68#prod1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:68#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:68#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:68#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:68#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:68#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:68#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:68#6": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:68#7": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:68#8": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:68#9": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:68#10": {
+   "resultat": "incertain",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1 : 怠ける, niveau très probablement supérieur au N3 (dépend de D-55)."
+  },
+  "v1:vocab:68#11": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:68#12": {
+   "resultat": "incertain",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1 : 玄人, niveau très probablement supérieur au N3 (dépend de D-55)."
+  },
+  "v1:vocab:68#13": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:68#14": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:68#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:68#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:68#2": {
+   "resultat": "incertain",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1 : 怠, niveau très probablement supérieur au N3 (dépend de D-55)."
+  },
+  "v1:kanji:68#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:68#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:68#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1 : 「料理をしないわりに」 naturel, clé non unique ; AC-3 : にしては aussi plausible. Recontrôle du 20/11/2026 : distracteurs remplacés (わりに, にしては : secondes réponses) ; ものだから, encore lisible, remplacé par ついでに au recontrôle ; état final jugé à clé unique par le second contre-contrôle.",
+   "apresCorrection": [
+    "C-0086",
+    "C-0087"
+   ]
+  },
+  "v1:quiz:68#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:68#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:68#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2 : 「説明したにしては」 naturel, clé non unique. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par AC-2 ; passe à l’aveugle sur le quiz modifié : clé retrouvée.",
+   "apresCorrection": [
+    "C-0088",
+    "C-0089"
+   ]
+  },
+  "v1:quiz:68#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-3 : distracteur fragmentaire « わりで ». Recontrôle du 20/11/2026 : texte corrigé jugé conforme par AC-2 ; passe à l’aveugle sur le quiz modifié : clé retrouvée.",
+   "apresCorrection": [
+    "C-0090"
+   ]
+  },
+  "v1:quiz:68#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:lecture:68": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:ecoute:68": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1 : のに (concession) pour deux avantages cités comme cause. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0091",
+    "C-0092"
+   ]
+  },
+  "v1:grammaire:g70-1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g70-1#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g70-1#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g70-1#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g70-2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1 : « style plutôt écrit » contredit l’écoute 70 et l’usage oral. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0093"
+   ]
+  },
+  "v1:exemple:g70-2#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g70-2#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g70-2#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g70-3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g70-3#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g70-3#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g70-3#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g70-4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g70-4#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g70-4#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g70-4#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:70#nuance": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2 : « Seul はず … なのに » faux (に決まっているのに existe) ; AC-1 : idem. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0094"
+   ]
+  },
+  "v1:unite:70#prod0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:70#prod1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:70#0": {
+   "resultat": "incertain",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1 : 断定, niveau très probablement supérieur au N3 (dépend de D-55)."
+  },
+  "v1:vocab:70#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:70#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:70#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:70#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:70#5": {
+   "resultat": "incertain",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1 : 容疑者, niveau très probablement supérieur au N3 (dépend de D-55)."
+  },
+  "v1:vocab:70#6": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:70#7": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:70#8": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:70#9": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:70#10": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:70#11": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:70#12": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:70#13": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:70#14": {
+   "resultat": "incertain",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1 : 犯行, niveau très probablement supérieur au N3 (dépend de D-55)."
+  },
+  "v1:kanji:70#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:70#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:70#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:70#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:70#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:70#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:70#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-3 : trois distracteurs inexistants, test de morphologie. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par AC-2 ; passe à l’aveugle sur le quiz modifié : clé retrouvée.",
+   "apresCorrection": [
+    "C-0095",
+    "C-0096",
+    "C-0097",
+    "C-0098"
+   ]
+  },
+  "v1:quiz:70#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2 : explication « Seul はず » trop absolue. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par AC-2 ; passe à l’aveugle sur le quiz modifié : clé retrouvée.",
+   "apresCorrection": [
+    "C-0099"
+   ]
+  },
+  "v1:quiz:70#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:70#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:70#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:lecture:70": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-3 : べきだ, enseigné en leçon 103, sert de clé à la question 3. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0100",
+    "C-0101",
+    "C-0102",
+    "C-0103"
+   ]
+  },
+  "v1:ecoute:70": {
+   "resultat": "incertain",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2 : 「に違いないよ」 jugé peu naturel dans un dialogue détendu ; AC-1 le juge courant à l’oral."
+  }
+ },
+ "recontrole": {
+  "date": "2026-11-20",
+  "avant": {
+   "conforme": 153,
+   "erreur": 5,
+   "incertain": 30,
+   "tauxIncertain": 15.96,
+   "statut": "BLOQUÉ : incertains au-dessus du plafond de 2 % (M2-03)"
+  },
+  "passes": "AC-2 (kotonoha-linguiste, contexte neuf, deux contre-contrôles des textes corrigés) ; AC-4 (passe à l’aveugle, Haiku, sur les quiz modifiés)",
+  "elementsRevus": 27
+ }
+}

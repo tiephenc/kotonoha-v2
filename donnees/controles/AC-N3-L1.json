@@ -1,0 +1,2436 @@
+{
+ "lot": "N3-L1",
+ "date": "2026-11-19",
+ "denominateur": 235,
+ "valeur": "autocontrole-ia",
+ "protocole": {
+  "AC-0": "outil ac0.mjs (rapport AC0-N3)",
+  "AC-1": "session principale, grille de nuances N3 comprise",
+  "AC-2": "kotonoha-linguiste, contexte neuf, 235 éléments, grille de nuances N3",
+  "AC-3": "kotonoha-pedagogue, par leçon",
+  "AC-4": "deux passes à l’aveugle (options mélangées), 55 items : 53 accords ; 56#1 (erreur de la passe A) et 60#0 (« 減り一方だ » agrammatical, clé つつある vérifiée) examinés, clés justes"
+ },
+ "bilan": {
+  "conforme": 233,
+  "erreur": 0,
+  "incertain": 2,
+  "tauxIncertain": 0.85,
+  "statut": "sous le plafond de 2 %, aucune erreur restante"
+ },
+ "avertissement": "Contrôle par IA, aucune relecture humaine. Bloqué le 19/11/2026 (4,26 % d’incertains, 3 erreurs) ; corrections C-0008 à C-0020, puis C-0059 à C-0061, recontrôlées le 20/11/2026 : 0 erreur, 2 incertains (慌, 甥 : niveau, dépend de D-55). Servi depuis le 20/11/2026. Les passes initiales ont lu un extrait où des lignes d’exemples identiques aux exemples des points de grammaire étaient abrégées ; ces exemples ont été relus via leur point de grammaire.",
+ "elements": {
+  "v1:grammaire:g56-1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g56-1#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g56-1#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g56-1#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g56-2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g56-2#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g56-2#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g56-2#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g56-3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g56-3#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g56-3#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g56-3#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g56-4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2 : forme attribuant 中{じゅう} à « d’ici la fin » alors que 今週中 se lit ちゅう ; la lecture dépend du mot (JMdict, consulté le 2026-11-19). AC-3 : même constat. Recontrôle du 20/11/2026 : C-0008 complétée par C-0059 (今日中 きょうじゅう = d’ici la fin de la journée), jugée conforme ; 今週中 こんしゅうちゅう vérifié sur l’API Jisho (JMdict) le 20/11/2026.",
+   "apresCorrection": [
+    "C-0008",
+    "C-0059"
+   ]
+  },
+  "v1:exemple:g56-4#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g56-4#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g56-4#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:56#nuance": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1, AC-2, AC-3 : « on dit 若いうちに et non 若い間に » trop prescriptif ; 若い間に est possible, うちに seulement préféré. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0009"
+   ]
+  },
+  "v1:unite:56#prod0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2 : 新鮮 peu naturel pour un gâteau (おいしいうちに). Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0011",
+    "C-0012"
+   ]
+  },
+  "v1:unite:56#prod1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:56#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:56#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:56#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:56#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:56#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:56#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:56#6": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:56#7": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:56#8": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:56#9": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:56#10": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:56#11": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:56#12": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:56#13": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:56#14": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:56#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:56#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:56#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:56#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:56#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:56#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:56#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:56#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:56#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:56#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-3 : 暗くならない間に acceptable, seconde bonne réponse possible. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par AC-2 ; passe à l’aveugle sur le quiz modifié : clé retrouvée, aucune seconde bonne réponse.",
+   "apresCorrection": [
+    "C-0017"
+   ]
+  },
+  "v1:quiz:56#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:lecture:56": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:ecoute:56": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g57-1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g57-1#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g57-1#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g57-1#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g57-2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2 : forme sans adj. い alors que l’exemple 3 l’emploie. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0013"
+   ]
+  },
+  "v1:exemple:g57-2#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g57-2#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g57-2#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g57-3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g57-3#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g57-3#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g57-3#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g57-4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g57-4#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g57-4#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g57-4#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:57#nuance": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:57#prod0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:57#prod1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:57#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:57#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:57#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:57#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:57#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:57#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:57#6": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:57#7": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:57#8": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:57#9": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:57#10": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:57#11": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:57#12": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:57#13": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:57#14": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:57#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:57#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:57#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:57#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:57#4": {
+   "resultat": "incertain",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2 : 慌 hors jōyō, niveau probablement supérieur au N3 (certitude faible)."
+  },
+  "v1:quiz:57#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:57#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:57#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:57#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:57#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:57#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:lecture:57": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:ecoute:57": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g58-1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g58-1#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g58-1#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g58-1#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g58-2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g58-2#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g58-2#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g58-2#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g58-3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g58-3#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g58-3#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g58-3#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g58-4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g58-4#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g58-4#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g58-4#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:58#nuance": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:58#prod0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:58#prod1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:58#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:58#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:58#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:58#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:58#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:58#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:58#6": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:58#7": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:58#8": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:58#9": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:58#10": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:58#11": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:58#12": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:58#13": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:58#14": {
+   "resultat": "incertain",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2 : 甥 hors jōyō, rare à l’écrit pour le N3 (certitude faible)."
+  },
+  "v1:kanji:58#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:58#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:58#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:58#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:58#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:58#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:58#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:58#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:58#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:58#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2, AC-3, AC-4 (passe A hésitante) : l’option 際 est grammaticalement possible. Recontrôle du 20/11/2026 : C-0014, puis C-0061 (間 remplacé par ながら, la passe à l’aveugle ayant jugé 「会う間に」 possible) ; seconde passe à l’aveugle sur la version finale : clé retrouvée.",
+   "apresCorrection": [
+    "C-0014",
+    "C-0061"
+   ]
+  },
+  "v1:quiz:58#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:lecture:58": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:ecoute:58": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-1, AC-2, AC-3 : 「帰る際に」 dans une conversation entre amis contredit la nuance de la leçon (際 soutenu) ; 帰ったら attendu. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0010"
+   ]
+  },
+  "v1:grammaire:g59-1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g59-1#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g59-1#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g59-1#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g59-2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g59-2#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g59-2#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g59-2#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g59-3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g59-3#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g59-3#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g59-3#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g59-4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2 : 以降 inclut le repère, non dit ; AC-3 : forme « Vて＋以降 » non illustrée. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0015"
+   ]
+  },
+  "v1:exemple:g59-4#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-2 : traduction « Après 18 h… souvent saturées » infidèle (à partir de 18 h, difficile d’obtenir la ligne). Recontrôle du 20/11/2026 : texte corrigé jugé conforme par le contre-contrôle AC-2.",
+   "apresCorrection": [
+    "C-0016"
+   ]
+  },
+  "v1:exemple:g59-4#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g59-4#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:59#nuance": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:59#prod0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:59#prod1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:59#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:59#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:59#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:59#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:59#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:59#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:59#6": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:59#7": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:59#8": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:59#9": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:59#10": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:59#11": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:59#12": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:59#13": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:59#14": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:59#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:59#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:59#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:59#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:59#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:59#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:59#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:59#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:59#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:59#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:59#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:lecture:59": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:ecoute:59": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g60-1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g60-1#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g60-1#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g60-1#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g60-2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g60-2#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g60-2#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g60-2#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g60-3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-3 : deux sens mêlés (sur le point de / essayer de) ; renvoi à l’unité 107 exact selon AC-2. Recontrôle du 20/11/2026 : C-0018 jugée erronée par le contre-contrôle (contredisait 「家を出ようとしたとき」, quiz 60#5) ; corrigée par C-0060, jugée conforme.",
+   "apresCorrection": [
+    "C-0018",
+    "C-0060"
+   ]
+  },
+  "v1:exemple:g60-3#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g60-3#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g60-3#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:grammaire:g60-4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g60-4#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g60-4#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:exemple:g60-4#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:60#nuance": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:60#prod0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:unite:60#prod1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:60#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:60#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:60#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:60#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:60#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:60#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:60#6": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:60#7": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:60#8": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:60#9": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:60#10": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:60#11": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:60#12": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:60#13": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:vocab:60#14": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:60#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:60#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:60#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:60#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:kanji:60#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:60#0": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:60#1": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ],
+   "note": "AC-3 : le trou suivi de で teste 一方で et non le point enseigné 一方だ. Recontrôle du 20/11/2026 : texte corrigé jugé conforme par AC-2 ; passe à l’aveugle sur le quiz modifié : clé retrouvée, aucune seconde bonne réponse.",
+   "apresCorrection": [
+    "C-0019",
+    "C-0020"
+   ]
+  },
+  "v1:quiz:60#2": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:60#3": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:60#4": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:quiz:60#5": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:lecture:60": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  },
+  "v1:ecoute:60": {
+   "resultat": "conforme",
+   "passes": [
+    "AC-0",
+    "AC-1",
+    "AC-2",
+    "AC-3",
+    "AC-4"
+   ]
+  }
+ },
+ "recontrole": {
+  "date": "2026-11-20",
+  "avant": {
+   "conforme": 222,
+   "erreur": 3,
+   "incertain": 10,
+   "tauxIncertain": 4.26,
+   "statut": "BLOQUÉ : incertains au-dessus du plafond de 2 % (M2-03)"
+  },
+  "passes": "AC-2 (kotonoha-linguiste, contexte neuf, deux contre-contrôles des textes corrigés) ; AC-4 (passe à l’aveugle, Haiku, sur les quiz modifiés)",
+  "elementsRevus": 11
+ }
+}

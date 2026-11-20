@@ -1,0 +1,144 @@
+/* KOTONOHA 2.0 · design system — lot 2 : C-LNK (06 §4.2), C-CHK (§4.4), C-NOTE (§4.14), C-SYNC (§4.15), C-PROG (§4.16).
+   Se charge après jetons.css et composants.css. Couleurs : jetons sémantiques seulement (--color-*), jamais un primitif.
+   Aucun état n'est porté par la seule couleur (§5.1) : forme, texte ou position l'accompagnent toujours. */
+
+:root { --cible-min: 24px; --cible-toucher: 44px; --note-filet: 3px; }
+
+/* Masqué à l'écran, lu par les technologies d'assistance. */
+.kds-masque { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* Icônes au trait : la forme porte le sens, la couleur est héritée (currentColor). */
+.kds-icone { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Focus : le même anneau que le lot 1, adapté à la surface par --focus-color (§5.2, D-84). La case et le bouton radio
+   natifs sont transparents : l'anneau est porté par leur boîte visible. */
+:where(.lnk, .sw, .sync):focus-visible,
+.chk-input:focus-visible + .chk-boite { outline: var(--border-focus) solid var(--focus-color); outline-offset: 2px; }
+
+/* ---- C-LNK (§4.2) ---- */
+.lnk { color: var(--color-link); text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; border-radius: var(--radius-tissu); }
+.lnk:hover { text-decoration-thickness: 2px; }            /* le soulignement n'est jamais retiré (1.4.1) */
+.surface-teinte .lnk { color: var(--color-on-dye); }
+.lnk-externe-icone { width: .85em; height: .85em; margin-inline-start: .2em; vertical-align: -.08em; }
+/* Lien de source (kamon, licences) : cible de 24 × 24 px au moins, 44 au toucher. */
+.lnk-source { display: inline-flex; align-items: center; justify-content: center; min-width: var(--cible-min); min-height: var(--cible-min); padding: 0 var(--space-1); font: var(--type-meta); }
+
+/* ---- C-CHK (§4.4) : case, bouton radio, interrupteur ---- */
+.chk { position: relative; display: inline-flex; align-items: center; gap: var(--space-3); min-height: var(--cible-min); color: var(--color-text); font: var(--type-body); cursor: pointer; }
+/* Élément natif conservé (sémantique, clavier, formulaire), rendu transparent au-dessus de sa boîte visible. */
+.chk-input { position: absolute; left: 0; top: 50%; width: var(--cible-min); height: var(--cible-min); margin: 0; transform: translateY(-50%); opacity: 0; cursor: inherit; }
+.chk-boite { position: relative; flex: none; box-sizing: border-box; width: 20px; height: 20px; margin: 2px; border: var(--border-field) solid var(--color-field-border); border-radius: var(--radius-sm); background: var(--color-surface); pointer-events: none; }
+.chk-radio .chk-boite { border-radius: var(--radius-round); }
+.chk-boite::after { content: ""; position: absolute; opacity: 0; }
+/* Case cochée : fond d'action ET coche (forme). */
+.chk-case .chk-boite::after { left: 5px; top: 1px; width: 5px; height: 10px; border: solid var(--color-on-action); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); }
+.chk-case .chk-input:checked + .chk-boite { background: var(--color-action); border-color: var(--color-action); }
+/* Bouton radio choisi : anneau d'action ET point central (forme). */
+.chk-radio .chk-boite::after { inset: 3.5px; border-radius: var(--radius-round); background: var(--color-action); }
+.chk-radio .chk-input:checked + .chk-boite { border-color: var(--color-action); }
+.chk-input:checked + .chk-boite::after { opacity: 1; }
+.chk-input:disabled { cursor: not-allowed; }
+.chk-input:disabled ~ * { opacity: var(--opacity-disabled); }
+.chk:has(.chk-input:disabled) { cursor: not-allowed; }
+.chk-groupe { display: grid; gap: var(--space-2); margin: 0; padding: 0; border: 0; min-width: 0; }
+.chk-groupe > legend { padding: 0; margin-bottom: var(--space-2); }
+
+/* Interrupteur : <button role="switch" aria-checked>, nom accessible obligatoire (KDS.interrupteur le vérifie).
+   L'état se lit à la position du curseur ET au signe (coche dans le curseur, texte « Activé » / « Désactivé »). */
+.sw { display: inline-flex; align-items: center; gap: var(--space-3); min-height: var(--cible-min); padding: 0 var(--space-1); border: 0; border-radius: var(--radius-sm); background: transparent; color: var(--color-text); font: var(--type-body); text-align: start; cursor: pointer; }
+.sw-piste { position: relative; flex: none; box-sizing: border-box; width: 42px; height: 24px; border: var(--border-field) solid var(--color-field-border); border-radius: 12px; background: var(--color-surface); }
+.sw-curseur { position: absolute; top: 2.5px; left: 2.5px; width: 16px; height: 16px; border-radius: var(--radius-round); background: var(--color-field-border); transition: transform var(--dur-fast) var(--ease); }
+.sw-curseur::after { content: ""; position: absolute; left: 5.5px; top: 2.5px; width: 3.5px; height: 7px; border: solid var(--color-action); border-width: 0 2px 2px 0; transform: rotate(45deg); opacity: 0; }
+.sw[aria-checked="true"] .sw-piste { background: var(--color-action); border-color: var(--color-action); }
+.sw[aria-checked="true"] .sw-curseur { transform: translateX(18px); background: var(--color-on-action); }
+.sw[aria-checked="true"] .sw-curseur::after { opacity: 1; }
+.sw-etat { min-width: 8.5ch; font: var(--type-meta); color: var(--color-text-2); }
+.sw[aria-disabled="true"] { opacity: var(--opacity-disabled); cursor: not-allowed; }
+
+@media (pointer: coarse), (max-width: 640px) {
+  .lnk-source { min-width: var(--cible-toucher); min-height: var(--cible-toucher); }
+  .chk, .sw { min-height: var(--cible-toucher); }
+}
+
+/* ---- C-NOTE (§4.14) : icône + texte + couleur fonctionnelle ; fond surface, filet de 3 px à gauche ---- */
+.note { --note-couleur: var(--color-info); box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--space-2) var(--space-3); max-width: var(--measure-fr); padding: var(--space-3) var(--space-4); background: var(--color-surface); color: var(--color-text); border: var(--border-hair) solid var(--color-border-strong); border-left: var(--note-filet) solid var(--note-couleur); border-radius: var(--radius-sm); font: var(--type-body); }
+.note[data-type="succes"] { --note-couleur: var(--color-success); }
+.note[data-type="avertissement"] { --note-couleur: var(--color-warning); }
+.note[data-type="erreur"] { --note-couleur: var(--color-error); }
+.note-icone { display: inline-flex; flex: none; margin-top: .25em; color: var(--note-couleur); }
+/* Le texte garde au moins 10 em : actions et fermeture passent à la ligne plutôt que de l'écraser (défaut vu à 320 px). */
+.note-texte { flex: 1 1 10em; min-width: 0; margin: 0; overflow-wrap: anywhere; }
+.note-actions { order: 3; display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+.note-fermer { order: 2; flex: none; margin: calc(-1 * var(--space-3)) calc(-1 * var(--space-3)) 0 0; }
+/* Toasts : région role="status" unique, en bas d'écran ; jamais d'information essentielle seulement ici. */
+.note-pile { position: fixed; z-index: var(--z-toast); inset-inline: var(--space-4); bottom: var(--space-4); display: grid; gap: var(--space-2); justify-items: center; pointer-events: none; }
+.note-pile > .note { width: 100%; pointer-events: auto; box-shadow: var(--shadow-lift); animation: note-entree var(--dur-base) var(--ease); }
+@keyframes note-entree { from { opacity: 0; transform: translateY(8px); } }
+.note-bannieres { display: grid; gap: var(--space-2); }
+.note-bannieres > .note { max-width: none; border-radius: 0; }
+.note-zone:empty { display: none; }
+.note-zone > .note { margin-top: var(--space-3); }
+
+/* ---- C-SYNC (§4.15) : bouton compact (icône d'état + libellé court), panneau de détail ---- */
+.sync-zone { position: relative; }
+.sync { --sync-ton: currentColor; position: relative; display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); box-sizing: border-box; min-width: var(--cible-min); min-height: var(--cible-min); padding: var(--space-1) var(--space-3); border: var(--border-hair) solid currentColor; border-radius: var(--radius-pli); background: transparent; color: var(--color-text); font: var(--type-label-info); cursor: pointer; }
+.sync .kds-icone, .sync-apercu .kds-icone { color: var(--sync-ton); }
+[data-etat="ET-21"], [data-etat="ET-24"] { --sync-ton: var(--color-info); }
+[data-etat="ET-22"] { --sync-ton: var(--color-success); }
+[data-etat="ET-25"], [data-etat="ET-26"] { --sync-ton: var(--color-warning); }
+[data-etat="ET-27"] { --sync-ton: var(--color-error); }
+/* Sur la bande d'en-tête teinte, tout passe en couleur de réserve : seules la forme et le texte distinguent les états. */
+.surface-teinte .sync, .surface-teinte .sync[data-etat] { --sync-ton: currentColor; color: var(--color-on-dye); }
+.sync:hover { background: var(--color-border); }
+.sync-panneau { position: absolute; z-index: var(--z-popover); top: calc(100% + var(--space-2)); right: 0; box-sizing: border-box; width: min(340px, calc(100vw - 2 * var(--space-4))); padding: var(--space-4); background: var(--color-surface); color: var(--color-text); border: var(--border-hair) solid var(--color-border-strong); border-radius: var(--radius-r); box-shadow: var(--shadow-lift); --focus-color: var(--color-focus); }
+.sync-panneau[hidden] { display: none; }
+.sync-panneau-etat { display: flex; align-items: center; gap: var(--space-2); margin: 0 0 var(--space-2); font: var(--type-subtitle); }
+.sync-panneau-detail { margin: 0; font: var(--type-body); color: var(--color-text-2); }
+.sync-panneau-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
+.sync-panneau-actions:empty { display: none; }
+.sync-galerie { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: var(--space-3); margin: 0; padding: 0; list-style: none; }
+.sync-apercu { display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2) var(--space-3); border: var(--border-hair) solid var(--color-border-strong); border-radius: var(--radius-sm); background: var(--color-surface); font: var(--type-meta); }
+.sync-apercu-code { margin-inline-start: auto; color: var(--color-text-2); font-weight: 400; }
+@media (pointer: coarse), (max-width: 640px) { .sync { min-width: var(--cible-toucher); min-height: var(--cible-toucher); } }
+/* Sous 400 px : icône seule ; le libellé reste dans le nom accessible (masqué à l'écran, pas retiré) et dans le panneau. */
+@media (max-width: 399.98px) {
+  .sync { padding: 0; }
+  .sync-libelle { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+
+/* ---- C-PROG (§4.16) ---- */
+.prog { display: grid; gap: var(--space-2); max-width: var(--measure-fr); }
+.prog-entete { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-2); font: var(--type-meta); }
+.prog-valeur { color: var(--color-text-2); }
+.prog-barre { box-sizing: border-box; height: 12px; border: var(--border-hair) solid var(--color-field-border); border-radius: var(--radius-tissu); background: var(--color-surface); overflow: hidden; }
+.prog-rempli { display: block; height: 100%; width: 0; background: var(--color-action); transition: width var(--dur-base) var(--ease); }
+/* Segments de leçon : une pastille par séquence, l'état en texte ; la pastille change aussi de forme. */
+.prog-segments { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); margin: 0; padding: 0; list-style: none; font: var(--type-meta); }
+.prog-segments > li { display: inline-flex; align-items: center; gap: var(--space-2); }
+.prog-pastille { position: relative; box-sizing: border-box; width: 16px; height: 16px; border: var(--border-field) solid var(--color-field-border); border-radius: var(--radius-round); background: var(--color-surface); }
+[data-etat="terminee"] > .prog-pastille { border-color: var(--color-action); background: var(--color-action); }
+[data-etat="terminee"] > .prog-pastille::after { content: ""; position: absolute; left: 4px; top: 1px; width: 3.5px; height: 7.5px; border: solid var(--color-on-action); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+[data-etat="en-cours"] > .prog-pastille { border-color: var(--color-action); background: linear-gradient(90deg, var(--color-action) 50%, var(--color-surface) 50%); }
+[data-etat="en-cours"] { font-weight: 800; }
+.prog-etat { font-weight: 400; color: var(--color-text-2); }
+/* Frise horaire : segments aux couleurs des pans, chacun avec son libellé dessous ; pauses en hachures ; total en Anton. */
+.prog-frise { display: flex; gap: var(--space-1); margin: 0; padding: 0; list-style: none; }
+.prog-frise > li { flex: var(--min, 1) 1 0; min-width: 0; display: grid; gap: var(--space-2); align-content: start; font: var(--type-meta); }
+.prog-frise-trait { display: block; height: 14px; border-radius: var(--radius-tissu); background: var(--frise-ton, var(--color-action)); }
+.prog-frise [data-ton="dye"] { --frise-ton: var(--color-dye-noren); }
+.prog-frise [data-ton="info"] { --frise-ton: var(--color-info); }
+.prog-frise [data-ton="succes"] { --frise-ton: var(--color-success); }
+.prog-frise .pause .prog-frise-trait { box-sizing: border-box; border: var(--border-hair) solid var(--color-field-border); background: repeating-linear-gradient(135deg, var(--color-text-3) 0 2px, transparent 2px 6px); }
+.prog-frise-lib { overflow-wrap: anywhere; }
+.prog-duree { display: block; font-weight: 400; color: var(--color-text-2); }
+.prog-total { font: var(--type-latin-display); letter-spacing: var(--tracking-latin-display); text-transform: uppercase; }
+@media (max-width: 560px) {
+  .prog-frise { flex-direction: column; gap: var(--space-2); }
+  .prog-frise > li { grid-template-columns: 44px 1fr; align-items: center; }
+  .prog-duree { display: inline; }
+}
+/* Niveau de confiance : trois points (pleins ou vides : forme) + texte (04 §8.3). */
+.prog-confiance { display: inline-flex; align-items: center; gap: var(--space-2); margin: 0; font: var(--type-meta); }
+.prog-points { display: inline-flex; gap: 3px; }
+.prog-points > i { box-sizing: border-box; width: 9px; height: 9px; border: var(--border-field) solid currentColor; border-radius: var(--radius-round); }
+.prog-confiance[data-niveau="1"] i:nth-child(-n+1), .prog-confiance[data-niveau="2"] i:nth-child(-n+2), .prog-confiance[data-niveau="3"] i { background: currentColor; }

@@ -1,0 +1,54 @@
+/* KOTONOHA 2.0 · Focus (F-M09). Dépend de jetons.css, composants.css et composants-2.css (classes .btn, .fld, .chk, .sw, .lnk).
+   Jetons sémantiques seulement ; aucune animation (D-85, T-A11Y-06) : la barre change par paliers, sans transition. */
+
+.foc {
+  /* Cibles de 44 px pour les cases, boutons radio et interrupteurs (06 §9). */
+  --cible-min: 44px;
+  box-sizing: border-box; max-width: var(--wrap); margin: 0 auto;
+  padding: var(--space-5); border: var(--border-hair) solid var(--color-border);
+  border-radius: var(--radius-r); background: var(--color-surface); color: var(--color-text); box-shadow: var(--shadow-paper);
+}
+.foc > h2 { margin: 0 0 var(--space-5); }
+.foc-grille { display: grid; gap: var(--space-7); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .foc-grille { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; } }
+
+.foc-cadran { display: grid; gap: var(--space-4); justify-items: start; }
+.foc-phase { margin: 0; font: var(--type-subtitle); color: var(--color-text-2); }
+.foc-temps {
+  margin: 0; font: 800 clamp(56px, 16vw, 104px) / 1 var(--font-title); font-variant-numeric: tabular-nums;
+  letter-spacing: .02em; color: var(--color-text); overflow-wrap: anywhere;
+}
+.foc-barre { box-sizing: border-box; width: 100%; max-width: 28em; height: 10px; border-radius: 5px; overflow: hidden; background: var(--color-surface-2); border: var(--border-hair) solid var(--color-field-border); }
+.foc-barre-rempli { width: 100%; height: 100%; background: var(--color-action); transform-origin: left center; transform: scaleX(var(--foc-p, 0)); }
+.foc[data-phase="brk"] .foc-barre-rempli, .foc[data-phase="bdone"] .foc-barre-rempli { background: var(--color-success); }
+.foc-aide { margin: 0; max-width: var(--measure-fr); color: var(--color-text-2); }
+.foc-commandes { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
+.foc .btn { min-height: 44px; min-width: 44px; }
+.foc-commandes [hidden] { display: none; }
+.foc-annonce, .foc-message { margin: 0; min-height: 1.7em; font: var(--type-meta); color: var(--color-text-2); }
+
+.foc-reglages { display: grid; gap: var(--space-6); }
+.foc-groupe { display: grid; gap: var(--space-3); margin: 0; padding: 0; border: 0; min-width: 0; }
+.foc-groupe > legend { padding: 0; margin-bottom: var(--space-2); }
+.foc .fld { max-width: 22em; }
+.foc-nombre { max-width: 8em; }
+.foc-interrupteur .fld-aide { margin: 0 0 0 var(--space-1); }
+.foc .sw { min-height: 44px; }
+.foc-amb-liste { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.foc-amb[aria-pressed="true"] { background: var(--color-action); border-color: var(--color-action); color: var(--color-on-action); }
+.foc-amb[aria-pressed="true"]::before { content: "✓"; margin-right: var(--space-2); }
+.foc-volume-ligne { display: flex; align-items: center; gap: var(--space-4); }
+.foc-volume { flex: 1 1 auto; min-width: 0; max-width: 20em; min-height: 44px; margin: 0; accent-color: var(--color-action); }
+.foc-volume:focus-visible { outline: var(--border-focus) solid var(--color-focus); outline-offset: 2px; }
+.foc-volume-valeur { min-width: 5ch; font: var(--type-meta); color: var(--color-text-2); }
+.foc-credits { font: var(--type-meta); color: var(--color-text-2); }
+.foc-credits summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; color: var(--color-link); }
+.foc-credits summary:focus-visible { outline: var(--border-focus) solid var(--color-focus); outline-offset: 2px; }
+.foc-credits ul { margin: 0; padding-left: 1.2em; }
+.foc-credits li { margin-bottom: var(--space-2); }
+
+/* Mouvement réduit (T-A11Y-06) : aucune transition ni animation, ni ici ni dans les composants réutilisés. */
+@media (prefers-reduced-motion: reduce) {
+  .foc, .foc *, .foc *::before, .foc *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  .foc .btn:hover, .foc .btn:active { transform: none !important; }
+}

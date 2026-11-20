@@ -1,0 +1,2610 @@
+{
+ "LEVELS": [
+  {
+   "lv": "N4",
+   "n": 55,
+   "from": 1,
+   "to": 55,
+   "phase": 1,
+   "title": "Consolider les bases",
+   "goal": "Consolider les bases et préparer la transition vers le N3."
+  },
+  {
+   "lv": "N3",
+   "n": 74,
+   "from": 56,
+   "to": 129,
+   "phase": 2,
+   "title": "Développer l'autonomie",
+   "goal": "Grammaire N3 et structures proches, lectures plus longues, production, révisions adaptatives : atteindre un N3 solide."
+  },
+  {
+   "lv": "N2",
+   "n": 81,
+   "from": 130,
+   "to": 210,
+   "phase": 3,
+   "title": "Maîtriser le N2",
+   "goal": "Nuances fines, textes complexes, écoute N2, exercices chronométrés et pièges du JLPT."
+  }
+ ],
+ "PHASES": [
+  [
+   0,
+   "Audit des sources et des données",
+   "terminée · 100/100"
+  ],
+  [
+   1,
+   "Parcours N4 · 55 unités",
+   "terminée"
+  ],
+  [
+   2,
+   "Parcours N3 · 74 unités",
+   "terminée"
+  ],
+  [
+   3,
+   "Parcours N2 · 81 unités",
+   "terminée"
+  ],
+  [
+   4,
+   "Examens blancs, entraînements et évaluations",
+   "terminée"
+  ],
+  [
+   5,
+   "Audit final, fiabilisation et finalisation",
+   "terminée"
+  ]
+ ],
+ "MODULES": [
+  [
+   1,
+   6,
+   "Fondations",
+   "N4",
+   1
+  ],
+  [
+   7,
+   12,
+   "Projets et capacités",
+   "N4",
+   1
+  ],
+  [
+   13,
+   18,
+   "Relations et règles",
+   "N4",
+   1
+  ],
+  [
+   19,
+   24,
+   "Conditions et temps",
+   "N4",
+   1
+  ],
+  [
+   25,
+   30,
+   "Jugement et perception",
+   "N4",
+   1
+  ],
+  [
+   31,
+   36,
+   "Les voix du verbe",
+   "N4",
+   1
+  ],
+  [
+   37,
+   42,
+   "Politesse",
+   "N4",
+   1
+  ],
+  [
+   43,
+   51,
+   "Nuances de phrase",
+   "N4",
+   1
+  ],
+  [
+   52,
+   55,
+   "Vers l'examen N4",
+   "N4",
+   0
+  ],
+  [
+   56,
+   62,
+   "Le temps qui passe",
+   "N3",
+   1
+  ],
+  [
+   63,
+   69,
+   "Cause, but et conséquence",
+   "N3",
+   1
+  ],
+  [
+   70,
+   76,
+   "Supposition et jugement",
+   "N3",
+   1
+  ],
+  [
+   77,
+   83,
+   "Relations et mise en relief",
+   "N3",
+   1
+  ],
+  [
+   84,
+   90,
+   "Concession et condition",
+   "N3",
+   1
+  ],
+  [
+   91,
+   97,
+   "Verbes et nuances",
+   "N3",
+   1
+  ],
+  [
+   98,
+   104,
+   "Discours rapporté",
+   "N3",
+   1
+  ],
+  [
+   105,
+   111,
+   "Fins de phrase",
+   "N3",
+   1
+  ],
+  [
+   112,
+   118,
+   "Le japonais écrit",
+   "N3",
+   1
+  ],
+  [
+   119,
+   124,
+   "Lecture et écoute N3",
+   "N3",
+   0
+  ],
+  [
+   125,
+   129,
+   "Vers l'examen N3",
+   "N3",
+   0
+  ],
+  [
+   130,
+   136,
+   "Évolution et moment",
+   "N2",
+   1
+  ],
+  [
+   137,
+   143,
+   "Concession",
+   "N2",
+   1
+  ],
+  [
+   144,
+   150,
+   "Cause et but",
+   "N2",
+   1
+  ],
+  [
+   151,
+   157,
+   "Point de vue et référence",
+   "N2",
+   1
+  ],
+  [
+   158,
+   164,
+   "Degré et limite",
+   "N2",
+   1
+  ],
+  [
+   165,
+   171,
+   "Jugement et modalité",
+   "N2",
+   1
+  ],
+  [
+   172,
+   178,
+   "Sentiments",
+   "N2",
+   1
+  ],
+  [
+   179,
+   185,
+   "Discours et formalité",
+   "N2",
+   1
+  ],
+  [
+   186,
+   192,
+   "Formes verbales N2",
+   "N2",
+   1
+  ],
+  [
+   193,
+   199,
+   "Textes N2",
+   "N2",
+   1
+  ],
+  [
+   200,
+   205,
+   "Lecture et écoute N2",
+   "N2",
+   0
+  ],
+  [
+   206,
+   210,
+   "Vers l'examen N2",
+   "N2",
+   0
+  ]
+ ],
+ "N4": [
+  [
+   1,
+   "Les verbes et leurs groupes",
+   "ます形 · 辞書形 · groupes 1, 2, 3"
+  ],
+  [
+   2,
+   "La forme て",
+   "て形 · てから · ている"
+  ],
+  [
+   3,
+   "Formes ない et た",
+   "ない形 · た形 · style neutre"
+  ],
+  [
+   4,
+   "Adjectifs et noms",
+   "い / な · くなる · になる"
+  ],
+  [
+   5,
+   "Les particules de base",
+   "は / が · を · に / で · から / まで"
+  ],
+  [
+   6,
+   "Bilan : fondations",
+   "test de module"
+  ],
+  [
+   7,
+   "Intentions et projets",
+   "つもり · ようと思う · 予定 · ために"
+  ],
+  [
+   8,
+   "Expérience et conseils",
+   "たことがある · ほうがいい · たらどう · てみる"
+  ],
+  [
+   9,
+   "Désirs",
+   "たい · たがる · ほしい · てほしい"
+  ],
+  [
+   10,
+   "Préparer, finir, laisser",
+   "ておく · てしまう · てある"
+  ],
+  [
+   11,
+   "Capacité et changement",
+   "ことができる · forme potentielle · ようになる · なくなる"
+  ],
+  [
+   12,
+   "Bilan : projets et capacités",
+   "test de module"
+  ],
+  [
+   13,
+   "Donner et recevoir",
+   "あげる · くれる · もらう · てあげる / てくれる / てもらう"
+  ],
+  [
+   14,
+   "Demander et proposer",
+   "てください · ませんか · ましょう · ましょうか"
+  ],
+  [
+   15,
+   "Permission et interdiction",
+   "てもいい · てはいけない · なくてもいい"
+  ],
+  [
+   16,
+   "Obligation",
+   "なければならない · なくてはいけない · ないと"
+  ],
+  [
+   17,
+   "Enchaîner les actions",
+   "たり〜たり · ながら · 前に · 後で"
+  ],
+  [
+   18,
+   "Bilan : relations et règles",
+   "test de module"
+  ],
+  [
+   19,
+   "La condition と",
+   "と (conséquence automatique)"
+  ],
+  [
+   20,
+   "La condition ば",
+   "ば · なければ · ばいい"
+  ],
+  [
+   21,
+   "La condition たら",
+   "たら · たらいい · たら (découverte)"
+  ],
+  [
+   22,
+   "なら et les quatre conditions",
+   "なら · と / ば / たら / なら"
+  ],
+  [
+   23,
+   "Situer dans le temps",
+   "とき · 間 · ところだ · たばかり"
+  ],
+  [
+   24,
+   "Bilan : conditions et temps",
+   "test de module"
+  ],
+  [
+   25,
+   "L'apparence",
+   "そうだ · そうな · そうに"
+  ],
+  [
+   26,
+   "Le ouï-dire",
+   "そうだ (rapporté) · らしい · って"
+  ],
+  [
+   27,
+   "Ressemblance et impression",
+   "ようだ · みたいだ · のような"
+  ],
+  [
+   28,
+   "La probabilité",
+   "でしょう · かもしれない · はずだ"
+  ],
+  [
+   29,
+   "Expliquer une raison",
+   "から · ので · んです"
+  ],
+  [
+   30,
+   "Bilan : jugement et perception",
+   "test de module"
+  ],
+  [
+   31,
+   "Le passif",
+   "られる · に · によって"
+  ],
+  [
+   32,
+   "Le passif de gêne",
+   "雨に降られる · passif indirect"
+  ],
+  [
+   33,
+   "Le causatif",
+   "させる · に / を"
+  ],
+  [
+   34,
+   "Causatif et demande",
+   "させてください · させてもらう"
+  ],
+  [
+   35,
+   "Le causatif-passif",
+   "させられる (initiation)"
+  ],
+  [
+   36,
+   "Bilan : les voix du verbe",
+   "test de module"
+  ],
+  [
+   37,
+   "Keigo : principes",
+   "丁寧語 · 尊敬語 · 謙譲語"
+  ],
+  [
+   38,
+   "Honorer l'autre",
+   "いらっしゃる · おっしゃる · お〜になる"
+  ],
+  [
+   39,
+   "Parler de soi avec modestie",
+   "参る · 申す · お〜する"
+  ],
+  [
+   40,
+   "Formules polies",
+   "でございます · おります · ください"
+  ],
+  [
+   41,
+   "Keigo en situation",
+   "magasin · téléphone · courriel"
+  ],
+  [
+   42,
+   "Bilan : politesse",
+   "test de module"
+  ],
+  [
+   43,
+   "Citer et rapporter",
+   "と言う · という · と思う · って"
+  ],
+  [
+   44,
+   "Décider et être décidé",
+   "ことにする · ことになる"
+  ],
+  [
+   45,
+   "Faire en sorte que",
+   "ようにする · ように · ように言う"
+  ],
+  [
+   46,
+   "Comparer",
+   "より · ほど〜ない · の中で一番"
+  ],
+  [
+   47,
+   "Contraste et concession",
+   "のに · ても · けど"
+  ],
+  [
+   48,
+   "Nominaliser",
+   "の · こと · のが好き · のを忘れる"
+  ],
+  [
+   49,
+   "Questions incluses",
+   "か · かどうか"
+  ],
+  [
+   50,
+   "Trop, facile, difficile",
+   "すぎる · やすい · にくい · 方"
+  ],
+  [
+   51,
+   "Bilan : nuances de phrase",
+   "test de module"
+  ],
+  [
+   52,
+   "Lecture N4",
+   "stratégies de lecture"
+  ],
+  [
+   53,
+   "Écoute N4",
+   "stratégies d'écoute"
+  ],
+  [
+   54,
+   "Examen blanc N4",
+   "épreuve complète chronométrée"
+  ],
+  [
+   55,
+   "Bilan N4 et passage au N3",
+   "diagnostic"
+  ]
+ ],
+ "N3": [
+  [
+   56,
+   "Pendant que",
+   "うちに · 間に · 最中に · 中に"
+  ],
+  [
+   57,
+   "Aussitôt que",
+   "とたん(に) · と同時に · かと思うと · たらすぐ"
+  ],
+  [
+   58,
+   "À chaque occasion",
+   "たびに · ついでに · をきっかけに · 際に"
+  ],
+  [
+   59,
+   "Depuis, pas avant",
+   "て以来 · てはじめて · てからでないと · 以降"
+  ],
+  [
+   60,
+   "Changement en cours",
+   "つつある · 一方だ · ようとしている · ばかりだ"
+  ],
+  [
+   61,
+   "Moments précis",
+   "ところに · ところを · かけ · きり"
+  ],
+  [
+   62,
+   "Bilan : le temps qui passe",
+   "test de module"
+  ],
+  [
+   63,
+   "Cause et conséquence",
+   "おかげで · せいで · によって · ため"
+  ],
+  [
+   64,
+   "Raisons nuancées",
+   "ものだから · せいか · からには · だけあって"
+  ],
+  [
+   65,
+   "Le but",
+   "ために · ように · のに · には"
+  ],
+  [
+   66,
+   "L'explication logique",
+   "わけだ · わけではない · わけがない · わけにはいかない"
+  ],
+  [
+   67,
+   "Connecteurs de conséquence",
+   "そのため · その結果 · そこで · したがって"
+  ],
+  [
+   68,
+   "Résultat inattendu",
+   "くせに · にしては · わりに · のに"
+  ],
+  [
+   69,
+   "Bilan : cause et but",
+   "test de module"
+  ],
+  [
+   70,
+   "Certitude",
+   "はずだ · に違いない · に決まっている · だろう"
+  ],
+  [
+   71,
+   "Quatre façons de « sembler »",
+   "そうだ · ようだ · らしい · みたいだ"
+  ],
+  [
+   72,
+   "Tendances",
+   "がち · 気味 · っぽい · げ"
+  ],
+  [
+   73,
+   "Risques et possibilités",
+   "おそれがある · 可能性がある · かねない · かもしれない"
+  ],
+  [
+   74,
+   "Opinion prudente",
+   "と思われる · と考えられる · のではないか · ではないだろうか"
+  ],
+  [
+   75,
+   "Point de vue",
+   "にとって · として · にしたら · から見ると"
+  ],
+  [
+   76,
+   "Bilan : supposition et jugement",
+   "test de module"
+  ],
+  [
+   77,
+   "Sujet et cible",
+   "について · に対して · に関して · をめぐって"
+  ],
+  [
+   78,
+   "Selon",
+   "によって · によると · に基づいて · に応じて"
+  ],
+  [
+   79,
+   "Degré et comparaison",
+   "ほど · くらい · ば〜ほど · ほど〜はない"
+  ],
+  [
+   80,
+   "Limitation",
+   "だけ · しか · ばかり · さえ"
+  ],
+  [
+   81,
+   "Insistance",
+   "こそ · まで · でも · なんか"
+  ],
+  [
+   82,
+   "Ajout et remplacement",
+   "かわりに · だけでなく · ばかりか · 上に"
+  ],
+  [
+   83,
+   "Bilan : relations et relief",
+   "test de module"
+  ],
+  [
+   84,
+   "Même si",
+   "ても · たとえ〜ても · にしても · としても"
+  ],
+  [
+   85,
+   "Contraste",
+   "一方で · 反面 · に反して · に対して"
+  ],
+  [
+   86,
+   "Hypothèses",
+   "としたら · とすれば · となると · もし〜なら"
+  ],
+  [
+   87,
+   "Condition minimale",
+   "さえ〜ば · ないことには · 限り · 以上は"
+  ],
+  [
+   88,
+   "Sans faire",
+   "ないで · ずに · なしで · ことなく"
+  ],
+  [
+   89,
+   "Quoi qu'il en soit",
+   "〜ても〜ても · にかかわらず · を問わず · に関係なく"
+  ],
+  [
+   90,
+   "Bilan : concession et condition",
+   "test de module"
+  ],
+  [
+   91,
+   "Verbes composés I",
+   "始める · 出す · 続ける · 終わる"
+  ],
+  [
+   92,
+   "Verbes composés II",
+   "合う · 直す · 切る · 込む"
+  ],
+  [
+   93,
+   "Direction et changement",
+   "てくる · ていく"
+  ],
+  [
+   94,
+   "Donner et recevoir II",
+   "てやる · てくださる · ていただく · てもらえないか"
+  ],
+  [
+   95,
+   "Causatif-passif et keigo N3",
+   "させられる · お〜願う · させていただく · ていただけないでしょうか"
+  ],
+  [
+   96,
+   "États et résultats",
+   "ている · てある · ておく · たまま"
+  ],
+  [
+   97,
+   "Bilan : verbes et nuances",
+   "test de module"
+  ],
+  [
+   98,
+   "Citer",
+   "という · といった · とか · って"
+  ],
+  [
+   99,
+   "Définir",
+   "とは · というのは · ということだ · というより"
+  ],
+  [
+   100,
+   "Rapporter une information",
+   "ということだ · とのことだ · によると · と言われている"
+  ],
+  [
+   101,
+   "Consignes et ordres",
+   "ように言う · なさい · こと · ように"
+  ],
+  [
+   102,
+   "Énumérer des exemples",
+   "など · なんか · とか〜とか · やら〜やら"
+  ],
+  [
+   103,
+   "Conseils et devoirs",
+   "べきだ · ほうがいい · ことだ · ものだ"
+  ],
+  [
+   104,
+   "Bilan : discours rapporté",
+   "test de module"
+  ],
+  [
+   105,
+   "わけ, はず, べき",
+   "わけ · はず · べき · ことはない"
+  ],
+  [
+   106,
+   "Les sens de ものだ",
+   "ものだ · ものか · もの · ものの"
+  ],
+  [
+   107,
+   "Intention et tentative",
+   "つもり · ようとする · ようとしない · まい"
+  ],
+  [
+   108,
+   "Regrets et souhaits",
+   "ばよかった · たらいいのに · たいものだ · ものなら"
+  ],
+  [
+   109,
+   "Sentiments forts",
+   "てたまらない · てしかたがない · てならない · ずにはいられない"
+  ],
+  [
+   110,
+   "Jugements de fin de phrase",
+   "にすぎない · に限る · しかない · ほかない"
+  ],
+  [
+   111,
+   "Bilan : fins de phrase",
+   "test de module"
+  ],
+  [
+   112,
+   "Le style écrit",
+   "である · ず · ねばならない · ぬ"
+  ],
+  [
+   113,
+   "Connecteurs écrits",
+   "また · さらに · ただし · なお"
+  ],
+  [
+   114,
+   "Quantités et seuils",
+   "以上 · 以下 · 未満 · 程度"
+  ],
+  [
+   115,
+   "Annonces et règlements",
+   "〜こと · 〜ないこと · 禁止 · 可"
+  ],
+  [
+   116,
+   "Le style des médias",
+   "とみられる · とされる · に伴い · を受けて"
+  ],
+  [
+   117,
+   "Expressions formelles",
+   "において · における · に際して · にわたって"
+  ],
+  [
+   118,
+   "Bilan : le japonais écrit",
+   "test de module"
+  ],
+  [
+   119,
+   "Lecture N3 : textes courts",
+   "内容理解（短文）"
+  ],
+  [
+   120,
+   "Lecture N3 : textes moyens",
+   "内容理解（中文）"
+  ],
+  [
+   121,
+   "Lecture N3 : texte long et documents",
+   "長文 · 情報検索"
+  ],
+  [
+   122,
+   "Écoute N3 : tâches et points précis",
+   "課題理解 · ポイント理解"
+  ],
+  [
+   123,
+   "Écoute N3 : idée générale",
+   "概要理解"
+  ],
+  [
+   124,
+   "Écoute N3 : répliques",
+   "発話表現 · 即時応答"
+  ],
+  [
+   125,
+   "Vocabulaire N3",
+   "言い換え · 用法 · 文脈規定"
+  ],
+  [
+   126,
+   "Kanji N3",
+   "漢字読み · 表記"
+  ],
+  [
+   127,
+   "Grammaire N3 en contexte",
+   "文の組み立て · 文章の文法"
+  ],
+  [
+   128,
+   "Examen blanc N3",
+   "épreuve complète chronométrée"
+  ],
+  [
+   129,
+   "Bilan N3 et passage au N2",
+   "diagnostic"
+  ]
+ ],
+ "N2": [
+  [
+   130,
+   "Évolution en cours",
+   "つつある · 一方だ · ばかりだ · につれて"
+  ],
+  [
+   131,
+   "À l'occasion de",
+   "際に · に先立って · をきっかけに · を契機に"
+  ],
+  [
+   132,
+   "Aussitôt",
+   "とたん · か〜ないかのうちに · かと思うと · 次第"
+  ],
+  [
+   133,
+   "Au terme de",
+   "末に · あげく · 上で · てからでないと"
+  ],
+  [
+   134,
+   "Depuis et jusqu'à",
+   "て以来 · をもって · に至るまで · を限りに"
+  ],
+  [
+   135,
+   "Chaque fois",
+   "たびに · につけ · ごとに · おきに"
+  ],
+  [
+   136,
+   "Bilan : évolution et moment",
+   "test de module"
+  ],
+  [
+   137,
+   "Concession avancée",
+   "にもかかわらず · ものの · つつも · からといって"
+  ],
+  [
+   138,
+   "Nuancer une affirmation",
+   "といっても · とはいえ · とは限らない · ないこともない"
+  ],
+  [
+   139,
+   "Que ce soit… ou…",
+   "にしろ〜にしろ · にせよ · であれ · ようが〜まいが"
+  ],
+  [
+   140,
+   "Loin de",
+   "どころか · どころではない · はともかく · はさておき"
+  ],
+  [
+   141,
+   "Sans tenir compte de",
+   "もかまわず · をよそに · ならともかく · ぬきで"
+  ],
+  [
+   142,
+   "Même au prix de",
+   "てでも · たところで · ところを · ものを"
+  ],
+  [
+   143,
+   "Bilan : concession",
+   "test de module"
+  ],
+  [
+   144,
+   "Justement parce que",
+   "だけに · だけのことはある · からこそ · ことだから"
+  ],
+  [
+   145,
+   "La faute à, grâce à",
+   "ばかりに · せいで · おかげで · あまり"
+  ],
+  [
+   146,
+   "Puisque, désormais",
+   "上は · 以上 · からには · ことだし"
+  ],
+  [
+   147,
+   "D'après des indices",
+   "ことから · からして · からすると · からみて"
+  ],
+  [
+   148,
+   "Résultats",
+   "たところ · 結果 · 次第だ · ことになる"
+  ],
+  [
+   149,
+   "Viser un objectif",
+   "べく · に向けて · をめざして · ためには"
+  ],
+  [
+   150,
+   "Bilan : cause et but",
+   "test de module"
+  ],
+  [
+   151,
+   "Conformément à",
+   "に沿って · に即して · をもとに · に基づいて"
+  ],
+  [
+   152,
+   "Autour d'un centre",
+   "を中心に · をはじめ · をこめて · を通して"
+  ],
+  [
+   153,
+   "Du point de vue de",
+   "からいうと · からすれば · にしてみれば · にとっては"
+  ],
+  [
+   154,
+   "Domaines et cas",
+   "にかけては · に限って · に関しては · にしては"
+  ],
+  [
+   155,
+   "Destiné à",
+   "向け · 向き · 用 · に適した"
+  ],
+  [
+   156,
+   "Cadre et étapes",
+   "のもとで · を経て · をもって · において"
+  ],
+  [
+   157,
+   "Bilan : point de vue et référence",
+   "test de module"
+  ],
+  [
+   158,
+   "Au moins",
+   "せめて · だけでも · 少なくとも · に限らず"
+  ],
+  [
+   159,
+   "Non seulement",
+   "のみならず · はもとより · はもちろん · に加えて"
+  ],
+  [
+   160,
+   "Le mieux, le pire",
+   "に越したことはない · くらいなら · に限る · ほど〜はない"
+  ],
+  [
+   161,
+   "Rien d'autre que",
+   "にほかならない · というものだ · というものではない · にすぎない"
+  ],
+  [
+   162,
+   "Le comble",
+   "にもほどがある · といったらない · ことか · ものがある"
+  ],
+  [
+   163,
+   "Possible ou non",
+   "得る · 得ない · かねる · っこない"
+  ],
+  [
+   164,
+   "Bilan : degré et limite",
+   "test de module"
+  ],
+  [
+   165,
+   "Ne pas pouvoir faire autrement",
+   "ざるを得ない · ほかない · よりほかない · しかない"
+  ],
+  [
+   166,
+   "Impossible",
+   "ようがない · わけがない · ものではない · はずがない"
+  ],
+  [
+   167,
+   "Certitude",
+   "に相違ない · に決まっている · に違いない · まず〜まい"
+  ],
+  [
+   168,
+   "Comme si",
+   "かのようだ · かのように · ように見える · 気がする"
+  ],
+  [
+   169,
+   "Volonté négative et souhait",
+   "まい · ないものか · ものか · ないではいられない"
+  ],
+  [
+   170,
+   "Devoirs et conseils",
+   "べきではない · ものではない · ことだ · ないことには"
+  ],
+  [
+   171,
+   "Bilan : jugement",
+   "test de module"
+  ],
+  [
+   172,
+   "Émotions fortes",
+   "ことに · ことか · てならない · ずにはいられない"
+  ],
+  [
+   173,
+   "Difficile à faire",
+   "がたい · づらい · にくい · かねる"
+  ],
+  [
+   174,
+   "Occasions manquées",
+   "ずじまい · ものを · そびれる · 損なう"
+  ],
+  [
+   175,
+   "Ça en valait la peine",
+   "かいがある · てこそ · てはじめて · だけのことはある"
+  ],
+  [
+   176,
+   "Tendances N2",
+   "きらいがある · ぎみ · がち · っぽい"
+  ],
+  [
+   177,
+   "Couvert de",
+   "だらけ · まみれ · ずくめ · 一色"
+  ],
+  [
+   178,
+   "Bilan : sentiments",
+   "test de module"
+  ],
+  [
+   179,
+   "Parler d'un thème",
+   "というと · といえば · といったら · ときたら"
+  ],
+  [
+   180,
+   "Nuancer ses propos",
+   "というより · というか · とでもいうか · いわば"
+  ],
+  [
+   181,
+   "Sans même",
+   "ことなく · もせずに · ないまでも · ずとも"
+  ],
+  [
+   182,
+   "À la place, en passant",
+   "ついでに · に代わって · かわりに · がてら"
+  ],
+  [
+   183,
+   "Keigo N2",
+   "承る · 申し上げる · おっしゃる · いらっしゃる"
+  ],
+  [
+   184,
+   "Écrits formels",
+   "ものとする · こととする · 次第である · につき"
+  ],
+  [
+   185,
+   "Bilan : discours",
+   "test de module"
+  ],
+  [
+   186,
+   "À peine fait, à moitié fait",
+   "たて · かけ · きり · っぱなし"
+  ],
+  [
+   187,
+   "Jusqu'au bout",
+   "ぬく · きる · とおす · 上げる"
+  ],
+  [
+   188,
+   "S'en tirer",
+   "ずにすむ · てすむ · で済む · 済ませる"
+  ],
+  [
+   189,
+   "À sa manière",
+   "なりに · ぶり · っぷり · 並み"
+  ],
+  [
+   190,
+   "Au moment précis",
+   "ところに · ところへ · ところを · ところだった"
+  ],
+  [
+   191,
+   "Règles et habitudes",
+   "ことになっている · ことにしている · ようになっている · こととなる"
+  ],
+  [
+   192,
+   "Bilan : formes verbales",
+   "test de module"
+  ],
+  [
+   193,
+   "Conformément aux attentes",
+   "にこたえて · とおり · どおり · に応じて"
+  ],
+  [
+   194,
+   "Dans le temps et l'espace",
+   "から〜にかけて · 中 · にわたって · を通じて"
+  ],
+  [
+   195,
+   "Rien de plus que",
+   "でしかない · でもなんでもない · ないでもない · ないものでもない"
+  ],
+  [
+   196,
+   "Questions rhétoriques",
+   "ではあるまいか · ないものだろうか · ものだろうか · ではなかろうか"
+  ],
+  [
+   197,
+   "Même, jusqu'à",
+   "ですら · までして · さえ〜ば · でさえ"
+  ],
+  [
+   198,
+   "L'oral rapide",
+   "っけ · ったら · ってば · じゃない"
+  ],
+  [
+   199,
+   "Bilan : textes N2",
+   "test de module"
+  ],
+  [
+   200,
+   "Lecture N2 : textes courts et moyens",
+   "内容理解（短文・中文）"
+  ],
+  [
+   201,
+   "Lecture N2 : lecture comparée",
+   "統合理解"
+  ],
+  [
+   202,
+   "Lecture N2 : argumentation et documents",
+   "主張理解 · 情報検索"
+  ],
+  [
+   203,
+   "Écoute N2 : tâches et points précis",
+   "課題理解 · ポイント理解"
+  ],
+  [
+   204,
+   "Écoute N2 : idée générale et écoute intégrée",
+   "概要理解 · 統合理解"
+  ],
+  [
+   205,
+   "Écoute N2 : réponses immédiates",
+   "即時応答"
+  ],
+  [
+   206,
+   "Vocabulaire N2",
+   "文脈規定 · 言い換え · 用法 · 語形成"
+  ],
+  [
+   207,
+   "Kanji N2",
+   "漢字読み · 表記"
+  ],
+  [
+   208,
+   "Grammaire N2 en contexte",
+   "文法形式 · 文の組み立て · 文章の文法"
+  ],
+  [
+   209,
+   "Examen blanc N2",
+   "épreuve complète chronométrée"
+  ],
+  [
+   210,
+   "Bilan final N2",
+   "diagnostic"
+  ]
+ ],
+ "SYL": {
+  "1": {
+   "id": 1,
+   "lv": "N4",
+   "t": "Les verbes et leurs groupes",
+   "g": "ます形 · 辞書形 · groupes 1, 2, 3"
+  },
+  "2": {
+   "id": 2,
+   "lv": "N4",
+   "t": "La forme て",
+   "g": "て形 · てから · ている"
+  },
+  "3": {
+   "id": 3,
+   "lv": "N4",
+   "t": "Formes ない et た",
+   "g": "ない形 · た形 · style neutre"
+  },
+  "4": {
+   "id": 4,
+   "lv": "N4",
+   "t": "Adjectifs et noms",
+   "g": "い / な · くなる · になる"
+  },
+  "5": {
+   "id": 5,
+   "lv": "N4",
+   "t": "Les particules de base",
+   "g": "は / が · を · に / で · から / まで"
+  },
+  "6": {
+   "id": 6,
+   "lv": "N4",
+   "t": "Bilan : fondations",
+   "g": "test de module"
+  },
+  "7": {
+   "id": 7,
+   "lv": "N4",
+   "t": "Intentions et projets",
+   "g": "つもり · ようと思う · 予定 · ために"
+  },
+  "8": {
+   "id": 8,
+   "lv": "N4",
+   "t": "Expérience et conseils",
+   "g": "たことがある · ほうがいい · たらどう · てみる"
+  },
+  "9": {
+   "id": 9,
+   "lv": "N4",
+   "t": "Désirs",
+   "g": "たい · たがる · ほしい · てほしい"
+  },
+  "10": {
+   "id": 10,
+   "lv": "N4",
+   "t": "Préparer, finir, laisser",
+   "g": "ておく · てしまう · てある"
+  },
+  "11": {
+   "id": 11,
+   "lv": "N4",
+   "t": "Capacité et changement",
+   "g": "ことができる · forme potentielle · ようになる · なくなる"
+  },
+  "12": {
+   "id": 12,
+   "lv": "N4",
+   "t": "Bilan : projets et capacités",
+   "g": "test de module"
+  },
+  "13": {
+   "id": 13,
+   "lv": "N4",
+   "t": "Donner et recevoir",
+   "g": "あげる · くれる · もらう · てあげる / てくれる / てもらう"
+  },
+  "14": {
+   "id": 14,
+   "lv": "N4",
+   "t": "Demander et proposer",
+   "g": "てください · ませんか · ましょう · ましょうか"
+  },
+  "15": {
+   "id": 15,
+   "lv": "N4",
+   "t": "Permission et interdiction",
+   "g": "てもいい · てはいけない · なくてもいい"
+  },
+  "16": {
+   "id": 16,
+   "lv": "N4",
+   "t": "Obligation",
+   "g": "なければならない · なくてはいけない · ないと"
+  },
+  "17": {
+   "id": 17,
+   "lv": "N4",
+   "t": "Enchaîner les actions",
+   "g": "たり〜たり · ながら · 前に · 後で"
+  },
+  "18": {
+   "id": 18,
+   "lv": "N4",
+   "t": "Bilan : relations et règles",
+   "g": "test de module"
+  },
+  "19": {
+   "id": 19,
+   "lv": "N4",
+   "t": "La condition と",
+   "g": "と (conséquence automatique)"
+  },
+  "20": {
+   "id": 20,
+   "lv": "N4",
+   "t": "La condition ば",
+   "g": "ば · なければ · ばいい"
+  },
+  "21": {
+   "id": 21,
+   "lv": "N4",
+   "t": "La condition たら",
+   "g": "たら · たらいい · たら (découverte)"
+  },
+  "22": {
+   "id": 22,
+   "lv": "N4",
+   "t": "なら et les quatre conditions",
+   "g": "なら · と / ば / たら / なら"
+  },
+  "23": {
+   "id": 23,
+   "lv": "N4",
+   "t": "Situer dans le temps",
+   "g": "とき · 間 · ところだ · たばかり"
+  },
+  "24": {
+   "id": 24,
+   "lv": "N4",
+   "t": "Bilan : conditions et temps",
+   "g": "test de module"
+  },
+  "25": {
+   "id": 25,
+   "lv": "N4",
+   "t": "L'apparence",
+   "g": "そうだ · そうな · そうに"
+  },
+  "26": {
+   "id": 26,
+   "lv": "N4",
+   "t": "Le ouï-dire",
+   "g": "そうだ (rapporté) · らしい · って"
+  },
+  "27": {
+   "id": 27,
+   "lv": "N4",
+   "t": "Ressemblance et impression",
+   "g": "ようだ · みたいだ · のような"
+  },
+  "28": {
+   "id": 28,
+   "lv": "N4",
+   "t": "La probabilité",
+   "g": "でしょう · かもしれない · はずだ"
+  },
+  "29": {
+   "id": 29,
+   "lv": "N4",
+   "t": "Expliquer une raison",
+   "g": "から · ので · んです"
+  },
+  "30": {
+   "id": 30,
+   "lv": "N4",
+   "t": "Bilan : jugement et perception",
+   "g": "test de module"
+  },
+  "31": {
+   "id": 31,
+   "lv": "N4",
+   "t": "Le passif",
+   "g": "られる · に · によって"
+  },
+  "32": {
+   "id": 32,
+   "lv": "N4",
+   "t": "Le passif de gêne",
+   "g": "雨に降られる · passif indirect"
+  },
+  "33": {
+   "id": 33,
+   "lv": "N4",
+   "t": "Le causatif",
+   "g": "させる · に / を"
+  },
+  "34": {
+   "id": 34,
+   "lv": "N4",
+   "t": "Causatif et demande",
+   "g": "させてください · させてもらう"
+  },
+  "35": {
+   "id": 35,
+   "lv": "N4",
+   "t": "Le causatif-passif",
+   "g": "させられる (initiation)"
+  },
+  "36": {
+   "id": 36,
+   "lv": "N4",
+   "t": "Bilan : les voix du verbe",
+   "g": "test de module"
+  },
+  "37": {
+   "id": 37,
+   "lv": "N4",
+   "t": "Keigo : principes",
+   "g": "丁寧語 · 尊敬語 · 謙譲語"
+  },
+  "38": {
+   "id": 38,
+   "lv": "N4",
+   "t": "Honorer l'autre",
+   "g": "いらっしゃる · おっしゃる · お〜になる"
+  },
+  "39": {
+   "id": 39,
+   "lv": "N4",
+   "t": "Parler de soi avec modestie",
+   "g": "参る · 申す · お〜する"
+  },
+  "40": {
+   "id": 40,
+   "lv": "N4",
+   "t": "Formules polies",
+   "g": "でございます · おります · ください"
+  },
+  "41": {
+   "id": 41,
+   "lv": "N4",
+   "t": "Keigo en situation",
+   "g": "magasin · téléphone · courriel"
+  },
+  "42": {
+   "id": 42,
+   "lv": "N4",
+   "t": "Bilan : politesse",
+   "g": "test de module"
+  },
+  "43": {
+   "id": 43,
+   "lv": "N4",
+   "t": "Citer et rapporter",
+   "g": "と言う · という · と思う · って"
+  },
+  "44": {
+   "id": 44,
+   "lv": "N4",
+   "t": "Décider et être décidé",
+   "g": "ことにする · ことになる"
+  },
+  "45": {
+   "id": 45,
+   "lv": "N4",
+   "t": "Faire en sorte que",
+   "g": "ようにする · ように · ように言う"
+  },
+  "46": {
+   "id": 46,
+   "lv": "N4",
+   "t": "Comparer",
+   "g": "より · ほど〜ない · の中で一番"
+  },
+  "47": {
+   "id": 47,
+   "lv": "N4",
+   "t": "Contraste et concession",
+   "g": "のに · ても · けど"
+  },
+  "48": {
+   "id": 48,
+   "lv": "N4",
+   "t": "Nominaliser",
+   "g": "の · こと · のが好き · のを忘れる"
+  },
+  "49": {
+   "id": 49,
+   "lv": "N4",
+   "t": "Questions incluses",
+   "g": "か · かどうか"
+  },
+  "50": {
+   "id": 50,
+   "lv": "N4",
+   "t": "Trop, facile, difficile",
+   "g": "すぎる · やすい · にくい · 方"
+  },
+  "51": {
+   "id": 51,
+   "lv": "N4",
+   "t": "Bilan : nuances de phrase",
+   "g": "test de module"
+  },
+  "52": {
+   "id": 52,
+   "lv": "N4",
+   "t": "Lecture N4",
+   "g": "stratégies de lecture"
+  },
+  "53": {
+   "id": 53,
+   "lv": "N4",
+   "t": "Écoute N4",
+   "g": "stratégies d'écoute"
+  },
+  "54": {
+   "id": 54,
+   "lv": "N4",
+   "t": "Examen blanc N4",
+   "g": "épreuve complète chronométrée"
+  },
+  "55": {
+   "id": 55,
+   "lv": "N4",
+   "t": "Bilan N4 et passage au N3",
+   "g": "diagnostic"
+  },
+  "56": {
+   "id": 56,
+   "lv": "N3",
+   "t": "Pendant que",
+   "g": "うちに · 間に · 最中に · 中に"
+  },
+  "57": {
+   "id": 57,
+   "lv": "N3",
+   "t": "Aussitôt que",
+   "g": "とたん(に) · と同時に · かと思うと · たらすぐ"
+  },
+  "58": {
+   "id": 58,
+   "lv": "N3",
+   "t": "À chaque occasion",
+   "g": "たびに · ついでに · をきっかけに · 際に"
+  },
+  "59": {
+   "id": 59,
+   "lv": "N3",
+   "t": "Depuis, pas avant",
+   "g": "て以来 · てはじめて · てからでないと · 以降"
+  },
+  "60": {
+   "id": 60,
+   "lv": "N3",
+   "t": "Changement en cours",
+   "g": "つつある · 一方だ · ようとしている · ばかりだ"
+  },
+  "61": {
+   "id": 61,
+   "lv": "N3",
+   "t": "Moments précis",
+   "g": "ところに · ところを · かけ · きり"
+  },
+  "62": {
+   "id": 62,
+   "lv": "N3",
+   "t": "Bilan : le temps qui passe",
+   "g": "test de module"
+  },
+  "63": {
+   "id": 63,
+   "lv": "N3",
+   "t": "Cause et conséquence",
+   "g": "おかげで · せいで · によって · ため"
+  },
+  "64": {
+   "id": 64,
+   "lv": "N3",
+   "t": "Raisons nuancées",
+   "g": "ものだから · せいか · からには · だけあって"
+  },
+  "65": {
+   "id": 65,
+   "lv": "N3",
+   "t": "Le but",
+   "g": "ために · ように · のに · には"
+  },
+  "66": {
+   "id": 66,
+   "lv": "N3",
+   "t": "L'explication logique",
+   "g": "わけだ · わけではない · わけがない · わけにはいかない"
+  },
+  "67": {
+   "id": 67,
+   "lv": "N3",
+   "t": "Connecteurs de conséquence",
+   "g": "そのため · その結果 · そこで · したがって"
+  },
+  "68": {
+   "id": 68,
+   "lv": "N3",
+   "t": "Résultat inattendu",
+   "g": "くせに · にしては · わりに · のに"
+  },
+  "69": {
+   "id": 69,
+   "lv": "N3",
+   "t": "Bilan : cause et but",
+   "g": "test de module"
+  },
+  "70": {
+   "id": 70,
+   "lv": "N3",
+   "t": "Certitude",
+   "g": "はずだ · に違いない · に決まっている · だろう"
+  },
+  "71": {
+   "id": 71,
+   "lv": "N3",
+   "t": "Quatre façons de « sembler »",
+   "g": "そうだ · ようだ · らしい · みたいだ"
+  },
+  "72": {
+   "id": 72,
+   "lv": "N3",
+   "t": "Tendances",
+   "g": "がち · 気味 · っぽい · げ"
+  },
+  "73": {
+   "id": 73,
+   "lv": "N3",
+   "t": "Risques et possibilités",
+   "g": "おそれがある · 可能性がある · かねない · かもしれない"
+  },
+  "74": {
+   "id": 74,
+   "lv": "N3",
+   "t": "Opinion prudente",
+   "g": "と思われる · と考えられる · のではないか · ではないだろうか"
+  },
+  "75": {
+   "id": 75,
+   "lv": "N3",
+   "t": "Point de vue",
+   "g": "にとって · として · にしたら · から見ると"
+  },
+  "76": {
+   "id": 76,
+   "lv": "N3",
+   "t": "Bilan : supposition et jugement",
+   "g": "test de module"
+  },
+  "77": {
+   "id": 77,
+   "lv": "N3",
+   "t": "Sujet et cible",
+   "g": "について · に対して · に関して · をめぐって"
+  },
+  "78": {
+   "id": 78,
+   "lv": "N3",
+   "t": "Selon",
+   "g": "によって · によると · に基づいて · に応じて"
+  },
+  "79": {
+   "id": 79,
+   "lv": "N3",
+   "t": "Degré et comparaison",
+   "g": "ほど · くらい · ば〜ほど · ほど〜はない"
+  },
+  "80": {
+   "id": 80,
+   "lv": "N3",
+   "t": "Limitation",
+   "g": "だけ · しか · ばかり · さえ"
+  },
+  "81": {
+   "id": 81,
+   "lv": "N3",
+   "t": "Insistance",
+   "g": "こそ · まで · でも · なんか"
+  },
+  "82": {
+   "id": 82,
+   "lv": "N3",
+   "t": "Ajout et remplacement",
+   "g": "かわりに · だけでなく · ばかりか · 上に"
+  },
+  "83": {
+   "id": 83,
+   "lv": "N3",
+   "t": "Bilan : relations et relief",
+   "g": "test de module"
+  },
+  "84": {
+   "id": 84,
+   "lv": "N3",
+   "t": "Même si",
+   "g": "ても · たとえ〜ても · にしても · としても"
+  },
+  "85": {
+   "id": 85,
+   "lv": "N3",
+   "t": "Contraste",
+   "g": "一方で · 反面 · に反して · に対して"
+  },
+  "86": {
+   "id": 86,
+   "lv": "N3",
+   "t": "Hypothèses",
+   "g": "としたら · とすれば · となると · もし〜なら"
+  },
+  "87": {
+   "id": 87,
+   "lv": "N3",
+   "t": "Condition minimale",
+   "g": "さえ〜ば · ないことには · 限り · 以上は"
+  },
+  "88": {
+   "id": 88,
+   "lv": "N3",
+   "t": "Sans faire",
+   "g": "ないで · ずに · なしで · ことなく"
+  },
+  "89": {
+   "id": 89,
+   "lv": "N3",
+   "t": "Quoi qu'il en soit",
+   "g": "〜ても〜ても · にかかわらず · を問わず · に関係なく"
+  },
+  "90": {
+   "id": 90,
+   "lv": "N3",
+   "t": "Bilan : concession et condition",
+   "g": "test de module"
+  },
+  "91": {
+   "id": 91,
+   "lv": "N3",
+   "t": "Verbes composés I",
+   "g": "始める · 出す · 続ける · 終わる"
+  },
+  "92": {
+   "id": 92,
+   "lv": "N3",
+   "t": "Verbes composés II",
+   "g": "合う · 直す · 切る · 込む"
+  },
+  "93": {
+   "id": 93,
+   "lv": "N3",
+   "t": "Direction et changement",
+   "g": "てくる · ていく"
+  },
+  "94": {
+   "id": 94,
+   "lv": "N3",
+   "t": "Donner et recevoir II",
+   "g": "てやる · てくださる · ていただく · てもらえないか"
+  },
+  "95": {
+   "id": 95,
+   "lv": "N3",
+   "t": "Causatif-passif et keigo N3",
+   "g": "させられる · お〜願う · させていただく · ていただけないでしょうか"
+  },
+  "96": {
+   "id": 96,
+   "lv": "N3",
+   "t": "États et résultats",
+   "g": "ている · てある · ておく · たまま"
+  },
+  "97": {
+   "id": 97,
+   "lv": "N3",
+   "t": "Bilan : verbes et nuances",
+   "g": "test de module"
+  },
+  "98": {
+   "id": 98,
+   "lv": "N3",
+   "t": "Citer",
+   "g": "という · といった · とか · って"
+  },
+  "99": {
+   "id": 99,
+   "lv": "N3",
+   "t": "Définir",
+   "g": "とは · というのは · ということだ · というより"
+  },
+  "100": {
+   "id": 100,
+   "lv": "N3",
+   "t": "Rapporter une information",
+   "g": "ということだ · とのことだ · によると · と言われている"
+  },
+  "101": {
+   "id": 101,
+   "lv": "N3",
+   "t": "Consignes et ordres",
+   "g": "ように言う · なさい · こと · ように"
+  },
+  "102": {
+   "id": 102,
+   "lv": "N3",
+   "t": "Énumérer des exemples",
+   "g": "など · なんか · とか〜とか · やら〜やら"
+  },
+  "103": {
+   "id": 103,
+   "lv": "N3",
+   "t": "Conseils et devoirs",
+   "g": "べきだ · ほうがいい · ことだ · ものだ"
+  },
+  "104": {
+   "id": 104,
+   "lv": "N3",
+   "t": "Bilan : discours rapporté",
+   "g": "test de module"
+  },
+  "105": {
+   "id": 105,
+   "lv": "N3",
+   "t": "わけ, はず, べき",
+   "g": "わけ · はず · べき · ことはない"
+  },
+  "106": {
+   "id": 106,
+   "lv": "N3",
+   "t": "Les sens de ものだ",
+   "g": "ものだ · ものか · もの · ものの"
+  },
+  "107": {
+   "id": 107,
+   "lv": "N3",
+   "t": "Intention et tentative",
+   "g": "つもり · ようとする · ようとしない · まい"
+  },
+  "108": {
+   "id": 108,
+   "lv": "N3",
+   "t": "Regrets et souhaits",
+   "g": "ばよかった · たらいいのに · たいものだ · ものなら"
+  },
+  "109": {
+   "id": 109,
+   "lv": "N3",
+   "t": "Sentiments forts",
+   "g": "てたまらない · てしかたがない · てならない · ずにはいられない"
+  },
+  "110": {
+   "id": 110,
+   "lv": "N3",
+   "t": "Jugements de fin de phrase",
+   "g": "にすぎない · に限る · しかない · ほかない"
+  },
+  "111": {
+   "id": 111,
+   "lv": "N3",
+   "t": "Bilan : fins de phrase",
+   "g": "test de module"
+  },
+  "112": {
+   "id": 112,
+   "lv": "N3",
+   "t": "Le style écrit",
+   "g": "である · ず · ねばならない · ぬ"
+  },
+  "113": {
+   "id": 113,
+   "lv": "N3",
+   "t": "Connecteurs écrits",
+   "g": "また · さらに · ただし · なお"
+  },
+  "114": {
+   "id": 114,
+   "lv": "N3",
+   "t": "Quantités et seuils",
+   "g": "以上 · 以下 · 未満 · 程度"
+  },
+  "115": {
+   "id": 115,
+   "lv": "N3",
+   "t": "Annonces et règlements",
+   "g": "〜こと · 〜ないこと · 禁止 · 可"
+  },
+  "116": {
+   "id": 116,
+   "lv": "N3",
+   "t": "Le style des médias",
+   "g": "とみられる · とされる · に伴い · を受けて"
+  },
+  "117": {
+   "id": 117,
+   "lv": "N3",
+   "t": "Expressions formelles",
+   "g": "において · における · に際して · にわたって"
+  },
+  "118": {
+   "id": 118,
+   "lv": "N3",
+   "t": "Bilan : le japonais écrit",
+   "g": "test de module"
+  },
+  "119": {
+   "id": 119,
+   "lv": "N3",
+   "t": "Lecture N3 : textes courts",
+   "g": "内容理解（短文）"
+  },
+  "120": {
+   "id": 120,
+   "lv": "N3",
+   "t": "Lecture N3 : textes moyens",
+   "g": "内容理解（中文）"
+  },
+  "121": {
+   "id": 121,
+   "lv": "N3",
+   "t": "Lecture N3 : texte long et documents",
+   "g": "長文 · 情報検索"
+  },
+  "122": {
+   "id": 122,
+   "lv": "N3",
+   "t": "Écoute N3 : tâches et points précis",
+   "g": "課題理解 · ポイント理解"
+  },
+  "123": {
+   "id": 123,
+   "lv": "N3",
+   "t": "Écoute N3 : idée générale",
+   "g": "概要理解"
+  },
+  "124": {
+   "id": 124,
+   "lv": "N3",
+   "t": "Écoute N3 : répliques",
+   "g": "発話表現 · 即時応答"
+  },
+  "125": {
+   "id": 125,
+   "lv": "N3",
+   "t": "Vocabulaire N3",
+   "g": "言い換え · 用法 · 文脈規定"
+  },
+  "126": {
+   "id": 126,
+   "lv": "N3",
+   "t": "Kanji N3",
+   "g": "漢字読み · 表記"
+  },
+  "127": {
+   "id": 127,
+   "lv": "N3",
+   "t": "Grammaire N3 en contexte",
+   "g": "文の組み立て · 文章の文法"
+  },
+  "128": {
+   "id": 128,
+   "lv": "N3",
+   "t": "Examen blanc N3",
+   "g": "épreuve complète chronométrée"
+  },
+  "129": {
+   "id": 129,
+   "lv": "N3",
+   "t": "Bilan N3 et passage au N2",
+   "g": "diagnostic"
+  },
+  "130": {
+   "id": 130,
+   "lv": "N2",
+   "t": "Évolution en cours",
+   "g": "つつある · 一方だ · ばかりだ · につれて"
+  },
+  "131": {
+   "id": 131,
+   "lv": "N2",
+   "t": "À l'occasion de",
+   "g": "際に · に先立って · をきっかけに · を契機に"
+  },
+  "132": {
+   "id": 132,
+   "lv": "N2",
+   "t": "Aussitôt",
+   "g": "とたん · か〜ないかのうちに · かと思うと · 次第"
+  },
+  "133": {
+   "id": 133,
+   "lv": "N2",
+   "t": "Au terme de",
+   "g": "末に · あげく · 上で · てからでないと"
+  },
+  "134": {
+   "id": 134,
+   "lv": "N2",
+   "t": "Depuis et jusqu'à",
+   "g": "て以来 · をもって · に至るまで · を限りに"
+  },
+  "135": {
+   "id": 135,
+   "lv": "N2",
+   "t": "Chaque fois",
+   "g": "たびに · につけ · ごとに · おきに"
+  },
+  "136": {
+   "id": 136,
+   "lv": "N2",
+   "t": "Bilan : évolution et moment",
+   "g": "test de module"
+  },
+  "137": {
+   "id": 137,
+   "lv": "N2",
+   "t": "Concession avancée",
+   "g": "にもかかわらず · ものの · つつも · からといって"
+  },
+  "138": {
+   "id": 138,
+   "lv": "N2",
+   "t": "Nuancer une affirmation",
+   "g": "といっても · とはいえ · とは限らない · ないこともない"
+  },
+  "139": {
+   "id": 139,
+   "lv": "N2",
+   "t": "Que ce soit… ou…",
+   "g": "にしろ〜にしろ · にせよ · であれ · ようが〜まいが"
+  },
+  "140": {
+   "id": 140,
+   "lv": "N2",
+   "t": "Loin de",
+   "g": "どころか · どころではない · はともかく · はさておき"
+  },
+  "141": {
+   "id": 141,
+   "lv": "N2",
+   "t": "Sans tenir compte de",
+   "g": "もかまわず · をよそに · ならともかく · ぬきで"
+  },
+  "142": {
+   "id": 142,
+   "lv": "N2",
+   "t": "Même au prix de",
+   "g": "てでも · たところで · ところを · ものを"
+  },
+  "143": {
+   "id": 143,
+   "lv": "N2",
+   "t": "Bilan : concession",
+   "g": "test de module"
+  },
+  "144": {
+   "id": 144,
+   "lv": "N2",
+   "t": "Justement parce que",
+   "g": "だけに · だけのことはある · からこそ · ことだから"
+  },
+  "145": {
+   "id": 145,
+   "lv": "N2",
+   "t": "La faute à, grâce à",
+   "g": "ばかりに · せいで · おかげで · あまり"
+  },
+  "146": {
+   "id": 146,
+   "lv": "N2",
+   "t": "Puisque, désormais",
+   "g": "上は · 以上 · からには · ことだし"
+  },
+  "147": {
+   "id": 147,
+   "lv": "N2",
+   "t": "D'après des indices",
+   "g": "ことから · からして · からすると · からみて"
+  },
+  "148": {
+   "id": 148,
+   "lv": "N2",
+   "t": "Résultats",
+   "g": "たところ · 結果 · 次第だ · ことになる"
+  },
+  "149": {
+   "id": 149,
+   "lv": "N2",
+   "t": "Viser un objectif",
+   "g": "べく · に向けて · をめざして · ためには"
+  },
+  "150": {
+   "id": 150,
+   "lv": "N2",
+   "t": "Bilan : cause et but",
+   "g": "test de module"
+  },
+  "151": {
+   "id": 151,
+   "lv": "N2",
+   "t": "Conformément à",
+   "g": "に沿って · に即して · をもとに · に基づいて"
+  },
+  "152": {
+   "id": 152,
+   "lv": "N2",
+   "t": "Autour d'un centre",
+   "g": "を中心に · をはじめ · をこめて · を通して"
+  },
+  "153": {
+   "id": 153,
+   "lv": "N2",
+   "t": "Du point de vue de",
+   "g": "からいうと · からすれば · にしてみれば · にとっては"
+  },
+  "154": {
+   "id": 154,
+   "lv": "N2",
+   "t": "Domaines et cas",
+   "g": "にかけては · に限って · に関しては · にしては"
+  },
+  "155": {
+   "id": 155,
+   "lv": "N2",
+   "t": "Destiné à",
+   "g": "向け · 向き · 用 · に適した"
+  },
+  "156": {
+   "id": 156,
+   "lv": "N2",
+   "t": "Cadre et étapes",
+   "g": "のもとで · を経て · をもって · において"
+  },
+  "157": {
+   "id": 157,
+   "lv": "N2",
+   "t": "Bilan : point de vue et référence",
+   "g": "test de module"
+  },
+  "158": {
+   "id": 158,
+   "lv": "N2",
+   "t": "Au moins",
+   "g": "せめて · だけでも · 少なくとも · に限らず"
+  },
+  "159": {
+   "id": 159,
+   "lv": "N2",
+   "t": "Non seulement",
+   "g": "のみならず · はもとより · はもちろん · に加えて"
+  },
+  "160": {
+   "id": 160,
+   "lv": "N2",
+   "t": "Le mieux, le pire",
+   "g": "に越したことはない · くらいなら · に限る · ほど〜はない"
+  },
+  "161": {
+   "id": 161,
+   "lv": "N2",
+   "t": "Rien d'autre que",
+   "g": "にほかならない · というものだ · というものではない · にすぎない"
+  },
+  "162": {
+   "id": 162,
+   "lv": "N2",
+   "t": "Le comble",
+   "g": "にもほどがある · といったらない · ことか · ものがある"
+  },
+  "163": {
+   "id": 163,
+   "lv": "N2",
+   "t": "Possible ou non",
+   "g": "得る · 得ない · かねる · っこない"
+  },
+  "164": {
+   "id": 164,
+   "lv": "N2",
+   "t": "Bilan : degré et limite",
+   "g": "test de module"
+  },
+  "165": {
+   "id": 165,
+   "lv": "N2",
+   "t": "Ne pas pouvoir faire autrement",
+   "g": "ざるを得ない · ほかない · よりほかない · しかない"
+  },
+  "166": {
+   "id": 166,
+   "lv": "N2",
+   "t": "Impossible",
+   "g": "ようがない · わけがない · ものではない · はずがない"
+  },
+  "167": {
+   "id": 167,
+   "lv": "N2",
+   "t": "Certitude",
+   "g": "に相違ない · に決まっている · に違いない · まず〜まい"
+  },
+  "168": {
+   "id": 168,
+   "lv": "N2",
+   "t": "Comme si",
+   "g": "かのようだ · かのように · ように見える · 気がする"
+  },
+  "169": {
+   "id": 169,
+   "lv": "N2",
+   "t": "Volonté négative et souhait",
+   "g": "まい · ないものか · ものか · ないではいられない"
+  },
+  "170": {
+   "id": 170,
+   "lv": "N2",
+   "t": "Devoirs et conseils",
+   "g": "べきではない · ものではない · ことだ · ないことには"
+  },
+  "171": {
+   "id": 171,
+   "lv": "N2",
+   "t": "Bilan : jugement",
+   "g": "test de module"
+  },
+  "172": {
+   "id": 172,
+   "lv": "N2",
+   "t": "Émotions fortes",
+   "g": "ことに · ことか · てならない · ずにはいられない"
+  },
+  "173": {
+   "id": 173,
+   "lv": "N2",
+   "t": "Difficile à faire",
+   "g": "がたい · づらい · にくい · かねる"
+  },
+  "174": {
+   "id": 174,
+   "lv": "N2",
+   "t": "Occasions manquées",
+   "g": "ずじまい · ものを · そびれる · 損なう"
+  },
+  "175": {
+   "id": 175,
+   "lv": "N2",
+   "t": "Ça en valait la peine",
+   "g": "かいがある · てこそ · てはじめて · だけのことはある"
+  },
+  "176": {
+   "id": 176,
+   "lv": "N2",
+   "t": "Tendances N2",
+   "g": "きらいがある · ぎみ · がち · っぽい"
+  },
+  "177": {
+   "id": 177,
+   "lv": "N2",
+   "t": "Couvert de",
+   "g": "だらけ · まみれ · ずくめ · 一色"
+  },
+  "178": {
+   "id": 178,
+   "lv": "N2",
+   "t": "Bilan : sentiments",
+   "g": "test de module"
+  },
+  "179": {
+   "id": 179,
+   "lv": "N2",
+   "t": "Parler d'un thème",
+   "g": "というと · といえば · といったら · ときたら"
+  },
+  "180": {
+   "id": 180,
+   "lv": "N2",
+   "t": "Nuancer ses propos",
+   "g": "というより · というか · とでもいうか · いわば"
+  },
+  "181": {
+   "id": 181,
+   "lv": "N2",
+   "t": "Sans même",
+   "g": "ことなく · もせずに · ないまでも · ずとも"
+  },
+  "182": {
+   "id": 182,
+   "lv": "N2",
+   "t": "À la place, en passant",
+   "g": "ついでに · に代わって · かわりに · がてら"
+  },
+  "183": {
+   "id": 183,
+   "lv": "N2",
+   "t": "Keigo N2",
+   "g": "承る · 申し上げる · おっしゃる · いらっしゃる"
+  },
+  "184": {
+   "id": 184,
+   "lv": "N2",
+   "t": "Écrits formels",
+   "g": "ものとする · こととする · 次第である · につき"
+  },
+  "185": {
+   "id": 185,
+   "lv": "N2",
+   "t": "Bilan : discours",
+   "g": "test de module"
+  },
+  "186": {
+   "id": 186,
+   "lv": "N2",
+   "t": "À peine fait, à moitié fait",
+   "g": "たて · かけ · きり · っぱなし"
+  },
+  "187": {
+   "id": 187,
+   "lv": "N2",
+   "t": "Jusqu'au bout",
+   "g": "ぬく · きる · とおす · 上げる"
+  },
+  "188": {
+   "id": 188,
+   "lv": "N2",
+   "t": "S'en tirer",
+   "g": "ずにすむ · てすむ · で済む · 済ませる"
+  },
+  "189": {
+   "id": 189,
+   "lv": "N2",
+   "t": "À sa manière",
+   "g": "なりに · ぶり · っぷり · 並み"
+  },
+  "190": {
+   "id": 190,
+   "lv": "N2",
+   "t": "Au moment précis",
+   "g": "ところに · ところへ · ところを · ところだった"
+  },
+  "191": {
+   "id": 191,
+   "lv": "N2",
+   "t": "Règles et habitudes",
+   "g": "ことになっている · ことにしている · ようになっている · こととなる"
+  },
+  "192": {
+   "id": 192,
+   "lv": "N2",
+   "t": "Bilan : formes verbales",
+   "g": "test de module"
+  },
+  "193": {
+   "id": 193,
+   "lv": "N2",
+   "t": "Conformément aux attentes",
+   "g": "にこたえて · とおり · どおり · に応じて"
+  },
+  "194": {
+   "id": 194,
+   "lv": "N2",
+   "t": "Dans le temps et l'espace",
+   "g": "から〜にかけて · 中 · にわたって · を通じて"
+  },
+  "195": {
+   "id": 195,
+   "lv": "N2",
+   "t": "Rien de plus que",
+   "g": "でしかない · でもなんでもない · ないでもない · ないものでもない"
+  },
+  "196": {
+   "id": 196,
+   "lv": "N2",
+   "t": "Questions rhétoriques",
+   "g": "ではあるまいか · ないものだろうか · ものだろうか · ではなかろうか"
+  },
+  "197": {
+   "id": 197,
+   "lv": "N2",
+   "t": "Même, jusqu'à",
+   "g": "ですら · までして · さえ〜ば · でさえ"
+  },
+  "198": {
+   "id": 198,
+   "lv": "N2",
+   "t": "L'oral rapide",
+   "g": "っけ · ったら · ってば · じゃない"
+  },
+  "199": {
+   "id": 199,
+   "lv": "N2",
+   "t": "Bilan : textes N2",
+   "g": "test de module"
+  },
+  "200": {
+   "id": 200,
+   "lv": "N2",
+   "t": "Lecture N2 : textes courts et moyens",
+   "g": "内容理解（短文・中文）"
+  },
+  "201": {
+   "id": 201,
+   "lv": "N2",
+   "t": "Lecture N2 : lecture comparée",
+   "g": "統合理解"
+  },
+  "202": {
+   "id": 202,
+   "lv": "N2",
+   "t": "Lecture N2 : argumentation et documents",
+   "g": "主張理解 · 情報検索"
+  },
+  "203": {
+   "id": 203,
+   "lv": "N2",
+   "t": "Écoute N2 : tâches et points précis",
+   "g": "課題理解 · ポイント理解"
+  },
+  "204": {
+   "id": 204,
+   "lv": "N2",
+   "t": "Écoute N2 : idée générale et écoute intégrée",
+   "g": "概要理解 · 統合理解"
+  },
+  "205": {
+   "id": 205,
+   "lv": "N2",
+   "t": "Écoute N2 : réponses immédiates",
+   "g": "即時応答"
+  },
+  "206": {
+   "id": 206,
+   "lv": "N2",
+   "t": "Vocabulaire N2",
+   "g": "文脈規定 · 言い換え · 用法 · 語形成"
+  },
+  "207": {
+   "id": 207,
+   "lv": "N2",
+   "t": "Kanji N2",
+   "g": "漢字読み · 表記"
+  },
+  "208": {
+   "id": 208,
+   "lv": "N2",
+   "t": "Grammaire N2 en contexte",
+   "g": "文法形式 · 文の組み立て · 文章の文法"
+  },
+  "209": {
+   "id": 209,
+   "lv": "N2",
+   "t": "Examen blanc N2",
+   "g": "épreuve complète chronométrée"
+  },
+  "210": {
+   "id": 210,
+   "lv": "N2",
+   "t": "Bilan final N2",
+   "g": "diagnostic"
+  }
+ },
+ "ANKI": {},
+ "KDECK": {},
+ "GLOSES": []
+}

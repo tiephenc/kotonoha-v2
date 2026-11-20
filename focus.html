@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Focus · minuteur</title>
+<link rel="stylesheet" href="src/ui/jetons.css">
+<link rel="stylesheet" href="src/ui/composants.css">
+<link rel="stylesheet" href="src/ui/composants-2.css">
+<link rel="stylesheet" href="src/ui/focus.css">
+<link rel="stylesheet" href="demo/demo.css">
+<link rel="stylesheet" href="demo/demo-2.css">
+<script type="module" src="demo/focus.js"></script>
+</head>
+<body>
+<header class="entete surface-teinte">
+  <p class="entete-titre">KOTONOHA</p>
+  <button id="theme" class="btn btn-teinte" type="button" aria-pressed="false">Thème nuit</button>
+</header>
+<main id="contenu">
+  <h1>Focus</h1>
+  <p>Un minuteur de concentration, sans score ni série. Les sons ne se lancent que sur votre demande.</p>
+  <div id="focus"></div>
+</main>
+</body>
+</html>

@@ -1,0 +1,161 @@
+{
+ "source": "index.html",
+ "sourceSha256": "8c4b7d2695b9ce3f0d632f84dbac0d825b5e084df2c2898cf5b76bda397743f2",
+ "reference": {
+  "fichier": "tools/data-baseline.json",
+  "date": "2026-11-04T15:27:49.298Z"
+ },
+ "fichiers": [
+  {
+   "fichier": "v1-unites.json",
+   "octets": 411214,
+   "sha256": "e46c1c69dead7d9510bf1097a496dc3d706183c5909af32047bcfd5dc38369e0"
+  },
+  {
+   "fichier": "v1-grammaire.json",
+   "octets": 279181,
+   "sha256": "71a32f1aaa8c31e30f5e293e88e99e8a7356e0c361e8676897eb6b3ae6575611"
+  },
+  {
+   "fichier": "v1-exemples.json",
+   "octets": 500225,
+   "sha256": "00d26ab27e050edb6138df14b75ebbf77e625a9434f9914f6256e3043a447b7d"
+  },
+  {
+   "fichier": "v1-vocabulaire.json",
+   "octets": 323025,
+   "sha256": "19916886afa4cba622fb9beb645991ca1502597a62e9301552145ed6c2c20279"
+  },
+  {
+   "fichier": "v1-kanji.json",
+   "octets": 144551,
+   "sha256": "9a7eaa454da27a363832fadb929acf1ea1176be79b7d2d0d0766df4c8e73e9c8"
+  },
+  {
+   "fichier": "v1-quiz.json",
+   "octets": 339794,
+   "sha256": "ec32f3e453ef7d606068f370cba98a85b881e55ded7165c5375696218a55f81d"
+  },
+  {
+   "fichier": "v1-lectures.json",
+   "octets": 414357,
+   "sha256": "04b9f1580e48c4438af81ae5e792ced99996760b630ae3d230f6f00402ba13db"
+  },
+  {
+   "fichier": "v1-ecoutes.json",
+   "octets": 244248,
+   "sha256": "7d722e41dd020bd90d264cda7f19f5aa76264289bd6e9a67dd49e9b952350522"
+  },
+  {
+   "fichier": "v1-ordonner.json",
+   "octets": 449588,
+   "sha256": "e71d10829dff3e54724fec1d1f57aa58b8ffc7feeb1025142ac7cd00901c0f1e"
+  },
+  {
+   "fichier": "v1-tables.json",
+   "octets": 51047,
+   "sha256": "1406affa9253a5707a03c0ed87d5fd0b516e38a167f48c3969c648d70666c93a"
+  },
+  {
+   "fichier": "v1-jmv.json",
+   "octets": 2881212,
+   "sha256": "d8c64a40748f97a2f43f6179b5190205d717c417aa7a214c85c7900126eca561"
+  },
+  {
+   "fichier": "v1-kvg.json",
+   "octets": 1611667,
+   "sha256": "702b77589cbacc3b558eb18da7e8f7150f07345c29ed21d0a4975c5c0d6459c9"
+  },
+  {
+   "fichier": "v1-ankid.json",
+   "octets": 55,
+   "sha256": "e360b2b8ccdf903b1e2d4e59e0a9578152b6496f11a9859d863e460445174efd"
+  }
+ ],
+ "volumes": {
+  "unites": 210,
+  "pointsDeGrammaire": 628,
+  "exemplesDeGrammaire": 1884,
+  "vocabulaireDesUnites": 2355,
+  "kanjiDesUnites": 785,
+  "exercicesSort": 1884,
+  "modules": 32,
+  "jmvNotes": 8188,
+  "jmvListes": 24,
+  "kanjiVG": 2189,
+  "ankiPaquets": 0,
+  "ankiNotes": 0,
+  "jmvIdentifiantsUniques": 8188
+ },
+ "ecarts": [],
+ "observations": {
+  "unitesAvecGrammaire": 157,
+  "unitesSansGrammaire": [
+   "6",
+   "12",
+   "18",
+   "24",
+   "30",
+   "36",
+   "42",
+   "51",
+   "52",
+   "53",
+   "54",
+   "55",
+   "62",
+   "69",
+   "76",
+   "83",
+   "90",
+   "97",
+   "104",
+   "111",
+   "118",
+   "119",
+   "120",
+   "121",
+   "122",
+   "123",
+   "124",
+   "125",
+   "126",
+   "127",
+   "128",
+   "129",
+   "136",
+   "143",
+   "150",
+   "157",
+   "164",
+   "171",
+   "178",
+   "185",
+   "192",
+   "199",
+   "200",
+   "201",
+   "202",
+   "203",
+   "204",
+   "205",
+   "206",
+   "207",
+   "208",
+   "209",
+   "210"
+  ],
+  "unitesParNiveau": {
+   "N4": 55,
+   "N3": 74,
+   "N2": 81
+  },
+  "exercicesOrdonnerNuls": 89,
+  "motsPresentsDansPlusieursUnites": 0,
+  "kanjiPresentsDansPlusieursUnites": 0,
+  "localisateursEnDouble": 0,
+  "identifiantsGrammaireUniques": true,
+  "anomalies": []
+ },
+ "statut": "conforme"
+}

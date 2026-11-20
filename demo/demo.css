@@ -1,0 +1,5 @@
+body { margin: 0; background: var(--color-bg); color: var(--color-text); font: var(--type-body); }
+main { max-width: var(--wrap); margin: 0 auto; padding: 16px; }
+h1, h2 { font: var(--type-title); }
+.rangee { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; padding: var(--space-4) 0; }
+.surface-teinte { padding: var(--space-4); border-radius: var(--radius-r); }
